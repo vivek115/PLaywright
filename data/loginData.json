@@ -1,0 +1,14 @@
+
+{
+    "DataVerify": {
+        "appTitle": "Sign in to Warehouse Orchestrator",
+        "warehouseOrchestratorURL":"https://app.warehouseorchestrator.com/wms/warehouse/receipts"
+    },
+
+    "invalidUser":{
+        "username": "",
+        "password":""
+    }
+}
+
+

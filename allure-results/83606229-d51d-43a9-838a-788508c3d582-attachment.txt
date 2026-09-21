@@ -1,0 +1,13 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Doral WH
+Selected value: Doral WH
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: Amazon Trade
+Selected value: Amazon Trade
+Current location: Main
+Location is auto-populated: Main
+Current contact: 

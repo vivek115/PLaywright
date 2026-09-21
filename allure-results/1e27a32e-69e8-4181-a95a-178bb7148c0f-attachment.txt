@@ -1,0 +1,35 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Position Utilization
+Selected value: Position Utilization
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: Ameritrade Logistics
+Selected value: Ameritrade Logistics
+Current location: 
+Randomly selected value: Seatle
+Selected value: Seatle
+Randomly selected value: First Name3 Last Name3
+Selected value: First Name3 Last Name3
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: Amazing Orchids
+Selected value: Amazing Orchids
+Current location: Main
+Location is auto-populated: Main
+Randomly selected value: Vincent Jayme
+Selected value: Vincent Jayme
+Agent is not specified. Clicking to select agent.
+Randomly selected value: 1030 Company
+Selected value: 1030 Company
+Current location: 
+Randomly selected value: Site B
+Selected value: Site B
+Randomly selected value: Three Dlc
+Selected value: Three Dlc
+Supplier is not specified. Clicking to select supplier.
+Randomly selected value: Default Supplier
+Selected value: Default Supplier
+Current location: Main
+Location is auto-populated: Main

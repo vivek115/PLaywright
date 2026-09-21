@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "test": "npx playwright test",
+    "chrome": "npx playwright test --project=chromium",
+    "firefox": "npx playwright test --project=firefox",
+    "webkit": "npx playwright test --project=webkit",
+    "headed": "npx playwright test --headed",
+    "parallel": "npx playwright test --workers=4",
+    "report": "npx playwright show-report",
+    "allure:generate": "allure generate allure-results --clean",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results"
+  }
+
+
+}

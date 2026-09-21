@@ -1,0 +1,31 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Warehouse List: [
+  ' Branch Issue ',
+  ' Chicago DC ',
+  ' Demo WH ',
+  ' Doral WH ',
+  ' Locations Preview ',
+  ' Locations UI ',
+  ' Mento ',
+  ' Packages ',
+  ' Pikill ',
+  ' Position Utilization ',
+  ' prod testing branch '
+]
+clean warehouse List: [
+  'Branch Issue',
+  'Chicago DC',
+  'Demo WH',
+  'Doral WH',
+  'Locations Preview',
+  'Locations UI',
+  'Mento',
+  'Packages',
+  'Pikill',
+  'Position Utilization',
+  'prod testing branch'
+]
+Randomly selected warehouse: Branch Issue
+Selected Warehouse: Branch Issue

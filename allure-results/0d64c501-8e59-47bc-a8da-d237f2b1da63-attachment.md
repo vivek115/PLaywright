@@ -1,0 +1,1293 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: loginTest.spec.js >> Login test
+- Location: tests\loginTest.spec.js:3:1
+
+# Error details
+
+```
+TimeoutError: locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('navLink')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - navigation [ref=e6]:
+        - paragraph [ref=e10] [cursor=pointer]: WMS
+        - generic [ref=e11]:
+          - list [ref=e12]:
+            - listitem [ref=e13]:
+              - link "Dashboard" [ref=e14] [cursor=pointer]:
+                - /url: /wms/dashboard
+            - listitem [ref=e15]:
+              - link "Orders" [ref=e16] [cursor=pointer]:
+                - /url: /wms/orders
+            - listitem [ref=e17]:
+              - link "Warehouse" [ref=e18] [cursor=pointer]:
+                - /url: /wms/warehouse
+            - listitem [ref=e19]:
+              - link "Locations" [ref=e20] [cursor=pointer]:
+                - /url: /wms/locations/list
+            - listitem [ref=e21]:
+              - link "Shipments" [ref=e22] [cursor=pointer]:
+                - /url: /wms/shipments
+            - listitem [ref=e23]:
+              - link "Tasks" [ref=e24] [cursor=pointer]:
+                - /url: /wms/tasks
+            - listitem [ref=e25]:
+              - link "Reports" [ref=e26] [cursor=pointer]:
+                - /url: /wms/reports
+            - listitem [ref=e27]:
+              - link "Settings" [ref=e28] [cursor=pointer]:
+                - /url: /wms/settings
+          - list [ref=e29]:
+            - listitem [ref=e30]:
+              - generic [ref=e31]:
+                - menuitem "Filter": Filter
+                - textbox "Search..." [ref=e32]
+            - listitem [ref=e33]:
+              - list [ref=e34]:
+                - listitem [ref=e35]:
+                  - generic [ref=e36] [cursor=pointer]: IFS Demo
+                  - list:
+                    - listitem:
+                      - generic: My Profile
+                    - listitem:
+                      - link "Logout":
+                        - /url: /logout
+    - generic [ref=e38]:
+      - generic [ref=e42] [cursor=pointer]:
+        - heading "SCRM" [level=4] [ref=e43]
+        - paragraph [ref=e44]: Manage Companies, Contacts & Quotes
+      - link "WMS WMS Manage Inventory, Packages & More" [ref=e46] [cursor=pointer]:
+        - /url: /wms
+        - img "WMS" [ref=e48]
+        - generic [ref=e49]:
+          - heading "WMS" [level=4] [ref=e50]
+          - paragraph [ref=e51]: Manage Inventory, Packages & More
+      - link "Dimensioner Dimensioner Capture Dimensions, Weight & Images" [ref=e53] [cursor=pointer]:
+        - /url: /dimensioner/capture
+        - img "Dimensioner" [ref=e55]
+        - generic [ref=e56]:
+          - heading "Dimensioner" [level=4] [ref=e57]
+          - paragraph [ref=e58]: Capture Dimensions, Weight & Images
+      - link "Workflows Workflows Manage Automations & More" [ref=e60] [cursor=pointer]:
+        - /url: /workflows/list
+        - img "Workflows" [ref=e62]
+        - generic [ref=e63]:
+          - heading "Workflows" [level=4] [ref=e64]
+          - paragraph [ref=e65]: Manage Automations & More
+      - generic [ref=e69] [cursor=pointer]:
+        - heading "Admin" [level=4] [ref=e70]
+        - paragraph [ref=e71]: Manage Users, Security, Modules and More
+  - generic [ref=e74]:
+    - generic [ref=e75]:
+      - img [ref=e76]
+      - img [ref=e77]
+    - generic [ref=e81]:
+      - generic [ref=e82]:
+        - heading "Packages Warehouse Receipts Inventory Packages" [level=2]:
+          - generic [ref=e83]:
+            - generic [ref=e85] [cursor=pointer]: Packages
+            - list [ref=e86]:
+              - listitem [ref=e87] [cursor=pointer]:
+                - generic [ref=e89]: Warehouse Receipts
+              - listitem [ref=e90] [cursor=pointer]:
+                - generic [ref=e92]: Inventory
+              - listitem [ref=e93] [cursor=pointer]:
+                - generic [ref=e95]: Packages
+      - list [ref=e97]:
+        - listitem
+        - listitem
+        - listitem [ref=e98]:
+          - button "Create New" [ref=e100] [cursor=pointer]: Create New
+        - listitem [ref=e101]:
+          - button [ref=e104] [cursor=pointer]
+    - generic [ref=e108]:
+      - grid "Data table" [ref=e109]:
+        - row "Select All Rows Package ID Sortable Status Sortable Shipper Sortable Consignee Sortable Created By Sortable Created Date Sortable WR ID Sortable Package Type Sortable Length (in) Sortable Width (in) Sortable Height (in) Sortable Weight (lbs) Sortable Volume (ft³) Sortable Length (cm) Sortable Width (cm) Sortable Height (cm) Sortable Weight (kg) Sortable Volume (m³) Sortable Pro No. Sortable" [ref=e131]:
+          - columnheader "Select All Rows":
+            - checkbox "Select All Rows" [ref=e132]: 
+          - columnheader "Package ID Sortable" [ref=e133]:
+            - generic [ref=e134]:
+              - generic [ref=e135] [cursor=pointer]:
+                - generic [ref=e136]: Package ID
+                - note "Sortable" [ref=e137]
+              - status
+          - columnheader "Status Sortable" [ref=e139]:
+            - generic [ref=e140]:
+              - generic [ref=e141] [cursor=pointer]:
+                - generic [ref=e142]: Status
+                - note "Sortable" [ref=e143]
+              - status
+          - columnheader "Shipper Sortable" [ref=e145]:
+            - generic [ref=e146]:
+              - generic [ref=e147] [cursor=pointer]:
+                - generic [ref=e148]: Shipper
+                - note "Sortable" [ref=e149]
+              - status
+          - columnheader "Consignee Sortable" [ref=e151]:
+            - generic [ref=e152]:
+              - generic [ref=e153] [cursor=pointer]:
+                - generic [ref=e154]: Consignee
+                - note "Sortable" [ref=e155]
+              - status
+          - columnheader "Created By Sortable" [ref=e157]:
+            - generic [ref=e158]:
+              - generic [ref=e159] [cursor=pointer]:
+                - generic [ref=e160]: Created By
+                - note "Sortable" [ref=e161]
+              - status
+          - columnheader "Created Date Sortable" [ref=e163]:
+            - generic [ref=e164]:
+              - generic [ref=e165] [cursor=pointer]:
+                - generic [ref=e166]: Created Date
+                - note "Sortable" [ref=e167]
+              - status
+          - columnheader "WR ID Sortable" [ref=e169]:
+            - generic [ref=e170]:
+              - generic [ref=e171] [cursor=pointer]:
+                - generic [ref=e172]: WR ID
+                - note "Sortable" [ref=e173]
+              - status
+          - columnheader "Package Type Sortable" [ref=e175]:
+            - generic [ref=e176]:
+              - generic [ref=e177] [cursor=pointer]:
+                - generic [ref=e178]: Package Type
+                - note "Sortable" [ref=e179]
+              - status
+          - columnheader "Length (in) Sortable" [ref=e181]:
+            - generic [ref=e182]:
+              - generic [ref=e183] [cursor=pointer]:
+                - generic [ref=e184]: Length (in)
+                - note "Sortable" [ref=e185]
+              - status
+          - columnheader "Width (in) Sortable" [ref=e187]:
+            - generic [ref=e188]:
+              - generic [ref=e189] [cursor=pointer]:
+                - generic [ref=e190]: Width (in)
+                - note "Sortable" [ref=e191]
+              - status
+          - columnheader "Height (in) Sortable" [ref=e193]:
+            - generic [ref=e194]:
+              - generic [ref=e195] [cursor=pointer]:
+                - generic [ref=e196]: Height (in)
+                - note "Sortable" [ref=e197]
+              - status
+          - columnheader "Weight (lbs) Sortable" [ref=e199]:
+            - generic [ref=e200]:
+              - generic [ref=e201] [cursor=pointer]:
+                - generic [ref=e202]: Weight (lbs)
+                - note "Sortable" [ref=e203]
+              - status
+          - columnheader "Volume (ft³) Sortable" [ref=e205]:
+            - generic [ref=e206]:
+              - generic [ref=e207] [cursor=pointer]:
+                - generic [ref=e208]: Volume (ft³)
+                - note "Sortable" [ref=e209]
+              - status
+          - columnheader "Length (cm) Sortable" [ref=e211]:
+            - generic [ref=e212]:
+              - generic [ref=e213] [cursor=pointer]:
+                - generic [ref=e214]: Length (cm)
+                - note "Sortable" [ref=e215]
+              - status
+          - columnheader "Width (cm) Sortable" [ref=e217]:
+            - generic [ref=e218]:
+              - generic [ref=e219] [cursor=pointer]:
+                - generic [ref=e220]: Width (cm)
+                - note "Sortable" [ref=e221]
+              - status
+          - columnheader "Height (cm) Sortable" [ref=e223]:
+            - generic [ref=e224]:
+              - generic [ref=e225] [cursor=pointer]:
+                - generic [ref=e226]: Height (cm)
+                - note "Sortable" [ref=e227]
+              - status
+          - columnheader "Weight (kg) Sortable" [ref=e229]:
+            - generic [ref=e230]:
+              - generic [ref=e231] [cursor=pointer]:
+                - generic [ref=e232]: Weight (kg)
+                - note "Sortable" [ref=e233]
+              - status
+          - columnheader "Volume (m³) Sortable" [ref=e235]:
+            - generic [ref=e236]:
+              - generic [ref=e237] [cursor=pointer]:
+                - generic [ref=e238]: Volume (m³)
+                - note "Sortable" [ref=e239]
+              - status
+          - columnheader "Pro No. Sortable" [ref=e241]:
+            - generic [ref=e242]:
+              - generic [ref=e243] [cursor=pointer]:
+                - generic [ref=e244]: Pro No.
+                - note "Sortable" [ref=e245]
+              - status
+          - columnheader [ref=e247]
+        - row "undefined Filter Package ID Filter Status Filter Shipper Filter Consignee Filter Created By Filter Created Date Filter WR ID Filter Package Type Filter Length (in) Filter Width (in) Filter Height (in) Filter Weight (lbs) Filter Volume (ft³) Filter Length (cm) Filter Width (cm) Filter Height (cm) Filter Weight (kg) Filter Volume (m³) Filter Pro No. Filter undefined Filter" [ref=e249]:
+          - textbox "Search" [ref=e251]
+          - generic [ref=e255] [cursor=pointer]: Filter
+          - textbox "Search" [ref=e257]
+          - textbox "Search" [ref=e259]
+          - textbox "Search" [ref=e261]
+          - generic [ref=e265] [cursor=pointer]: Filter
+          - textbox "Search" [ref=e267]
+          - generic [ref=e271] [cursor=pointer]: Filter
+          - generic [ref=e275] [cursor=pointer]: Filter
+          - generic [ref=e279] [cursor=pointer]: Filter
+          - generic [ref=e283] [cursor=pointer]: Filter
+          - generic [ref=e287] [cursor=pointer]: Filter
+          - generic [ref=e291] [cursor=pointer]: Filter
+          - generic [ref=e295] [cursor=pointer]: Filter
+          - generic [ref=e299] [cursor=pointer]: Filter
+          - generic [ref=e303] [cursor=pointer]: Filter
+          - generic [ref=e307] [cursor=pointer]: Filter
+          - generic [ref=e311] [cursor=pointer]: Filter
+          - textbox "Search" [ref=e313]
+        - generic [ref=e314]:
+          - row "Select Row RPIDAA000180-1 On Hand IFS Demo 08/13/2026 WRAA000936 20 Ft. Flat Rack 0" [ref=e336]:
+            - gridcell "Select Row" [ref=e337]:
+              - checkbox "Select Row" [ref=e338]: 
+            - gridcell "RPIDAA000180-1" [ref=e339]
+            - gridcell "On Hand" [ref=e340]:
+              - generic [ref=e341]: On Hand
+            - gridcell [ref=e342]
+            - gridcell [ref=e343]
+            - gridcell "IFS Demo" [ref=e344]:
+              - generic [ref=e345]: IFS Demo
+            - gridcell "08/13/2026" [ref=e346]:
+              - generic [ref=e347]: 08/13/2026
+            - gridcell "WRAA000936" [ref=e348]:
+              - link "WRAA000936" [ref=e349] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/cdbe44d4-3861-470a-9c57-9eb27fe28235/general
+            - gridcell "20 Ft. Flat Rack" [ref=e350]:
+              - generic [ref=e351]: 20 Ft. Flat Rack
+            - gridcell [ref=e352]
+            - gridcell [ref=e353]
+            - gridcell [ref=e354]
+            - gridcell [ref=e355]
+            - gridcell "0" [ref=e356]:
+              - generic [ref=e357]: "0"
+            - gridcell [ref=e358]
+            - gridcell [ref=e359]
+            - gridcell [ref=e360]
+            - gridcell [ref=e361]
+            - gridcell [ref=e362]
+            - gridcell [ref=e363]
+            - gridcell [ref=e364]
+          - row "Select Row PIDAA001084-5 Pre-Received IFS Demo 08/13/2026 WRAA000936 0" [ref=e365]:
+            - gridcell "Select Row" [ref=e366]:
+              - checkbox "Select Row" [ref=e367]: 
+            - gridcell "PIDAA001084-5" [ref=e368]:
+              - link "PIDAA001084-5" [ref=e369] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/cdbe44d4-3861-470a-9c57-9eb27fe28235/package/62584f3c-be09-45c5-8d1c-6593a08d5acb/general
+            - gridcell "Pre-Received" [ref=e370]:
+              - generic [ref=e371]: Pre-Received
+            - gridcell [ref=e372]
+            - gridcell [ref=e373]
+            - gridcell "IFS Demo" [ref=e374]:
+              - generic [ref=e375]: IFS Demo
+            - gridcell "08/13/2026" [ref=e376]:
+              - generic [ref=e377]: 08/13/2026
+            - gridcell "WRAA000936" [ref=e378]:
+              - link "WRAA000936" [ref=e379] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/cdbe44d4-3861-470a-9c57-9eb27fe28235/general
+            - gridcell [ref=e380]
+            - gridcell [ref=e381]
+            - gridcell [ref=e382]
+            - gridcell [ref=e383]
+            - gridcell [ref=e384]
+            - gridcell "0" [ref=e385]:
+              - generic [ref=e386]: "0"
+            - gridcell [ref=e387]
+            - gridcell [ref=e388]
+            - gridcell [ref=e389]
+            - gridcell [ref=e390]
+            - gridcell [ref=e391]
+            - gridcell [ref=e392]
+            - gridcell [ref=e393]
+          - row "Select Row PIDAA001084-4 Pre-Received IFS Demo 08/13/2026 New Tab WRAA000936 0" [ref=e394]:
+            - gridcell "Select Row" [ref=e395]:
+              - checkbox "Select Row" [ref=e396]: 
+            - gridcell "PIDAA001084-4" [ref=e397]:
+              - link [ref=e399] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/cdbe44d4-3861-470a-9c57-9eb27fe28235/package/878a12a3-e764-4f8f-a8f0-c378637068bd/general
+                - img [ref=e401]
+              - link "PIDAA001084-4" [ref=e402] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/cdbe44d4-3861-470a-9c57-9eb27fe28235/package/878a12a3-e764-4f8f-a8f0-c378637068bd/general
+            - gridcell "Pre-Received" [ref=e403]:
+              - generic [ref=e404]: Pre-Received
+            - gridcell [ref=e405]
+            - gridcell [ref=e406]
+            - gridcell "IFS Demo" [ref=e407]:
+              - generic [ref=e408]: IFS Demo
+            - gridcell "08/13/2026" [ref=e409]:
+              - generic [ref=e410]: 08/13/2026
+            - gridcell "New Tab WRAA000936" [ref=e411]:
+              - link "New Tab" [ref=e413] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/cdbe44d4-3861-470a-9c57-9eb27fe28235/general
+                - img "New Tab" [ref=e415]
+              - link "WRAA000936" [ref=e416] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/cdbe44d4-3861-470a-9c57-9eb27fe28235/general
+            - gridcell [ref=e417]
+            - gridcell [ref=e418]
+            - gridcell [ref=e419]
+            - gridcell [ref=e420]
+            - gridcell [ref=e421]
+            - gridcell "0" [ref=e422]:
+              - generic [ref=e423]: "0"
+            - gridcell [ref=e424]
+            - gridcell [ref=e425]
+            - gridcell [ref=e426]
+            - gridcell [ref=e427]
+            - gridcell [ref=e428]
+            - gridcell [ref=e429]
+            - gridcell [ref=e430]:
+              - button [ref=e432] [cursor=pointer]:
+                - img [ref=e434]
+          - row "Select Row PIDAA001084-3 Pre-Received IFS Demo 08/13/2026 WRAA000936 0" [ref=e435]:
+            - gridcell "Select Row" [ref=e436]:
+              - checkbox "Select Row" [ref=e437]: 
+            - gridcell "PIDAA001084-3" [ref=e438]:
+              - link "PIDAA001084-3" [ref=e439] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/cdbe44d4-3861-470a-9c57-9eb27fe28235/package/0416fa81-7293-443b-92ba-ed8176ec2639/general
+            - gridcell "Pre-Received" [ref=e440]:
+              - generic [ref=e441]: Pre-Received
+            - gridcell [ref=e442]
+            - gridcell [ref=e443]
+            - gridcell "IFS Demo" [ref=e444]:
+              - generic [ref=e445]: IFS Demo
+            - gridcell "08/13/2026" [ref=e446]:
+              - generic [ref=e447]: 08/13/2026
+            - gridcell "WRAA000936" [ref=e448]:
+              - link "WRAA000936" [ref=e449] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/cdbe44d4-3861-470a-9c57-9eb27fe28235/general
+            - gridcell [ref=e450]
+            - gridcell [ref=e451]
+            - gridcell [ref=e452]
+            - gridcell [ref=e453]
+            - gridcell [ref=e454]
+            - gridcell "0" [ref=e455]:
+              - generic [ref=e456]: "0"
+            - gridcell [ref=e457]
+            - gridcell [ref=e458]
+            - gridcell [ref=e459]
+            - gridcell [ref=e460]
+            - gridcell [ref=e461]
+            - gridcell [ref=e462]
+            - gridcell [ref=e463]
+          - row "Select Row PIDAA001084-2 Pre-Received IFS Demo 08/13/2026 WRAA000936 0" [ref=e464]:
+            - gridcell "Select Row" [ref=e465]:
+              - checkbox "Select Row" [ref=e466]: 
+            - gridcell "PIDAA001084-2" [ref=e467]:
+              - link "PIDAA001084-2" [ref=e468] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/cdbe44d4-3861-470a-9c57-9eb27fe28235/package/23aa2198-570f-4926-a256-db2df2b46e21/general
+            - gridcell "Pre-Received" [ref=e469]:
+              - generic [ref=e470]: Pre-Received
+            - gridcell [ref=e471]
+            - gridcell [ref=e472]
+            - gridcell "IFS Demo" [ref=e473]:
+              - generic [ref=e474]: IFS Demo
+            - gridcell "08/13/2026" [ref=e475]:
+              - generic [ref=e476]: 08/13/2026
+            - gridcell "WRAA000936" [ref=e477]:
+              - link "WRAA000936" [ref=e478] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/cdbe44d4-3861-470a-9c57-9eb27fe28235/general
+            - gridcell [ref=e479]
+            - gridcell [ref=e480]
+            - gridcell [ref=e481]
+            - gridcell [ref=e482]
+            - gridcell [ref=e483]
+            - gridcell "0" [ref=e484]:
+              - generic [ref=e485]: "0"
+            - gridcell [ref=e486]
+            - gridcell [ref=e487]
+            - gridcell [ref=e488]
+            - gridcell [ref=e489]
+            - gridcell [ref=e490]
+            - gridcell [ref=e491]
+            - gridcell [ref=e492]
+          - row "Select Row PIDAA001084-1 Pre-Received IFS Demo 08/13/2026 WRAA000936 0" [ref=e493]:
+            - gridcell "Select Row" [ref=e494]:
+              - checkbox "Select Row" [ref=e495]: 
+            - gridcell "PIDAA001084-1" [ref=e496]:
+              - link "PIDAA001084-1" [ref=e497] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/cdbe44d4-3861-470a-9c57-9eb27fe28235/package/cb10e104-6304-4347-9444-d236663b94cf/general
+            - gridcell "Pre-Received" [ref=e498]:
+              - generic [ref=e499]: Pre-Received
+            - gridcell [ref=e500]
+            - gridcell [ref=e501]
+            - gridcell "IFS Demo" [ref=e502]:
+              - generic [ref=e503]: IFS Demo
+            - gridcell "08/13/2026" [ref=e504]:
+              - generic [ref=e505]: 08/13/2026
+            - gridcell "WRAA000936" [ref=e506]:
+              - link "WRAA000936" [ref=e507] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/cdbe44d4-3861-470a-9c57-9eb27fe28235/general
+            - gridcell [ref=e508]
+            - gridcell [ref=e509]
+            - gridcell [ref=e510]
+            - gridcell [ref=e511]
+            - gridcell [ref=e512]
+            - gridcell "0" [ref=e513]:
+              - generic [ref=e514]: "0"
+            - gridcell [ref=e515]
+            - gridcell [ref=e516]
+            - gridcell [ref=e517]
+            - gridcell [ref=e518]
+            - gridcell [ref=e519]
+            - gridcell [ref=e520]
+            - gridcell [ref=e521]
+          - row "Select Row PIDAA001083 Pre-Received IFS Demo 08/04/2026 0" [ref=e522]:
+            - gridcell "Select Row" [ref=e523]:
+              - checkbox "Select Row" [ref=e524]: 
+            - gridcell "PIDAA001083" [ref=e525]:
+              - link "PIDAA001083" [ref=e526] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/0/package/53f09207-e152-4e53-8087-f90f80fe2da6/general
+            - gridcell "Pre-Received" [ref=e527]:
+              - generic [ref=e528]: Pre-Received
+            - gridcell [ref=e529]
+            - gridcell [ref=e530]
+            - gridcell "IFS Demo" [ref=e531]:
+              - generic [ref=e532]: IFS Demo
+            - gridcell "08/04/2026" [ref=e533]:
+              - generic [ref=e534]: 08/04/2026
+            - gridcell [ref=e535]
+            - gridcell [ref=e536]
+            - gridcell [ref=e537]
+            - gridcell [ref=e538]
+            - gridcell [ref=e539]
+            - gridcell [ref=e540]
+            - gridcell "0" [ref=e541]:
+              - generic [ref=e542]: "0"
+            - gridcell [ref=e543]
+            - gridcell [ref=e544]
+            - gridcell [ref=e545]
+            - gridcell [ref=e546]
+            - gridcell [ref=e547]
+            - gridcell [ref=e548]
+            - gridcell [ref=e549]
+          - row "Select Row PIDAA001082-3 In Process All Type Fence Co All Company Access Andres Puerta 07/28/2026 WRAA000933 14.4 13.4 18.2 21.2 2.03 36.58 34.04 46.23 9.62 0.06" [ref=e550]:
+            - gridcell "Select Row" [ref=e551]:
+              - checkbox "Select Row" [ref=e552]: 
+            - gridcell "PIDAA001082-3" [ref=e553]:
+              - link "PIDAA001082-3" [ref=e554] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/7df7fffd-ba0a-45ec-a6f2-70730afe51d0/package/d324ca51-7375-442d-bf6a-69c6de31b49e/general
+            - gridcell "In Process" [ref=e555]:
+              - generic [ref=e556]: In Process
+            - gridcell "All Type Fence Co" [ref=e557]:
+              - generic [ref=e558]: All Type Fence Co
+            - gridcell "All Company Access" [ref=e559]:
+              - generic [ref=e560]: All Company Access
+            - gridcell "Andres Puerta" [ref=e561]:
+              - generic [ref=e562]: Andres Puerta
+            - gridcell "07/28/2026" [ref=e563]:
+              - generic [ref=e564]: 07/28/2026
+            - gridcell "WRAA000933" [ref=e565]:
+              - link "WRAA000933" [ref=e566] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/7df7fffd-ba0a-45ec-a6f2-70730afe51d0/general
+            - gridcell [ref=e567]
+            - gridcell "14.4" [ref=e568]:
+              - generic [ref=e569]: "14.4"
+            - gridcell "13.4" [ref=e570]:
+              - generic [ref=e571]: "13.4"
+            - gridcell "18.2" [ref=e572]:
+              - generic [ref=e573]: "18.2"
+            - gridcell "21.2" [ref=e574]:
+              - generic [ref=e575]: "21.2"
+            - gridcell "2.03" [ref=e576]:
+              - generic [ref=e577]: "2.03"
+            - gridcell "36.58" [ref=e578]:
+              - generic [ref=e579]: "36.58"
+            - gridcell "34.04" [ref=e580]:
+              - generic [ref=e581]: "34.04"
+            - gridcell "46.23" [ref=e582]:
+              - generic [ref=e583]: "46.23"
+            - gridcell "9.62" [ref=e584]:
+              - generic [ref=e585]: "9.62"
+            - gridcell "0.06" [ref=e586]:
+              - generic [ref=e587]: "0.06"
+            - gridcell [ref=e588]
+            - gridcell [ref=e589]
+          - row "Select Row PIDAA001082-1 Delivered All Type Fence Co All Company Access Andres Puerta 07/28/2026 WRAA000933 Box 0 874589854" [ref=e590]:
+            - gridcell "Select Row" [ref=e591]:
+              - checkbox "Select Row" [ref=e592]: 
+            - gridcell "PIDAA001082-1" [ref=e593]:
+              - link "PIDAA001082-1" [ref=e594] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/7df7fffd-ba0a-45ec-a6f2-70730afe51d0/package/0f1c3003-9017-43df-8763-dd18a31ed40f/general
+            - gridcell "Delivered" [ref=e595]:
+              - generic [ref=e596]: Delivered
+            - gridcell "All Type Fence Co" [ref=e597]:
+              - generic [ref=e598]: All Type Fence Co
+            - gridcell "All Company Access" [ref=e599]:
+              - generic [ref=e600]: All Company Access
+            - gridcell "Andres Puerta" [ref=e601]:
+              - generic [ref=e602]: Andres Puerta
+            - gridcell "07/28/2026" [ref=e603]:
+              - generic [ref=e604]: 07/28/2026
+            - gridcell "WRAA000933" [ref=e605]:
+              - link "WRAA000933" [ref=e606] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/7df7fffd-ba0a-45ec-a6f2-70730afe51d0/general
+            - gridcell "Box" [ref=e607]:
+              - generic [ref=e608]: Box
+            - gridcell [ref=e609]
+            - gridcell [ref=e610]
+            - gridcell [ref=e611]
+            - gridcell [ref=e612]
+            - gridcell "0" [ref=e613]:
+              - generic [ref=e614]: "0"
+            - gridcell [ref=e615]
+            - gridcell [ref=e616]
+            - gridcell [ref=e617]
+            - gridcell [ref=e618]
+            - gridcell [ref=e619]
+            - gridcell "874589854" [ref=e620]:
+              - generic [ref=e621]: "874589854"
+            - gridcell [ref=e622]
+          - row "Select Row PIDAA001081-1 In Process 100 SM Brewing All Type Fence Co Andres Puerta 07/28/2026 WRAA000929 14.4 13.4 18.2 21.2 2.03 36.58 34.04 46.23 9.62 0.06" [ref=e623]:
+            - gridcell "Select Row" [ref=e624]:
+              - checkbox "Select Row" [ref=e625]: 
+            - gridcell "PIDAA001081-1" [ref=e626]:
+              - link "PIDAA001081-1" [ref=e627] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/0b4b823d-d28b-4b84-9a80-5f4b3dcc8141/package/786880c9-c475-443c-91d3-3c7140cfa2c7/general
+            - gridcell "In Process" [ref=e628]:
+              - generic [ref=e629]: In Process
+            - gridcell "100 SM Brewing" [ref=e630]:
+              - generic [ref=e631]: 100 SM Brewing
+            - gridcell "All Type Fence Co" [ref=e632]:
+              - generic [ref=e633]: All Type Fence Co
+            - gridcell "Andres Puerta" [ref=e634]:
+              - generic [ref=e635]: Andres Puerta
+            - gridcell "07/28/2026" [ref=e636]:
+              - generic [ref=e637]: 07/28/2026
+            - gridcell "WRAA000929" [ref=e638]:
+              - link "WRAA000929" [ref=e639] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/0b4b823d-d28b-4b84-9a80-5f4b3dcc8141/general
+            - gridcell [ref=e640]
+            - gridcell "14.4" [ref=e641]:
+              - generic [ref=e642]: "14.4"
+            - gridcell "13.4" [ref=e643]:
+              - generic [ref=e644]: "13.4"
+            - gridcell "18.2" [ref=e645]:
+              - generic [ref=e646]: "18.2"
+            - gridcell "21.2" [ref=e647]:
+              - generic [ref=e648]: "21.2"
+            - gridcell "2.03" [ref=e649]:
+              - generic [ref=e650]: "2.03"
+            - gridcell "36.58" [ref=e651]:
+              - generic [ref=e652]: "36.58"
+            - gridcell "34.04" [ref=e653]:
+              - generic [ref=e654]: "34.04"
+            - gridcell "46.23" [ref=e655]:
+              - generic [ref=e656]: "46.23"
+            - gridcell "9.62" [ref=e657]:
+              - generic [ref=e658]: "9.62"
+            - gridcell "0.06" [ref=e659]:
+              - generic [ref=e660]: "0.06"
+            - gridcell [ref=e661]
+            - gridcell [ref=e662]
+          - row "Select Row PIDAA001080-3 Shipped ALBATROSS AMERICA, INC All Type Fence Co IFS Demo 07/23/2026 WRAA000928 Pallet 48 24 42 28 121.92 60.96 106.68 0.79 0189765387" [ref=e663]:
+            - gridcell "Select Row" [ref=e664]:
+              - checkbox "Select Row" [ref=e665]: 
+            - gridcell "PIDAA001080-3" [ref=e666]:
+              - link "PIDAA001080-3" [ref=e667] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/d8ccca1e-fa43-4adf-a5d6-005fefc4813c/package/8dbd91be-3731-4aae-898d-d99bf0f00e4b/general
+            - gridcell "Shipped" [ref=e668]:
+              - generic [ref=e669]: Shipped
+            - gridcell "ALBATROSS AMERICA, INC" [ref=e670]:
+              - generic [ref=e671]: ALBATROSS AMERICA, INC
+            - gridcell "All Type Fence Co" [ref=e672]:
+              - generic [ref=e673]: All Type Fence Co
+            - gridcell "IFS Demo" [ref=e674]:
+              - generic [ref=e675]: IFS Demo
+            - gridcell "07/23/2026" [ref=e676]:
+              - generic [ref=e677]: 07/23/2026
+            - gridcell "WRAA000928" [ref=e678]:
+              - link "WRAA000928" [ref=e679] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/d8ccca1e-fa43-4adf-a5d6-005fefc4813c/general
+            - gridcell "Pallet" [ref=e680]:
+              - generic [ref=e681]: Pallet
+            - gridcell "48" [ref=e682]:
+              - generic [ref=e683]: "48"
+            - gridcell "24" [ref=e684]:
+              - generic [ref=e685]: "24"
+            - gridcell "42" [ref=e686]:
+              - generic [ref=e687]: "42"
+            - gridcell [ref=e688]
+            - gridcell "28" [ref=e689]:
+              - generic [ref=e690]: "28"
+            - gridcell "121.92" [ref=e691]:
+              - generic [ref=e692]: "121.92"
+            - gridcell "60.96" [ref=e693]:
+              - generic [ref=e694]: "60.96"
+            - gridcell "106.68" [ref=e695]:
+              - generic [ref=e696]: "106.68"
+            - gridcell [ref=e697]
+            - gridcell "0.79" [ref=e698]:
+              - generic [ref=e699]: "0.79"
+            - gridcell "0189765387" [ref=e700]:
+              - generic [ref=e701]: "0189765387"
+            - gridcell [ref=e702]
+          - row "Select Row PIDAA001080-2 In Process ALBATROSS AMERICA, INC All Type Fence Co IFS Demo 07/23/2026 WRAA000928 Barrel 0" [ref=e703]:
+            - gridcell "Select Row" [ref=e704]:
+              - checkbox "Select Row" [ref=e705]: 
+            - gridcell "PIDAA001080-2" [ref=e706]:
+              - link "PIDAA001080-2" [ref=e707] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/d8ccca1e-fa43-4adf-a5d6-005fefc4813c/package/51edd5ac-3fdd-4f70-a5f2-123fd3958e84/general
+            - gridcell "In Process" [ref=e708]:
+              - generic [ref=e709]: In Process
+            - gridcell "ALBATROSS AMERICA, INC" [ref=e710]:
+              - generic [ref=e711]: ALBATROSS AMERICA, INC
+            - gridcell "All Type Fence Co" [ref=e712]:
+              - generic [ref=e713]: All Type Fence Co
+            - gridcell "IFS Demo" [ref=e714]:
+              - generic [ref=e715]: IFS Demo
+            - gridcell "07/23/2026" [ref=e716]:
+              - generic [ref=e717]: 07/23/2026
+            - gridcell "WRAA000928" [ref=e718]:
+              - link "WRAA000928" [ref=e719] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/d8ccca1e-fa43-4adf-a5d6-005fefc4813c/general
+            - gridcell "Barrel" [ref=e720]:
+              - generic [ref=e721]: Barrel
+            - gridcell [ref=e722]
+            - gridcell [ref=e723]
+            - gridcell [ref=e724]
+            - gridcell [ref=e725]
+            - gridcell "0" [ref=e726]:
+              - generic [ref=e727]: "0"
+            - gridcell [ref=e728]
+            - gridcell [ref=e729]
+            - gridcell [ref=e730]
+            - gridcell [ref=e731]
+            - gridcell [ref=e732]
+            - gridcell [ref=e733]
+            - gridcell [ref=e734]
+          - row "Select Row PIDAA001080-1 In Process ALBATROSS AMERICA, INC All Type Fence Co IFS Demo 07/23/2026 WRAA000928 Barrelo 0" [ref=e735]:
+            - gridcell "Select Row" [ref=e736]:
+              - checkbox "Select Row" [ref=e737]: 
+            - gridcell "PIDAA001080-1" [ref=e738]:
+              - link "PIDAA001080-1" [ref=e739] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/d8ccca1e-fa43-4adf-a5d6-005fefc4813c/package/cf44e821-48c9-4aee-a132-36a509161473/general
+            - gridcell "In Process" [ref=e740]:
+              - generic [ref=e741]: In Process
+            - gridcell "ALBATROSS AMERICA, INC" [ref=e742]:
+              - generic [ref=e743]: ALBATROSS AMERICA, INC
+            - gridcell "All Type Fence Co" [ref=e744]:
+              - generic [ref=e745]: All Type Fence Co
+            - gridcell "IFS Demo" [ref=e746]:
+              - generic [ref=e747]: IFS Demo
+            - gridcell "07/23/2026" [ref=e748]:
+              - generic [ref=e749]: 07/23/2026
+            - gridcell "WRAA000928" [ref=e750]:
+              - link "WRAA000928" [ref=e751] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/d8ccca1e-fa43-4adf-a5d6-005fefc4813c/general
+            - gridcell "Barrelo" [ref=e752]:
+              - generic [ref=e753]: Barrelo
+            - gridcell [ref=e754]
+            - gridcell [ref=e755]
+            - gridcell [ref=e756]
+            - gridcell [ref=e757]
+            - gridcell "0" [ref=e758]:
+              - generic [ref=e759]: "0"
+            - gridcell [ref=e760]
+            - gridcell [ref=e761]
+            - gridcell [ref=e762]
+            - gridcell [ref=e763]
+            - gridcell [ref=e764]
+            - gridcell [ref=e765]
+            - gridcell [ref=e766]
+          - row "Select Row PIDAA001079 In Process IFS Demo 07/23/2026 WRAA000927 10 8.8 6.8 0.4 0.35 25.4 22.35 17.27 0.18 0.01 KIOOO" [ref=e767]:
+            - gridcell "Select Row" [ref=e768]:
+              - checkbox "Select Row" [ref=e769]: 
+            - gridcell "PIDAA001079" [ref=e770]:
+              - link "PIDAA001079" [ref=e771] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/6765d299-9219-4d61-a11d-7b64b4d6f542/package/8537e868-a42e-4b1d-9491-f3ef4cf840f7/general
+            - gridcell "In Process" [ref=e772]:
+              - generic [ref=e773]: In Process
+            - gridcell [ref=e774]
+            - gridcell [ref=e775]
+            - gridcell "IFS Demo" [ref=e776]:
+              - generic [ref=e777]: IFS Demo
+            - gridcell "07/23/2026" [ref=e778]:
+              - generic [ref=e779]: 07/23/2026
+            - gridcell "WRAA000927" [ref=e780]:
+              - link "WRAA000927" [ref=e781] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/6765d299-9219-4d61-a11d-7b64b4d6f542/general
+            - gridcell [ref=e782]
+            - gridcell "10" [ref=e783]:
+              - generic [ref=e784]: "10"
+            - gridcell "8.8" [ref=e785]:
+              - generic [ref=e786]: "8.8"
+            - gridcell "6.8" [ref=e787]:
+              - generic [ref=e788]: "6.8"
+            - gridcell "0.4" [ref=e789]:
+              - generic [ref=e790]: "0.4"
+            - gridcell "0.35" [ref=e791]:
+              - generic [ref=e792]: "0.35"
+            - gridcell "25.4" [ref=e793]:
+              - generic [ref=e794]: "25.4"
+            - gridcell "22.35" [ref=e795]:
+              - generic [ref=e796]: "22.35"
+            - gridcell "17.27" [ref=e797]:
+              - generic [ref=e798]: "17.27"
+            - gridcell "0.18" [ref=e799]:
+              - generic [ref=e800]: "0.18"
+            - gridcell "0.01" [ref=e801]:
+              - generic [ref=e802]: "0.01"
+            - gridcell "KIOOO" [ref=e803]:
+              - generic [ref=e804]: KIOOO
+            - gridcell [ref=e805]
+          - row "Select Row PIDAA001078-2 In Process 100 SM Brewing 10000R's Cafe IFS Demo 07/23/2026 WRAA000926 Case 10 10 10 60 0.58 25.4 25.4 25.4 27.22 0.02" [ref=e806]:
+            - gridcell "Select Row" [ref=e807]:
+              - checkbox "Select Row" [ref=e808]: 
+            - gridcell "PIDAA001078-2" [ref=e809]:
+              - link "PIDAA001078-2" [ref=e810] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/86174890-0223-4c59-bc6d-84859f4d3cc8/package/63047f8c-8ef0-419c-bb5b-a40225eeb4cb/general
+            - gridcell "In Process" [ref=e811]:
+              - generic [ref=e812]: In Process
+            - gridcell "100 SM Brewing" [ref=e813]:
+              - generic [ref=e814]: 100 SM Brewing
+            - gridcell "10000R's Cafe" [ref=e815]:
+              - generic [ref=e816]: 10000R's Cafe
+            - gridcell "IFS Demo" [ref=e817]:
+              - generic [ref=e818]: IFS Demo
+            - gridcell "07/23/2026" [ref=e819]:
+              - generic [ref=e820]: 07/23/2026
+            - gridcell "WRAA000926" [ref=e821]:
+              - link "WRAA000926" [ref=e822] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/86174890-0223-4c59-bc6d-84859f4d3cc8/general
+            - gridcell "Case" [ref=e823]:
+              - generic [ref=e824]: Case
+            - gridcell "10" [ref=e825]:
+              - generic [ref=e826]: "10"
+            - gridcell "10" [ref=e827]:
+              - generic [ref=e828]: "10"
+            - gridcell "10" [ref=e829]:
+              - generic [ref=e830]: "10"
+            - gridcell "60" [ref=e831]:
+              - generic [ref=e832]: "60"
+            - gridcell "0.58" [ref=e833]:
+              - generic [ref=e834]: "0.58"
+            - gridcell "25.4" [ref=e835]:
+              - generic [ref=e836]: "25.4"
+            - gridcell "25.4" [ref=e837]:
+              - generic [ref=e838]: "25.4"
+            - gridcell "25.4" [ref=e839]:
+              - generic [ref=e840]: "25.4"
+            - gridcell "27.22" [ref=e841]:
+              - generic [ref=e842]: "27.22"
+            - gridcell "0.02" [ref=e843]:
+              - generic [ref=e844]: "0.02"
+            - gridcell [ref=e845]
+            - gridcell [ref=e846]
+          - row "Select Row PIDAA001078-1 In Process 100 SM Brewing 10000R's Cafe IFS Demo 07/23/2026 WRAA000926 Barrel 10 10 50 0 25.4 25.4 22.68" [ref=e847]:
+            - gridcell "Select Row" [ref=e848]:
+              - checkbox "Select Row" [ref=e849]: 
+            - gridcell "PIDAA001078-1" [ref=e850]:
+              - link "PIDAA001078-1" [ref=e851] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/86174890-0223-4c59-bc6d-84859f4d3cc8/package/fd520a0c-3d38-4055-b1f7-a8ad9c0ddcda/general
+            - gridcell "In Process" [ref=e852]:
+              - generic [ref=e853]: In Process
+            - gridcell "100 SM Brewing" [ref=e854]:
+              - generic [ref=e855]: 100 SM Brewing
+            - gridcell "10000R's Cafe" [ref=e856]:
+              - generic [ref=e857]: 10000R's Cafe
+            - gridcell "IFS Demo" [ref=e858]:
+              - generic [ref=e859]: IFS Demo
+            - gridcell "07/23/2026" [ref=e860]:
+              - generic [ref=e861]: 07/23/2026
+            - gridcell "WRAA000926" [ref=e862]:
+              - link "WRAA000926" [ref=e863] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/86174890-0223-4c59-bc6d-84859f4d3cc8/general
+            - gridcell "Barrel" [ref=e864]:
+              - generic [ref=e865]: Barrel
+            - gridcell "10" [ref=e866]:
+              - generic [ref=e867]: "10"
+            - gridcell "10" [ref=e868]:
+              - generic [ref=e869]: "10"
+            - gridcell [ref=e870]
+            - gridcell "50" [ref=e871]:
+              - generic [ref=e872]: "50"
+            - gridcell "0" [ref=e873]:
+              - generic [ref=e874]: "0"
+            - gridcell "25.4" [ref=e875]:
+              - generic [ref=e876]: "25.4"
+            - gridcell "25.4" [ref=e877]:
+              - generic [ref=e878]: "25.4"
+            - gridcell [ref=e879]
+            - gridcell "22.68" [ref=e880]:
+              - generic [ref=e881]: "22.68"
+            - gridcell [ref=e882]
+            - gridcell [ref=e883]
+            - gridcell [ref=e884]
+          - row "Select Row PIDAA001077-8 In Process IFS Demo 07/23/2026 Barreling 37.5 55 65 100 77.58 95.25 139.7 165.1 45.36 2.2" [ref=e885]:
+            - gridcell "Select Row" [ref=e886]:
+              - checkbox "Select Row" [ref=e887]: 
+            - gridcell "PIDAA001077-8" [ref=e888]:
+              - link "PIDAA001077-8" [ref=e889] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/0/package/43273eb2-fb6b-419b-b877-05fbfdea9e4e/general
+            - gridcell "In Process" [ref=e890]:
+              - generic [ref=e891]: In Process
+            - gridcell [ref=e892]
+            - gridcell [ref=e893]
+            - gridcell "IFS Demo" [ref=e894]:
+              - generic [ref=e895]: IFS Demo
+            - gridcell "07/23/2026" [ref=e896]:
+              - generic [ref=e897]: 07/23/2026
+            - gridcell [ref=e898]
+            - gridcell "Barreling" [ref=e899]:
+              - generic [ref=e900]: Barreling
+            - gridcell "37.5" [ref=e901]:
+              - generic [ref=e902]: "37.5"
+            - gridcell "55" [ref=e903]:
+              - generic [ref=e904]: "55"
+            - gridcell "65" [ref=e905]:
+              - generic [ref=e906]: "65"
+            - gridcell "100" [ref=e907]:
+              - generic [ref=e908]: "100"
+            - gridcell "77.58" [ref=e909]:
+              - generic [ref=e910]: "77.58"
+            - gridcell "95.25" [ref=e911]:
+              - generic [ref=e912]: "95.25"
+            - gridcell "139.7" [ref=e913]:
+              - generic [ref=e914]: "139.7"
+            - gridcell "165.1" [ref=e915]:
+              - generic [ref=e916]: "165.1"
+            - gridcell "45.36" [ref=e917]:
+              - generic [ref=e918]: "45.36"
+            - gridcell "2.2" [ref=e919]:
+              - generic [ref=e920]: "2.2"
+            - gridcell [ref=e921]
+            - gridcell [ref=e922]
+          - row "Select Row PIDAA001077-7 In Process IFS Demo 07/23/2026 Barreling 37.5 55 65 100 77.58 95.25 139.7 165.1 45.36 2.2" [ref=e923]:
+            - gridcell "Select Row" [ref=e924]:
+              - checkbox "Select Row" [ref=e925]: 
+            - gridcell "PIDAA001077-7" [ref=e926]:
+              - link "PIDAA001077-7" [ref=e927] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/0/package/87e8f6fd-bc84-44e5-96e2-ac872619366a/general
+            - gridcell "In Process" [ref=e928]:
+              - generic [ref=e929]: In Process
+            - gridcell [ref=e930]
+            - gridcell [ref=e931]
+            - gridcell "IFS Demo" [ref=e932]:
+              - generic [ref=e933]: IFS Demo
+            - gridcell "07/23/2026" [ref=e934]:
+              - generic [ref=e935]: 07/23/2026
+            - gridcell [ref=e936]
+            - gridcell "Barreling" [ref=e937]:
+              - generic [ref=e938]: Barreling
+            - gridcell "37.5" [ref=e939]:
+              - generic [ref=e940]: "37.5"
+            - gridcell "55" [ref=e941]:
+              - generic [ref=e942]: "55"
+            - gridcell "65" [ref=e943]:
+              - generic [ref=e944]: "65"
+            - gridcell "100" [ref=e945]:
+              - generic [ref=e946]: "100"
+            - gridcell "77.58" [ref=e947]:
+              - generic [ref=e948]: "77.58"
+            - gridcell "95.25" [ref=e949]:
+              - generic [ref=e950]: "95.25"
+            - gridcell "139.7" [ref=e951]:
+              - generic [ref=e952]: "139.7"
+            - gridcell "165.1" [ref=e953]:
+              - generic [ref=e954]: "165.1"
+            - gridcell "45.36" [ref=e955]:
+              - generic [ref=e956]: "45.36"
+            - gridcell "2.2" [ref=e957]:
+              - generic [ref=e958]: "2.2"
+            - gridcell [ref=e959]
+            - gridcell [ref=e960]
+          - row "Select Row PIDAA001077-6 In Process IFS Demo 07/23/2026 Barreling 37.5 55 65 100 77.58 95.25 139.7 165.1 45.36 2.2" [ref=e961]:
+            - gridcell "Select Row" [ref=e962]:
+              - checkbox "Select Row" [ref=e963]: 
+            - gridcell "PIDAA001077-6" [ref=e964]:
+              - link "PIDAA001077-6" [ref=e965] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/0/package/26a4cb03-4aff-49d3-b50d-56bd19678c9f/general
+            - gridcell "In Process" [ref=e966]:
+              - generic [ref=e967]: In Process
+            - gridcell [ref=e968]
+            - gridcell [ref=e969]
+            - gridcell "IFS Demo" [ref=e970]:
+              - generic [ref=e971]: IFS Demo
+            - gridcell "07/23/2026" [ref=e972]:
+              - generic [ref=e973]: 07/23/2026
+            - gridcell [ref=e974]
+            - gridcell "Barreling" [ref=e975]:
+              - generic [ref=e976]: Barreling
+            - gridcell "37.5" [ref=e977]:
+              - generic [ref=e978]: "37.5"
+            - gridcell "55" [ref=e979]:
+              - generic [ref=e980]: "55"
+            - gridcell "65" [ref=e981]:
+              - generic [ref=e982]: "65"
+            - gridcell "100" [ref=e983]:
+              - generic [ref=e984]: "100"
+            - gridcell "77.58" [ref=e985]:
+              - generic [ref=e986]: "77.58"
+            - gridcell "95.25" [ref=e987]:
+              - generic [ref=e988]: "95.25"
+            - gridcell "139.7" [ref=e989]:
+              - generic [ref=e990]: "139.7"
+            - gridcell "165.1" [ref=e991]:
+              - generic [ref=e992]: "165.1"
+            - gridcell "45.36" [ref=e993]:
+              - generic [ref=e994]: "45.36"
+            - gridcell "2.2" [ref=e995]:
+              - generic [ref=e996]: "2.2"
+            - gridcell [ref=e997]
+            - gridcell [ref=e998]
+          - row "Select Row PIDAA001077-5 In Process IFS Demo 07/23/2026 Barreling 37.5 55 65 100 77.58 95.25 139.7 165.1 45.36 2.2" [ref=e999]:
+            - gridcell "Select Row" [ref=e1000]:
+              - checkbox "Select Row" [ref=e1001]: 
+            - gridcell "PIDAA001077-5" [ref=e1002]:
+              - link "PIDAA001077-5" [ref=e1003] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/0/package/78753e80-7e5d-4d3f-a6e3-3f9d44b482dd/general
+            - gridcell "In Process" [ref=e1004]:
+              - generic [ref=e1005]: In Process
+            - gridcell [ref=e1006]
+            - gridcell [ref=e1007]
+            - gridcell "IFS Demo" [ref=e1008]:
+              - generic [ref=e1009]: IFS Demo
+            - gridcell "07/23/2026" [ref=e1010]:
+              - generic [ref=e1011]: 07/23/2026
+            - gridcell [ref=e1012]
+            - gridcell "Barreling" [ref=e1013]:
+              - generic [ref=e1014]: Barreling
+            - gridcell "37.5" [ref=e1015]:
+              - generic [ref=e1016]: "37.5"
+            - gridcell "55" [ref=e1017]:
+              - generic [ref=e1018]: "55"
+            - gridcell "65" [ref=e1019]:
+              - generic [ref=e1020]: "65"
+            - gridcell "100" [ref=e1021]:
+              - generic [ref=e1022]: "100"
+            - gridcell "77.58" [ref=e1023]:
+              - generic [ref=e1024]: "77.58"
+            - gridcell "95.25" [ref=e1025]:
+              - generic [ref=e1026]: "95.25"
+            - gridcell "139.7" [ref=e1027]:
+              - generic [ref=e1028]: "139.7"
+            - gridcell "165.1" [ref=e1029]:
+              - generic [ref=e1030]: "165.1"
+            - gridcell "45.36" [ref=e1031]:
+              - generic [ref=e1032]: "45.36"
+            - gridcell "2.2" [ref=e1033]:
+              - generic [ref=e1034]: "2.2"
+            - gridcell [ref=e1035]
+            - gridcell [ref=e1036]
+          - row "Select Row PIDAA001077-4 In Process IFS Demo 07/23/2026 Barreling 37.5 55 65 100 77.58 95.25 139.7 165.1 45.36 2.2" [ref=e1037]:
+            - gridcell "Select Row" [ref=e1038]:
+              - checkbox "Select Row" [ref=e1039]: 
+            - gridcell "PIDAA001077-4" [ref=e1040]:
+              - link "PIDAA001077-4" [ref=e1041] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/0/package/dac0deba-4a54-4154-9765-d006f3dafb84/general
+            - gridcell "In Process" [ref=e1042]:
+              - generic [ref=e1043]: In Process
+            - gridcell [ref=e1044]
+            - gridcell [ref=e1045]
+            - gridcell "IFS Demo" [ref=e1046]:
+              - generic [ref=e1047]: IFS Demo
+            - gridcell "07/23/2026" [ref=e1048]:
+              - generic [ref=e1049]: 07/23/2026
+            - gridcell [ref=e1050]
+            - gridcell "Barreling" [ref=e1051]:
+              - generic [ref=e1052]: Barreling
+            - gridcell "37.5" [ref=e1053]:
+              - generic [ref=e1054]: "37.5"
+            - gridcell "55" [ref=e1055]:
+              - generic [ref=e1056]: "55"
+            - gridcell "65" [ref=e1057]:
+              - generic [ref=e1058]: "65"
+            - gridcell "100" [ref=e1059]:
+              - generic [ref=e1060]: "100"
+            - gridcell "77.58" [ref=e1061]:
+              - generic [ref=e1062]: "77.58"
+            - gridcell "95.25" [ref=e1063]:
+              - generic [ref=e1064]: "95.25"
+            - gridcell "139.7" [ref=e1065]:
+              - generic [ref=e1066]: "139.7"
+            - gridcell "165.1" [ref=e1067]:
+              - generic [ref=e1068]: "165.1"
+            - gridcell "45.36" [ref=e1069]:
+              - generic [ref=e1070]: "45.36"
+            - gridcell "2.2" [ref=e1071]:
+              - generic [ref=e1072]: "2.2"
+            - gridcell [ref=e1073]
+            - gridcell [ref=e1074]
+          - row "Select Row PIDAA001077-3 In Process IFS Demo 07/23/2026 Barreling 37.5 55 65 100 77.58 95.25 139.7 165.1 45.36 2.2" [ref=e1075]:
+            - gridcell "Select Row" [ref=e1076]:
+              - checkbox "Select Row" [ref=e1077]: 
+            - gridcell "PIDAA001077-3" [ref=e1078]:
+              - link "PIDAA001077-3" [ref=e1079] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/0/package/39d42293-a5cd-4370-9c0b-f69c85b87d33/general
+            - gridcell "In Process" [ref=e1080]:
+              - generic [ref=e1081]: In Process
+            - gridcell [ref=e1082]
+            - gridcell [ref=e1083]
+            - gridcell "IFS Demo" [ref=e1084]:
+              - generic [ref=e1085]: IFS Demo
+            - gridcell "07/23/2026" [ref=e1086]:
+              - generic [ref=e1087]: 07/23/2026
+            - gridcell [ref=e1088]
+            - gridcell "Barreling" [ref=e1089]:
+              - generic [ref=e1090]: Barreling
+            - gridcell "37.5" [ref=e1091]:
+              - generic [ref=e1092]: "37.5"
+            - gridcell "55" [ref=e1093]:
+              - generic [ref=e1094]: "55"
+            - gridcell "65" [ref=e1095]:
+              - generic [ref=e1096]: "65"
+            - gridcell "100" [ref=e1097]:
+              - generic [ref=e1098]: "100"
+            - gridcell "77.58" [ref=e1099]:
+              - generic [ref=e1100]: "77.58"
+            - gridcell "95.25" [ref=e1101]:
+              - generic [ref=e1102]: "95.25"
+            - gridcell "139.7" [ref=e1103]:
+              - generic [ref=e1104]: "139.7"
+            - gridcell "165.1" [ref=e1105]:
+              - generic [ref=e1106]: "165.1"
+            - gridcell "45.36" [ref=e1107]:
+              - generic [ref=e1108]: "45.36"
+            - gridcell "2.2" [ref=e1109]:
+              - generic [ref=e1110]: "2.2"
+            - gridcell [ref=e1111]
+            - gridcell [ref=e1112]
+          - row "Select Row PIDAA001077-2 In Process IFS Demo 07/23/2026 Barreling 37.5 55 65 100 77.58 95.25 139.7 165.1 45.36 2.2" [ref=e1113]:
+            - gridcell "Select Row" [ref=e1114]:
+              - checkbox "Select Row" [ref=e1115]: 
+            - gridcell "PIDAA001077-2" [ref=e1116]:
+              - link "PIDAA001077-2" [ref=e1117] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/0/package/2aa9bd3b-7f8d-43b9-936f-fe566ab9df7a/general
+            - gridcell "In Process" [ref=e1118]:
+              - generic [ref=e1119]: In Process
+            - gridcell [ref=e1120]
+            - gridcell [ref=e1121]
+            - gridcell "IFS Demo" [ref=e1122]:
+              - generic [ref=e1123]: IFS Demo
+            - gridcell "07/23/2026" [ref=e1124]:
+              - generic [ref=e1125]: 07/23/2026
+            - gridcell [ref=e1126]
+            - gridcell "Barreling" [ref=e1127]:
+              - generic [ref=e1128]: Barreling
+            - gridcell "37.5" [ref=e1129]:
+              - generic [ref=e1130]: "37.5"
+            - gridcell "55" [ref=e1131]:
+              - generic [ref=e1132]: "55"
+            - gridcell "65" [ref=e1133]:
+              - generic [ref=e1134]: "65"
+            - gridcell "100" [ref=e1135]:
+              - generic [ref=e1136]: "100"
+            - gridcell "77.58" [ref=e1137]:
+              - generic [ref=e1138]: "77.58"
+            - gridcell "95.25" [ref=e1139]:
+              - generic [ref=e1140]: "95.25"
+            - gridcell "139.7" [ref=e1141]:
+              - generic [ref=e1142]: "139.7"
+            - gridcell "165.1" [ref=e1143]:
+              - generic [ref=e1144]: "165.1"
+            - gridcell "45.36" [ref=e1145]:
+              - generic [ref=e1146]: "45.36"
+            - gridcell "2.2" [ref=e1147]:
+              - generic [ref=e1148]: "2.2"
+            - gridcell [ref=e1149]
+            - gridcell [ref=e1150]
+          - row "Select Row PIDAA001077-1 In Process IFS Demo 07/23/2026 Barreling 37.5 55 65 100 77.58 95.25 139.7 165.1 45.36 2.2" [ref=e1151]:
+            - gridcell "Select Row" [ref=e1152]:
+              - checkbox "Select Row" [ref=e1153]: 
+            - gridcell "PIDAA001077-1" [ref=e1154]:
+              - link "PIDAA001077-1" [ref=e1155] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/0/package/43d65fa6-20b4-4138-b62a-bf9e247f501b/general
+            - gridcell "In Process" [ref=e1156]:
+              - generic [ref=e1157]: In Process
+            - gridcell [ref=e1158]
+            - gridcell [ref=e1159]
+            - gridcell "IFS Demo" [ref=e1160]:
+              - generic [ref=e1161]: IFS Demo
+            - gridcell "07/23/2026" [ref=e1162]:
+              - generic [ref=e1163]: 07/23/2026
+            - gridcell [ref=e1164]
+            - gridcell "Barreling" [ref=e1165]:
+              - generic [ref=e1166]: Barreling
+            - gridcell "37.5" [ref=e1167]:
+              - generic [ref=e1168]: "37.5"
+            - gridcell "55" [ref=e1169]:
+              - generic [ref=e1170]: "55"
+            - gridcell "65" [ref=e1171]:
+              - generic [ref=e1172]: "65"
+            - gridcell "100" [ref=e1173]:
+              - generic [ref=e1174]: "100"
+            - gridcell "77.58" [ref=e1175]:
+              - generic [ref=e1176]: "77.58"
+            - gridcell "95.25" [ref=e1177]:
+              - generic [ref=e1178]: "95.25"
+            - gridcell "139.7" [ref=e1179]:
+              - generic [ref=e1180]: "139.7"
+            - gridcell "165.1" [ref=e1181]:
+              - generic [ref=e1182]: "165.1"
+            - gridcell "45.36" [ref=e1183]:
+              - generic [ref=e1184]: "45.36"
+            - gridcell "2.2" [ref=e1185]:
+              - generic [ref=e1186]: "2.2"
+            - gridcell [ref=e1187]
+            - gridcell [ref=e1188]
+          - row "Select Row PIDAA001076-7 In Process IFS Demo 07/23/2026 Fenko 85 33 65 222 105.51 215.9 83.82 165.1 100.7 2.99" [ref=e1189]:
+            - gridcell "Select Row" [ref=e1190]:
+              - checkbox "Select Row" [ref=e1191]: 
+            - gridcell "PIDAA001076-7" [ref=e1192]:
+              - link "PIDAA001076-7" [ref=e1193] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/0/package/620bc53e-d2b2-4ffc-9f35-ea214ed65a89/general
+            - gridcell "In Process" [ref=e1194]:
+              - generic [ref=e1195]: In Process
+            - gridcell [ref=e1196]
+            - gridcell [ref=e1197]
+            - gridcell "IFS Demo" [ref=e1198]:
+              - generic [ref=e1199]: IFS Demo
+            - gridcell "07/23/2026" [ref=e1200]:
+              - generic [ref=e1201]: 07/23/2026
+            - gridcell [ref=e1202]
+            - gridcell "Fenko" [ref=e1203]:
+              - generic [ref=e1204]: Fenko
+            - gridcell "85" [ref=e1205]:
+              - generic [ref=e1206]: "85"
+            - gridcell "33" [ref=e1207]:
+              - generic [ref=e1208]: "33"
+            - gridcell "65" [ref=e1209]:
+              - generic [ref=e1210]: "65"
+            - gridcell "222" [ref=e1211]:
+              - generic [ref=e1212]: "222"
+            - gridcell "105.51" [ref=e1213]:
+              - generic [ref=e1214]: "105.51"
+            - gridcell "215.9" [ref=e1215]:
+              - generic [ref=e1216]: "215.9"
+            - gridcell "83.82" [ref=e1217]:
+              - generic [ref=e1218]: "83.82"
+            - gridcell "165.1" [ref=e1219]:
+              - generic [ref=e1220]: "165.1"
+            - gridcell "100.7" [ref=e1221]:
+              - generic [ref=e1222]: "100.7"
+            - gridcell "2.99" [ref=e1223]:
+              - generic [ref=e1224]: "2.99"
+            - gridcell [ref=e1225]
+            - gridcell [ref=e1226]
+      - generic [ref=e1228]:
+        - generic [ref=e1229]: 1-25 of 12713 items
+        - generic [ref=e1230]:
+          - generic [ref=e1231]:
+            - button "Go to the first page":
+              - note "Go to the first page"
+            - button "Go to the previous page":
+              - note "Go to the previous page"
+          - list [ref=e1233]:
+            - listitem [ref=e1234]:
+              - button "Page 1" [ref=e1235]: "1"
+            - listitem [ref=e1236]:
+              - button "Page 2" [ref=e1237] [cursor=pointer]: "2"
+            - listitem [ref=e1238]:
+              - button "Page 3" [ref=e1239] [cursor=pointer]: "3"
+            - listitem [ref=e1240]:
+              - button "Page 4" [ref=e1241] [cursor=pointer]: "4"
+            - listitem [ref=e1242]:
+              - button "Page 5" [ref=e1243] [cursor=pointer]: "5"
+            - listitem [ref=e1244]:
+              - button "Page 6" [ref=e1245] [cursor=pointer]: "6"
+            - listitem [ref=e1246]:
+              - button "Page 7" [ref=e1247] [cursor=pointer]: "7"
+            - listitem [ref=e1248]:
+              - button "Page 8" [ref=e1249] [cursor=pointer]: "8"
+            - listitem [ref=e1250]:
+              - button "Page 9" [ref=e1251] [cursor=pointer]: "9"
+            - listitem [ref=e1252]:
+              - button "Page 10" [ref=e1253] [cursor=pointer]: "10"
+            - listitem [ref=e1254]:
+              - button "Page 11" [ref=e1255] [cursor=pointer]: ...
+          - generic [ref=e1256]:
+            - button "Go to the next page" [ref=e1257] [cursor=pointer]:
+              - note "Go to the next page" [ref=e1258]
+            - button "Go to the last page" [ref=e1259] [cursor=pointer]:
+              - note "Go to the last page" [ref=e1260]
+        - button "25 per page" [ref=e1262] [cursor=pointer]:
+          - generic [ref=e1263]: 25 per page
+  - button "AI Assistant AI" [ref=e1264] [cursor=pointer]:
+    - img "AI Assistant" [ref=e1265]
+    - text: AI
+```
+
+# Test source
+
+```ts
+  1  | const { expect } = require('@playwright/test');
+  2  | const utils = require('../../utils/CommonUtils');
+  3  | const LocatorHelper = require('../../utils/LocatorHelper');
+  4  | const LoginPageLocators = require('./loginPageLocators');
+  5  | const loginData = require('../../data/loginData.json');
+  6  | const env = require('../../config/env.prod.json');
+  7  | 
+  8  | class LoginPage extends LocatorHelper {
+  9  | 
+  10 |     constructor(page) {
+  11 |         super(page,LoginPageLocators);
+  12 |     }
+  13 | 
+  14 | 
+  15 |     async navigateToLoginPageURL() {
+  16 |         // Use Playwright baseURL from config and wait for initial DOM readiness.
+  17 |         await this.page.goto('/', {
+  18 |             waitUntil: 'domcontentloaded',
+  19 |             timeout: 120000,
+  20 |         });
+  21 |        // await this.page.pause();
+  22 |     
+  23 |     }
+  24 | 
+  25 |     async  verfiyLoginPageTitle() {
+  26 |         const logText = await this.locator('loginLogo').textContent();
+  27 |         expect(logText).toContain(loginData.DataVerify.appTitle,"Login Page Title does not match expected value");
+  28 |         console.log('Login Page Title verified successfully:', logText);
+  29 |     
+  30 |     }
+  31 | 
+  32 |     async validLogin() {
+  33 |      await this.locator('usernameField').fill(env.username);
+  34 |      await this.locator('passwordField').fill(env.password);
+  35 |      await this.locator('rememberMeCheckbox').click();
+  36 |      await this.locator('loginButton').click();
+  37 |      await utils.waitForLoaderToDisappear(this.locator('loginLoader'));
+  38 |         //await this.loginButton.click();
+  39 |     }
+  40 | 
+  41 |     async verifyUserLandingToWarehouseOrchestratorPage(){
+  42 |         const wrURL = this.page.url();
+  43 |         if(wrURL.includes(loginData.DataVerify.warehouseOrchestratorURL)){
+  44 |             console.log('User has successfully landed to Warehouse Orchestrator Page:', wrURL);
+  45 |         }
+  46 |         else{
+> 47 |             await this.page.locator('navLink').click();
+     |                                                ^ TimeoutError: locator.click: Timeout 30000ms exceeded.
+  48 |             const dropdownHeading = await utils.getDropdownValues(this.locator('dropdownHeadingSelector'));
+  49 |             console.log(dropdownHeading);
+  50 |             await this.locator('warehouseReceiptsTitle').click();
+  51 |             await utils.waitForLoaderToDisappear(this.locator('loaderNewTrue'));
+  52 | 
+  53 |         }
+  54 |         await this.page.pause();
+  55 |     }
+  56 | }
+  57 | 
+  58 | module.exports = LoginPage;
+  59 | 
+  60 | 
+  61 | 
+```

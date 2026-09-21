@@ -1,0 +1,12 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Pikill
+Selected value: Pikill
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: All Type Fence Co
+Selected value: All Type Fence Co
+Current location: Main
+Location is auto-populated: Main

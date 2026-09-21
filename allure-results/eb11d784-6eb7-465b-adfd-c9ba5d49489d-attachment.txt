@@ -1,0 +1,36 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Packages
+Selected value: Packages
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: Ameritrade Logistics
+Selected value: Ameritrade Logistics
+Current location: 
+Randomly selected value: Seatle
+Selected value: Seatle
+Randomly selected value: Alyssa diaz
+Selected value: Alyssa diaz
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: 200 Carats
+Selected value: 200 Carats
+Current location: 
+Randomly selected value: Sta. Ana Branch
+Selected value: Sta. Ana Branch
+Randomly selected value: Noah Lim
+Selected value: Noah Lim
+Agent is not specified. Clicking to select agent.
+Randomly selected value: Andres Lopez
+Selected value: Andres Lopez
+Current location: Main
+Location is auto-populated: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.
+Supplier is not specified. Clicking to select supplier.
+Randomly selected value: Default Consignee
+Selected value: Default Consignee
+Current location: 
+Randomly selected value: warehouse
+Selected value: warehouse

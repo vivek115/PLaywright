@@ -1,0 +1,13 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Locations UI
+Selected value: Locations UI
+Status is specified: Pre-Received
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: Andres Lopez
+Selected value: Andres Lopez
+Current location: Main
+Location is auto-populated: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.

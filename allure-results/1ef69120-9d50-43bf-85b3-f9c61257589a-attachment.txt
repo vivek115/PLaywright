@@ -1,0 +1,7 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed to Warehouse Orchestrator Page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+Items Nav Text Raw: 1-25 of 1559 items
+
+Items Nav Text: 1559
+WR Form is displaying on the screen
+Dropdown values: []

@@ -1,0 +1,19 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Mento
+Selected value: Mento
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: ALBATROSS AMERICA, INC
+Selected value: ALBATROSS AMERICA, INC
+Current location: Main
+Location is auto-populated: Main
+Current contact: 
+No options appeared in the point of contact dropdown; continuing.
+No point of contact is available; continuing.
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: CHRISTIAN TERAN
+Selected value: CHRISTIAN TERAN
+Current location: 

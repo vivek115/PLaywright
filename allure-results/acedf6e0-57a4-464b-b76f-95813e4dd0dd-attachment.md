@@ -1,0 +1,526 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: createWarehouseReceipts.spec.js >> Warehouse receipts >> Create warehouse receipt
+- Location: tests\createWarehouseReceipts.spec.js:10:5
+
+# Error details
+
+```
+TypeError: warehouseOptions.first is not a function
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - navigation [ref=e6]:
+        - paragraph [ref=e10] [cursor=pointer]: WMS
+        - generic [ref=e11]:
+          - list [ref=e12]:
+            - listitem [ref=e13]:
+              - link "Dashboard" [ref=e14] [cursor=pointer]:
+                - /url: /wms/dashboard
+            - listitem [ref=e15]:
+              - link "Orders" [ref=e16] [cursor=pointer]:
+                - /url: /wms/orders
+            - listitem [ref=e17]:
+              - link "Warehouse" [ref=e18] [cursor=pointer]:
+                - /url: /wms/warehouse
+            - listitem [ref=e19]:
+              - link "Locations" [ref=e20] [cursor=pointer]:
+                - /url: /wms/locations/list
+            - listitem [ref=e21]:
+              - link "Shipments" [ref=e22] [cursor=pointer]:
+                - /url: /wms/shipments
+            - listitem [ref=e23]:
+              - link "Tasks" [ref=e24] [cursor=pointer]:
+                - /url: /wms/tasks
+            - listitem [ref=e25]:
+              - link "Reports" [ref=e26] [cursor=pointer]:
+                - /url: /wms/reports
+            - listitem [ref=e27]:
+              - link "Settings" [ref=e28] [cursor=pointer]:
+                - /url: /wms/settings
+          - list [ref=e29]:
+            - listitem [ref=e30]:
+              - generic [ref=e31]:
+                - menuitem "Filter": Filter
+                - textbox "Search..." [ref=e32]
+            - listitem [ref=e33]:
+              - list [ref=e34]:
+                - listitem [ref=e35]:
+                  - generic [ref=e36] [cursor=pointer]: IFS Demo
+                  - list:
+                    - listitem:
+                      - generic: My Profile
+                    - listitem:
+                      - link "Logout":
+                        - /url: /logout
+    - generic [ref=e38]:
+      - generic [ref=e42] [cursor=pointer]:
+        - heading "SCRM" [level=4] [ref=e43]
+        - paragraph [ref=e44]: Manage Companies, Contacts & Quotes
+      - link "WMS WMS Manage Inventory, Packages & More" [ref=e46] [cursor=pointer]:
+        - /url: /wms
+        - img "WMS" [ref=e48]
+        - generic [ref=e49]:
+          - heading "WMS" [level=4] [ref=e50]
+          - paragraph [ref=e51]: Manage Inventory, Packages & More
+      - link "Dimensioner Dimensioner Capture Dimensions, Weight & Images" [ref=e53] [cursor=pointer]:
+        - /url: /dimensioner/capture
+        - img "Dimensioner" [ref=e55]
+        - generic [ref=e56]:
+          - heading "Dimensioner" [level=4] [ref=e57]
+          - paragraph [ref=e58]: Capture Dimensions, Weight & Images
+      - link "Workflows Workflows Manage Automations & More" [ref=e60] [cursor=pointer]:
+        - /url: /workflows/list
+        - img "Workflows" [ref=e62]
+        - generic [ref=e63]:
+          - heading "Workflows" [level=4] [ref=e64]
+          - paragraph [ref=e65]: Manage Automations & More
+      - generic [ref=e69] [cursor=pointer]:
+        - heading "Admin" [level=4] [ref=e70]
+        - paragraph [ref=e71]: Manage Users, Security, Modules and More
+  - generic [ref=e72]:
+    - generic [ref=e77]:
+      - heading "WR00000000" [level=2] [ref=e78]
+      - paragraph [ref=e79]: "Status: Pre-Received"
+    - generic [ref=e82]:
+      - generic [ref=e86]:
+        - navigation [ref=e89]:
+          - generic [ref=e92]:
+            - generic [ref=e93]: General
+            - generic [ref=e94]: Packages
+            - generic [ref=e95]: Items
+            - generic [ref=e96]: Charges & Expenses
+            - generic [ref=e97]: Notes
+            - generic [ref=e98]: Attachments
+            - generic [ref=e99]: Tasks
+            - generic [ref=e100]: Activities
+            - button "Menu" [ref=e104] [cursor=pointer]: Menu
+        - generic [ref=e111]:
+          - generic [ref=e112]:
+            - generic [ref=e113]:
+              - heading "Basic Information" [level=4] [ref=e114]
+              - generic [ref=e115]:
+                - generic [ref=e122] [cursor=pointer]:
+                  - combobox "Warehouse" [expanded] [ref=e123]:
+                    - listbox "Warehouse" [ref=e128]:
+                      - generic [ref=e129]: Warehouse
+                      - option [disabled] [ref=e130]:
+                        - searchbox [disabled] [active] [ref=e134]
+                      - button [ref=e135]:
+                        - img [ref=e136]
+                      - generic [ref=e138]:
+                        - option "Branch Issue" [ref=e139]:
+                          - generic [ref=e140]: Branch Issue
+                        - option "Chicago DC" [ref=e141]:
+                          - generic [ref=e142]: Chicago DC
+                        - option "Demo WH" [ref=e143]:
+                          - generic [ref=e144]: Demo WH
+                        - option "Doral WH" [ref=e145]:
+                          - generic [ref=e146]: Doral WH
+                        - option "Locations Preview" [ref=e147]:
+                          - generic [ref=e148]: Locations Preview
+                        - option "Locations UI" [ref=e149]:
+                          - generic [ref=e150]: Locations UI
+                        - option "Mento" [ref=e151]:
+                          - generic [ref=e152]: Mento
+                        - option "Packages" [ref=e153]:
+                          - generic [ref=e154]: Packages
+                        - option "Pikill" [ref=e155]:
+                          - generic [ref=e156]: Pikill
+                        - option "Position Utilization" [ref=e157]:
+                          - generic [ref=e158]: Position Utilization
+                        - option "prod testing branch" [ref=e159]:
+                          - generic [ref=e160]: prod testing branch
+                  - generic:
+                    - generic: Warehouse
+                - generic [ref=e168] [cursor=pointer]:
+                  - combobox "Status Pre-Received" [ref=e169]:
+                    - generic [ref=e173]: Pre-Received
+                  - generic:
+                    - generic: Status
+                - generic [ref=e177]:
+                  - paragraph [ref=e178]:
+                    - generic [ref=e179]: Created By
+                  - paragraph [ref=e180]:
+                    - generic [ref=e181]: IFS Demo
+              - generic [ref=e185]:
+                - paragraph [ref=e186]:
+                  - generic [ref=e187]: Created Date/Time
+                - paragraph [ref=e188]:
+                  - generic [ref=e189]: 09/07/2026 at 04:23 PM
+            - generic [ref=e190]:
+              - heading "Carrier" [level=4] [ref=e191]
+              - generic [ref=e192]:
+                - generic [ref=e199] [cursor=pointer]:
+                  - combobox "Carrier Name" [ref=e200]
+                  - generic:
+                    - generic: Carrier Name
+                - generic [ref=e211] [cursor=pointer]:
+                  - combobox "Driver" [ref=e212]
+                  - generic:
+                    - generic: Driver
+                - generic [ref=e221]:
+                  - textbox "Driver License No." [disabled] [ref=e222]
+                  - generic:
+                    - generic: Driver License No.
+              - generic [ref=e223]:
+                - generic [ref=e228] [cursor=pointer]:
+                  - textbox "No. of Pieces" [ref=e229]
+                  - generic:
+                    - generic: No. of Pieces
+                - generic [ref=e234] [cursor=pointer]:
+                  - textbox "Pro No." [ref=e235]
+                  - generic:
+                    - generic: Pro No.
+                - generic [ref=e240] [cursor=pointer]:
+                  - textbox "Tracking No." [ref=e241]
+                  - generic:
+                    - generic: Tracking No.
+            - generic [ref=e243]:
+              - heading "Shipper" [level=4] [ref=e244]
+              - generic [ref=e245]:
+                - generic [ref=e252] [cursor=pointer]:
+                  - combobox "Shipper Name" [ref=e253]
+                  - generic:
+                    - generic:
+                      - generic: Shipper Name
+                - generic [ref=e260]:
+                  - combobox "Location" [disabled] [ref=e261]
+                  - generic:
+                    - generic: Location
+                - paragraph [ref=e269]:
+                  - generic [ref=e270]: Address 1
+              - generic [ref=e271]:
+                - paragraph [ref=e275]:
+                  - generic [ref=e276]: Address 2
+                - paragraph [ref=e280]:
+                  - generic [ref=e281]: City
+                - generic [ref=e283]:
+                  - paragraph [ref=e287]:
+                    - generic [ref=e288]: State
+                  - paragraph [ref=e292]:
+                    - generic [ref=e293]: Zip Code
+              - generic [ref=e294]:
+                - paragraph [ref=e298]:
+                  - generic [ref=e299]: Country
+                - generic [ref=e306]:
+                  - combobox "Point Of Contact" [disabled] [ref=e307]
+                  - generic:
+                    - generic: Point Of Contact
+            - generic [ref=e313]:
+              - heading "Consignee" [level=4] [ref=e314]
+              - generic [ref=e315]:
+                - generic [ref=e322] [cursor=pointer]:
+                  - combobox "Consignee Name" [ref=e323]
+                  - generic:
+                    - generic:
+                      - generic: Consignee Name
+                - generic [ref=e330]:
+                  - combobox "Location" [disabled] [ref=e331]
+                  - generic:
+                    - generic: Location
+                - paragraph [ref=e339]:
+                  - generic [ref=e340]: Address 1
+              - generic [ref=e341]:
+                - paragraph [ref=e345]:
+                  - generic [ref=e346]: Address 2
+                - paragraph [ref=e350]:
+                  - generic [ref=e351]: City
+                - generic [ref=e353]:
+                  - paragraph [ref=e357]:
+                    - generic [ref=e358]: State
+                  - paragraph [ref=e362]:
+                    - generic [ref=e363]: Zip Code
+              - generic [ref=e364]:
+                - paragraph [ref=e368]:
+                  - generic [ref=e369]: Country
+                - generic [ref=e376]:
+                  - combobox "Point Of Contact" [disabled] [ref=e377]
+                  - generic:
+                    - generic: Point Of Contact
+            - generic [ref=e383]:
+              - heading "Agent" [level=4] [ref=e384]
+              - generic [ref=e385]:
+                - generic [ref=e392] [cursor=pointer]:
+                  - combobox "Agent Name" [ref=e393]
+                  - generic:
+                    - generic:
+                      - generic: Agent Name
+                - generic [ref=e400]:
+                  - combobox "Location" [disabled] [ref=e401]
+                  - generic:
+                    - generic: Location
+                - paragraph [ref=e409]:
+                  - generic [ref=e410]: Address 1
+              - generic [ref=e411]:
+                - paragraph [ref=e415]:
+                  - generic [ref=e416]: Address 2
+                - paragraph [ref=e420]:
+                  - generic [ref=e421]: City
+                - generic [ref=e423]:
+                  - paragraph [ref=e427]:
+                    - generic [ref=e428]: State
+                  - paragraph [ref=e432]:
+                    - generic [ref=e433]: Zip Code
+              - generic [ref=e434]:
+                - paragraph [ref=e438]:
+                  - generic [ref=e439]: Country
+                - generic [ref=e446]:
+                  - combobox "Point Of Contact" [disabled] [ref=e447]
+                  - generic:
+                    - generic: Point Of Contact
+            - generic [ref=e453]:
+              - heading "Supplier" [level=4] [ref=e454]
+              - generic [ref=e455]:
+                - generic [ref=e462] [cursor=pointer]:
+                  - combobox "Supplier Name" [ref=e463]
+                  - generic:
+                    - generic:
+                      - generic: Supplier Name
+                - generic [ref=e470]:
+                  - combobox "Location" [disabled] [ref=e471]
+                  - generic:
+                    - generic: Location
+                - paragraph [ref=e479]:
+                  - generic [ref=e480]: Address 1
+              - generic [ref=e481]:
+                - paragraph [ref=e485]:
+                  - generic [ref=e486]: Address 2
+                - paragraph [ref=e490]:
+                  - generic [ref=e491]: City
+                - generic [ref=e493]:
+                  - paragraph [ref=e497]:
+                    - generic [ref=e498]: State
+                  - paragraph [ref=e502]:
+                    - generic [ref=e503]: Zip Code
+              - generic [ref=e504]:
+                - paragraph [ref=e508]:
+                  - generic [ref=e509]: Country
+                - generic [ref=e513]:
+                  - paragraph [ref=e514]: Invoice No.
+                  - textbox "Enter Invoice No." [ref=e520]
+                - generic [ref=e525]:
+                  - paragraph [ref=e526]: PO No.
+                  - textbox "Enter PO No. or PO ID" [ref=e532]
+            - generic [ref=e534]:
+              - heading "Import Information" [level=4] [ref=e535]
+              - generic [ref=e536]:
+                - generic [ref=e543] [cursor=pointer]:
+                  - combobox "Receiving Type" [ref=e544]
+                  - generic:
+                    - generic: Receiving Type
+                - generic [ref=e553] [cursor=pointer]:
+                  - textbox "Entry Number" [ref=e554]
+                  - generic:
+                    - generic: Entry Number
+                - generic [ref=e558] [cursor=pointer]: Entry Date/Time
+            - generic [ref=e559]:
+              - heading "Bill To" [level=4] [ref=e560]
+              - generic [ref=e561]:
+                - generic [ref=e568] [cursor=pointer]:
+                  - combobox "Client Name" [ref=e569]
+                  - generic:
+                    - generic: Client Name
+                - generic [ref=e580] [cursor=pointer]:
+                  - combobox "Point of Contact" [ref=e581]
+                  - generic:
+                    - generic: Point of Contact
+            - generic [ref=e586]:
+              - heading "Custom Fields" [level=4] [ref=e587]
+              - generic [ref=e588]:
+                - generic [ref=e597] [cursor=pointer]:
+                  - combobox "WR Dropdown"
+                  - generic [ref=e599]: WR Dropdown
+                - generic [ref=e608] [cursor=pointer]:
+                  - combobox "WR Checkbox"
+                  - generic [ref=e610]: WR Checkbox
+                - generic [ref=e618]:
+                  - generic [ref=e619] [cursor=pointer]: WR Picker
+                  - textbox
+                - generic [ref=e627] [cursor=pointer]:
+                  - textbox "WR SLT Edit" [ref=e628]
+                  - generic [ref=e630]: WR SLT Edit
+                - generic [ref=e639] [cursor=pointer]:
+                  - combobox "WR DD Edit"
+                  - generic [ref=e641]: WR DD Edit
+                - generic [ref=e650] [cursor=pointer]:
+                  - combobox "WR MC Edit"
+                  - generic [ref=e652]: WR MC Edit
+                - generic [ref=e660]:
+                  - generic [ref=e661] [cursor=pointer]: WR DP Edit
+                  - textbox
+                - generic [ref=e669] [cursor=pointer]:
+                  - textbox "TechOps Ref No." [ref=e670]
+                  - generic [ref=e672]: TechOps Ref No.
+                - generic [ref=e679] [cursor=pointer]:
+                  - textbox "Reference No" [ref=e680]
+                  - generic [ref=e682]: Reference No
+                - generic [ref=e689] [cursor=pointer]:
+                  - textbox "Warehouse X" [ref=e690]
+                  - generic [ref=e692]: Warehouse X
+                - generic [ref=e701] [cursor=pointer]:
+                  - combobox "Instructions"
+                  - generic [ref=e703]: Instructions
+          - generic [ref=e705]:
+            - generic [ref=e706]:
+              - img [ref=e708]
+              - paragraph [ref=e710]: Do you want to create a warehouse receipt?
+            - generic [ref=e712]:
+              - button "Create" [disabled]: Create
+              - button "Cancel" [ref=e713] [cursor=pointer]: Cancel
+      - generic [ref=e714]:
+        - heading "Package Summary" [level=4] [ref=e715]
+        - generic [ref=e717]:
+          - generic [ref=e720]:
+            - img "Total Pieces" [ref=e722]
+            - generic [ref=e723]:
+              - paragraph [ref=e724]: Total Pieces
+              - heading "0" [level=4] [ref=e725]
+          - generic [ref=e728]:
+            - img "Total Weight" [ref=e730]
+            - generic [ref=e731]:
+              - paragraph [ref=e732]: Total Weight
+              - heading "0 lbs | 0 kg" [level=4] [ref=e733]
+          - generic [ref=e736]:
+            - img "Total Volume" [ref=e738]
+            - generic [ref=e739]:
+              - paragraph [ref=e740]: Total Volume
+              - heading "0 ft³ | 0 m³" [level=4] [ref=e741]
+          - generic [ref=e744]:
+            - img "Total Volume Weight" [ref=e746]
+            - generic [ref=e747]:
+              - paragraph [ref=e748]: Total Volume Weight
+              - heading "0 lbs | 0 kg" [level=4] [ref=e749]
+          - generic [ref=e752]:
+            - img "Total Value" [ref=e754]
+            - generic [ref=e755]:
+              - paragraph [ref=e756]: Total Value
+              - heading "$0.00" [level=4] [ref=e757]
+      - table [ref=e761]:
+        - rowgroup [ref=e762]:
+          - row "Package Type No. of Pieces No. of Units Volume (ft3) Volume (m3) Weight (Lbs) Weight (Kgs)" [ref=e763]:
+            - columnheader "Package Type" [ref=e764]:
+              - generic [ref=e766] [cursor=pointer]: Package Type
+            - columnheader "No. of Pieces" [ref=e768]:
+              - generic [ref=e770] [cursor=pointer]: No. of Pieces
+            - columnheader "No. of Units" [ref=e772]:
+              - generic [ref=e774] [cursor=pointer]: No. of Units
+            - columnheader "Volume (ft3)" [ref=e776]:
+              - generic [ref=e778] [cursor=pointer]:
+                - text: Volume (ft
+                - superscript [ref=e779]: "3"
+                - text: )
+            - columnheader "Volume (m3)" [ref=e781]:
+              - generic [ref=e783] [cursor=pointer]:
+                - text: Volume (m
+                - superscript [ref=e784]: "3"
+                - text: )
+            - columnheader "Weight (Lbs)" [ref=e786]:
+              - generic [ref=e788] [cursor=pointer]: Weight (Lbs)
+            - columnheader "Weight (Kgs)" [ref=e790]:
+              - generic [ref=e792] [cursor=pointer]: Weight (Kgs)
+        - rowgroup
+      - generic [ref=e795]:
+        - generic "Create Driver Contact" [ref=e796]:
+          - generic [ref=e797]:
+            - heading "Create Driver Contact" [level=2] [ref=e798]
+            - button [ref=e799] [cursor=pointer]
+        - generic:
+          - generic [ref=e802]:
+            - generic [ref=e807] [cursor=pointer]:
+              - textbox "First Name" [ref=e808]
+              - generic:
+                - generic: First Name
+            - generic [ref=e813] [cursor=pointer]:
+              - textbox "Last Name" [ref=e814]
+              - generic:
+                - generic: Last Name
+            - generic [ref=e819]:
+              - textbox "Roles" [disabled] [ref=e820]: Driver
+              - generic:
+                - generic: Roles
+            - generic [ref=e825] [cursor=pointer]:
+              - textbox "Driver License No." [ref=e826]
+              - generic:
+                - generic: Driver License No.
+            - generic [ref=e831] [cursor=pointer]:
+              - textbox "Email Address" [ref=e832]
+              - generic:
+                - generic: Email Address
+            - generic [ref=e837] [cursor=pointer]:
+              - textbox "Phone Number" [ref=e838]
+              - generic:
+                - generic: Phone Number
+            - generic [ref=e843] [cursor=pointer]:
+              - textbox "Extension" [ref=e844]
+              - generic:
+                - generic: Extension
+            - generic [ref=e851] [cursor=pointer]:
+              - combobox "Carrier Name" [ref=e852]
+              - generic:
+                - generic: Carrier Name
+          - generic [ref=e857]:
+            - button "Create" [disabled]: Create
+            - button "Create & Add Another" [disabled]: Create & Add Another
+            - button "Cancel" [ref=e858] [cursor=pointer]: Cancel
+  - button "AI Assistant AI" [ref=e859] [cursor=pointer]:
+    - img "AI Assistant" [ref=e860]
+    - text: AI
+```
+
+# Test source
+
+```ts
+  1  | const { expect } = require('@playwright/test');
+  2  | const utils = require('../../utils/CommonUtils');
+  3  | const LocatorHelper = require("../../utils/LocatorHelper");
+  4  | const wrData = require('../../data/warehouseReceiptData.json');
+  5  | const warehouseReceiptLocators = require('./warehouseReceiptLocators');
+  6  | 
+  7  | class WRPage extends LocatorHelper {
+  8  | 
+  9  |     constructor(page) {
+  10 |         super(page, warehouseReceiptLocators);
+  11 |     }
+  12 | 
+  13 |     async verifyWRForm() {
+  14 |         await this.locator('createNewButton').click();
+  15 |         await utils.waitForLoaderToDisappear(this.locator('loaderNewTrue'));
+  16 |         const wrHeadingText = await this.locator('wrHeading').textContent();
+  17 |         expect(wrHeadingText).toContain(wrData.wrGeneralFormURL.expectedHeading)
+  18 |         console.log("WR Form is displaying on the screen");
+  19 |     }
+  20 | 
+  21 |     async createWarehouseReceipts() {
+  22 |         await this.locator('warehouseReceiptField').click();
+  23 |         const warehouseOptions = this.locator('warehouseDropdownList').count();
+> 24 |         await expect(warehouseOptions.first()).toBeVisible();
+     |                                       ^ TypeError: warehouseOptions.first is not a function
+  25 |         const optionCount = await warehouseOptions.count();
+  26 |         const randomOption = warehouseOptions.nth(Math.floor(Math.random() * optionCount));
+  27 |         const randomWarehouse = (await randomOption.textContent()).trim();
+  28 |         console.log('Random Warehouse:', randomWarehouse);
+  29 |         await randomOption.scrollIntoViewIfNeeded();
+  30 |         await randomOption.click();
+  31 | 
+  32 |         // const warehouseDropdownlist = await utils.getDropdownValues(warehouseOptions);
+  33 |         // console.log(warehouseDropdownlist);
+  34 |         // await utils.selectRandomValue(warehouseOptions);
+  35 |     
+  36 |     }
+  37 | 
+  38 | }
+  39 | 
+  40 | module.exports = WRPage;
+```

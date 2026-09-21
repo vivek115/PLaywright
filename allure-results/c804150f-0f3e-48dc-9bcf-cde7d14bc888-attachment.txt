@@ -1,0 +1,21 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Mento
+Selected value: Mento
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: 11 S Beach Dr
+Selected value: 11 S Beach Dr
+Current location: 
+Randomly selected value: HQ
+Selected value: HQ
+Point of Contact field 'shipperContact' is not available; continuing.
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: 200 Carats
+Selected value: 200 Carats
+Current location: 
+Randomly selected value: Main
+Selected value: Main
+Current contact: 

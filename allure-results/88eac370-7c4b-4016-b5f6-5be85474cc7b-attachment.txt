@@ -1,0 +1,7 @@
+Login Page Title verified successfully: Sign in to Warehouse Orchestrator
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/packages
+Dropdown values: [ 'Warehouse Receipts', 'Inventory', 'Packages' ]
+1: Warehouse Receipts
+2: Inventory
+3: Packages
+[ 'Warehouse Receipts', 'Inventory', 'Packages' ]

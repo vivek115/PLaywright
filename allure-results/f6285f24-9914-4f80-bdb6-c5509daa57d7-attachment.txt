@@ -1,0 +1,34 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Pikill
+Selected value: Pikill
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: AMAZON.COM DEDC LLC
+Selected value: AMAZON.COM DEDC LLC
+Current location: Main
+Location is auto-populated: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: 100 SM Brewing
+Selected value: 100 SM Brewing
+Current location: 
+Randomly selected value: msin
+Selected value: msin
+Randomly selected value: p-u_se.r@gmail.com
+Selected value: p-u_se.r@gmail.com
+Agent is not specified. Clicking to select agent.
+Randomly selected value: Aarons Dairy Products
+Selected value: Aarons Dairy Products
+Current location: Main
+Location is auto-populated: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.
+Supplier is not specified. Clicking to select supplier.
+Randomly selected value: Drayage
+Selected value: Drayage
+Current location: Drayage
+Location is auto-populated: Drayage

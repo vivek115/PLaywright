@@ -1,0 +1,47 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Pikill
+Selected value: Pikill
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: 123 Heritage
+Selected value: 123 Heritage
+Current location: Main
+Location is auto-populated: Main
+Randomly selected value: test1 test2
+Selected value: test1 test2
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: Angels Ice Plant
+Selected value: Angels Ice Plant
+Current location: Main
+Location is auto-populated: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.
+Agent is not specified. Clicking to select agent.
+Randomly selected value: Angels Ice Plant
+Selected value: Angels Ice Plant
+Current location: Main
+Location is auto-populated: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.
+Supplier is not specified. Clicking to select supplier.
+Randomly selected value: 11 S Beach Dr
+Selected value: 11 S Beach Dr
+Current location: 
+Randomly selected value: HQ
+Selected value: HQ
+Menu options available:  [
+  'Create Task',
+  'Add to Task',
+  'Print Label',
+  'Download Images',
+  'Delete',
+  'Switch to List View'
+]
+Card view option not found in the menu options.
+Package form heading:  Create Multiple Packages
+Randomly selected value: Bulkhead
+Selected value: Bulkhead
+Rows found in the Kendo grid:  15

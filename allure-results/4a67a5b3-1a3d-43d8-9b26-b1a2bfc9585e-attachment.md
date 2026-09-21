@@ -1,0 +1,106 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: loginTest.spec.js >> Login test
+- Location: tests\loginTest.spec.js:3:1
+
+# Error details
+
+```
+ReferenceError: expect is not defined
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e6]:
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - img "Warehouse Orchestrator" [ref=e13]
+      - heading "Warehouse Orchestrator" [level=2] [ref=e14]
+    - paragraph [ref=e15]: Warehouse Orchestrator is an open ecosystem of software modules that allows warehouses and DCs to orchestrate their operations end to end without the need to migrate from their current software solutions. Our modules include Dimensioning, Supply Chain Portal, Workflows, and more.
+    - list [ref=e17]:
+      - listitem [ref=e18]: "Connect with us on:"
+      - listitem [ref=e19]:
+        - link "LinkedIn" [ref=e20] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/cyzerg/
+          - img [ref=e21]
+          - text: LinkedIn
+      - listitem [ref=e22]:
+        - link "Twitter" [ref=e23] [cursor=pointer]:
+          - /url: https://twitter.com/cyzergllc
+          - img [ref=e24]
+          - text: Twitter
+      - listitem [ref=e25]:
+        - link "Facebook" [ref=e26] [cursor=pointer]:
+          - /url: https://www.facebook.com/cyzerg
+          - img [ref=e27]
+          - text: Facebook
+  - generic [ref=e31]:
+    - heading "Welcome" [level=3] [ref=e32]
+    - paragraph [ref=e33]: Sign in to Warehouse Orchestrator
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - generic [ref=e40] [cursor=pointer]:
+          - textbox "Email Address" [ref=e41]
+          - generic:
+            - generic: Email Address
+        - generic [ref=e46] [cursor=pointer]:
+          - textbox "Password" [ref=e47]
+          - generic:
+            - generic: Password
+      - generic [ref=e49] [cursor=pointer]:
+        - generic [ref=e50]:
+          - checkbox "Remember Me" [ref=e51]
+          - generic:
+            - img
+        - generic [ref=e52]: Remember Me
+      - link "Forgot Password?" [ref=e53] [cursor=pointer]:
+        - /url: /auth/forgotpassword
+      - generic [ref=e54]:
+        - button "Sign In" [disabled]: Sign In
+```
+
+# Test source
+
+```ts
+  1  | 
+  2  | const utils = require('../../utils/CommonUtils');
+  3  | const LoginPageLocators = require('./loginPageLocators');
+  4  | 
+  5  | class LoginPage {
+  6  | 
+  7  |     constructor(page) {
+  8  |         this.page = page;
+  9  |     }
+  10 | 
+  11 | 
+  12 |     async navigateToLoginPageURL() {
+  13 |         // Use Playwright baseURL from config and wait for initial DOM readiness.
+  14 |         await this.page.goto('/', {
+  15 |             waitUntil: 'domcontentloaded',
+  16 |             timeout: 120000,
+  17 |         });
+  18 |         await this.page.pause();
+  19 |     
+  20 |     }
+  21 | 
+  22 |     async  verfiyLoginPageTitle() {
+  23 |         const title = await this.page.title();
+  24 |         console.log('Login Page Title:', title);
+> 25 |         expect(title).toBe('Login');
+     |         ^ ReferenceError: expect is not defined
+  26 |         console.log('Login Page Title verified successfully');
+  27 |     }
+  28 | }
+  29 | 
+  30 | module.exports = LoginPage;
+  31 | 
+  32 | 
+  33 | 
+```

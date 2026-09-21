@@ -1,0 +1,42 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Mento
+Selected value: Mento
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: ALBATROSS AMERICA, INC
+Selected value: ALBATROSS AMERICA, INC
+Current location: Main
+Location is auto-populated: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: 11 S Beach Dr
+Selected value: 11 S Beach Dr
+Current location: 
+Randomly selected value: Main
+Selected value: Main
+Randomly selected value: Kallie Lire
+Selected value: Kallie Lire
+Agent is not specified. Clicking to select agent.
+Randomly selected value: Angels Ice Plant
+Selected value: Angels Ice Plant
+Current location: Main
+Location is auto-populated: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.
+Supplier is not specified. Clicking to select supplier.
+Randomly selected value: All Type Fence Co
+Selected value: All Type Fence Co
+Current location: Main
+Location is auto-populated: Main
+Menu options available:  [
+  'Create Task',
+  'Add to Task',
+  'Print Label',
+  'Download Images',
+  'Delete',
+  'Switch to Card View'
+]

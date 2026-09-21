@@ -1,0 +1,13 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Mento
+Selected value: Mento
+Status is specified: Pre-Received
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: Braini Medical Supply
+Selected value: Braini Medical Supply
+Current location: 
+Randomly selected value: Cyzerg Test location
+Selected value: Cyzerg Test location
+Point of Contact 'consigneeContact' is disabled; continuing.

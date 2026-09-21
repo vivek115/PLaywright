@@ -1,0 +1,30 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Locations Preview
+Selected value: Locations Preview
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: Amazing Orchids
+Selected value: Amazing Orchids
+Current location: Main
+Location is auto-populated: Main
+Randomly selected value: Jessie James
+Selected value: Jessie James
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: 200 Carats
+Selected value: 200 Carats
+Current location: 
+Randomly selected value: Main
+Selected value: Main
+Randomly selected value: Ana Marie
+Selected value: Ana Marie
+Agent is not specified. Clicking to select agent.
+Randomly selected value: 100 SM Brewing
+Selected value: 100 SM Brewing
+Current location: 
+Randomly selected value: Main
+Selected value: Main
+Randomly selected value: Isa Cruz
+Selected value: Isa Cruz

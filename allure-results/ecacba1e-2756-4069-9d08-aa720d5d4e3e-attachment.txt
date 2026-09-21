@@ -1,0 +1,27 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Doral WH
+Selected value: Doral WH
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: Amazing Orchids
+Selected value: Amazing Orchids
+Current location: Main
+Location is auto-populated: Main
+Point of Contact 'shipperContact' is not available; continuing.
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: Alpha Star Research
+Selected value: Alpha Star Research
+Current location: 
+Randomly selected value: Main
+Selected value: Main
+Randomly selected value: Vincent Jayme
+Selected value: Vincent Jayme
+Agent is not specified. Clicking to select agent.
+Randomly selected value: BRASELVSIMPORTAPPLE34SECUREVIVE
+Selected value: BRASELVSIMPORTAPPLE34SECUREVIVE
+Current location: Main
+Location is auto-populated: Main
+Point of Contact is auto-populated: Vincent Jayme

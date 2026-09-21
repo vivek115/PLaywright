@@ -1,0 +1,7 @@
+Login Page Title verified successfully: Warehouse Orchestrator
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/packages
+Dropdown values: [ 'Warehouse Receipts', 'Inventory', 'Packages' ]
+1: function trim() { [native code] }
+2: function trim() { [native code] }
+3: function trim() { [native code] }
+[ 'Warehouse Receipts', 'Inventory', 'Packages' ]

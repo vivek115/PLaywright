@@ -1,0 +1,42 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Doral WH
+Selected value: Doral WH
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: Amazon
+Selected value: Amazon
+Current location: Main
+Location is auto-populated: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: All Company Access
+Selected value: All Company Access
+Current location: Main
+Location is auto-populated: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.
+Agent is not specified. Clicking to select agent.
+Randomly selected value: Amazing Orchids
+Selected value: Amazing Orchids
+Current location: Main
+Location is auto-populated: Main
+Randomly selected value: Jessie James
+Selected value: Jessie James
+Supplier is not specified. Clicking to select supplier.
+Randomly selected value: Fossil Rim Wildlife Center
+Selected value: Fossil Rim Wildlife Center
+Current location: Main
+Location is auto-populated: Main
+Menu options available:  [
+  'Create Task',
+  'Add to Task',
+  'Print Label',
+  'Download Images',
+  'Delete',
+  'Switch to List View'
+]
+Card view option not found in the menu options.

@@ -1,0 +1,15 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Position Utilization
+Selected value: Position Utilization
+Status is specified: Pre-Received
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: 1030 Company
+Selected value: 1030 Company
+Current location: 
+Randomly selected value: Site 3
+Selected value: Site 3
+Current contact: 
+Randomly selected value: Three Dlc
+Selected value: Three Dlc

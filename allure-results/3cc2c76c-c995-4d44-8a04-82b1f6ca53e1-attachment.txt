@@ -1,0 +1,13 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Branch Issue
+Selected value: Branch Issue
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: All Company Access
+Selected value: All Company Access
+Current location: Main
+Location is auto-populated: Main
+Current contact: 

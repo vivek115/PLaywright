@@ -1,0 +1,34 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Mento
+Selected value: Mento
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: 123 Heritage
+Selected value: 123 Heritage
+Current location: Main
+Location is auto-populated: Main
+Randomly selected value: test1 test2
+Selected value: test1 test2
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: 200 Carats
+Selected value: 200 Carats
+Current location: 
+Randomly selected value: Main
+Selected value: Main
+Randomly selected value: Marwin Pinlac
+Selected value: Marwin Pinlac
+Agent is not specified. Clicking to select agent.
+Randomly selected value: 31231test
+Selected value: 31231test
+Current location: Main
+Location is auto-populated: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.
+Supplier is not specified. Clicking to select supplier.
+Randomly selected value: 1234 Test Rd
+Selected value: 1234 Test Rd
+Current location: Main
+Location is auto-populated: Main

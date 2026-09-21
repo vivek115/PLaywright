@@ -1,0 +1,11 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Demo WH
+Selected value: Demo WH
+Status is not specified. Clicking to select status.
+Randomly selected value: Delivered
+Selected value: Delivered
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: Amazon Trade
+Selected value: Amazon Trade

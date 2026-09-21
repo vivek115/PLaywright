@@ -1,0 +1,21 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Chicago DC
+Selected value: Chicago DC
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: Amantesa
+Selected value: Amantesa
+Current location: 
+Randomly selected value: Agent Miami
+Selected value: Agent Miami
+Current contact: 
+Randomly selected value: Anuar Saab
+Selected value: Anuar Saab
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: Angels Pizza
+Selected value: Angels Pizza
+Current location: Main
+Location is auto-populated: Main

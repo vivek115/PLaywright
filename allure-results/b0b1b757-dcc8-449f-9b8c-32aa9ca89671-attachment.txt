@@ -1,0 +1,30 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed to Warehouse Orchestrator Page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+Items Nav Text Raw: 1-25 of 1559 items
+
+Items Nav Text: 1559
+WR Form is displaying on the screen
+Dropdown values: [
+  ' Branch Issue ',
+  ' Chicago DC ',
+  ' Demo WH ',
+  ' Doral WH ',
+  ' Locations Preview ',
+  ' Locations UI ',
+  ' Mento ',
+  ' Packages ',
+  ' Pikill ',
+  ' Position Utilization ',
+  ' prod testing branch '
+]
+1: Branch Issue
+2: Chicago DC
+3: Demo WH
+4: Doral WH
+5: Locations Preview
+6: Locations UI
+7: Mento
+8: Packages
+9: Pikill
+10: Position Utilization
+11: prod testing branch

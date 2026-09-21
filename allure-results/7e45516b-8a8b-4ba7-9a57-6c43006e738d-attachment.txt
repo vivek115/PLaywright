@@ -1,0 +1,34 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Doral WH
+Selected value: Doral WH
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: Amazon Trade
+Selected value: Amazon Trade
+Current location: Main
+Location is auto-populated: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: Amantesa
+Selected value: Amantesa
+Current location: 
+Randomly selected value: Agent MIami
+Selected value: Agent MIami
+Randomly selected value: Claudia Daza
+Selected value: Claudia Daza
+Agent is not specified. Clicking to select agent.
+Randomly selected value: Andres Lopez
+Selected value: Andres Lopez
+Current location: Main
+Location is auto-populated: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.
+Supplier is not specified. Clicking to select supplier.
+Randomly selected value: Don Pan International Bakery
+Selected value: Don Pan International Bakery
+Current location: Main
+Location is auto-populated: Main

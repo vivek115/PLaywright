@@ -1,0 +1,28 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: prod testing branch
+Selected value: prod testing branch
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: AMAZON.COM DEDC LLC
+Selected value: AMAZON.COM DEDC LLC
+Current location: Main
+Location is auto-populated: Main
+Point of Contact 'shipperContact' is not available; continuing.
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: Andres Lopez
+Selected value: Andres Lopez
+Current location: Main
+Location is auto-populated: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.
+Agent is not specified. Clicking to select agent.
+Randomly selected value: 200 Carats
+Selected value: 200 Carats
+Current location: 
+Randomly selected value: Main
+Selected value: Main
+No options appeared in the point of contact dropdown; continuing.
+Point of Contact dropdown is empty; closing dropdown.

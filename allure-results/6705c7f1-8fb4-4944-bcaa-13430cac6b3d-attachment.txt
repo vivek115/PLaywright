@@ -1,0 +1,35 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Locations UI
+Selected value: Locations UI
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: 100 SM Brewing
+Selected value: 100 SM Brewing
+Current location: 
+Randomly selected value: Main
+Selected value: Main
+Randomly selected value: Jon Luck
+Selected value: Jon Luck
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: Association Club Argentino Juniors infatil
+Selected value: Association Club Argentino Juniors infatil
+Current location: Main
+Location is auto-populated: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.
+Agent is not specified. Clicking to select agent.
+Randomly selected value: Ameritrade Logistics
+Selected value: Ameritrade Logistics
+Current location: 
+Randomly selected value: Seatle
+Selected value: Seatle
+Randomly selected value: George Smith
+Selected value: George Smith
+Supplier is not specified. Clicking to select supplier.
+Randomly selected value: All Company Access
+Selected value: All Company Access
+Current location: Main
+Location is auto-populated: Main

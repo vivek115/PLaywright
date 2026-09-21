@@ -1,0 +1,10 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Chicago DC
+Selected value: Chicago DC
+Status is specified: Pre-Received
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: 146 Thomas Jefferson Terrace and ny state usa
+Selected value: 146 Thomas Jefferson Terrace and ny state usa
+Location is not specified. Clicking to select location.

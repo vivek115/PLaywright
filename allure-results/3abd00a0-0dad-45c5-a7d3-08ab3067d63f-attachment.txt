@@ -1,0 +1,2 @@
+Login Page Title verified successfully: Sign in to Warehouse Orchestrator
+User has successfully landed to Warehouse Receipts Page: https://app.warehouseorchestrator.com/wms/warehouse/receipts

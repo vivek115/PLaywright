@@ -1,0 +1,49 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/packages
+Current URL after navigation: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Demo WH
+Selected value: Demo WH
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: 200 Carats
+Selected value: 200 Carats
+Current location: 
+Randomly selected value: Main
+Selected value: Main
+Randomly selected value: Noah Lim
+Selected value: Noah Lim
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: 1234 Test Rd
+Selected value: 1234 Test Rd
+Current location: Main
+Location is auto-populated: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.
+Agent is not specified. Clicking to select agent.
+Randomly selected value: Angels Pizza
+Selected value: Angels Pizza
+Current location: Main
+Location is auto-populated: Main
+Randomly selected value: ProdTesting01
+Selected value: ProdTesting01
+Supplier is not specified. Clicking to select supplier.
+Randomly selected value: Braini Medical Supply
+Selected value: Braini Medical Supply
+Current location: 
+Randomly selected value: Cyzerg Test location
+Selected value: Cyzerg Test location
+Menu options available:  [
+  'Create Task',
+  'Add to Task',
+  'Print Label',
+  'Download Images',
+  'Delete',
+  'Switch to List View'
+]
+Card view option not found in the menu options.
+Package form heading:  Create Multiple Packages
+Randomly selected value: Barrelo
+Selected value: Barrelo
+Rows found in the Kendo grid:  15

@@ -1,0 +1,14 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: prod testing branch
+Selected value: prod testing branch
+Status is specified: Pre-Received
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: Amantesa
+Selected value: Amantesa
+Current location: 
+Randomly selected value: Agent Miami
+Selected value: Agent Miami
+Current contact: 
+Point of Contact field 'consigneeContact' is disabled and not populated; continuing.

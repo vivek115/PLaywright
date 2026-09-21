@@ -1,0 +1,15 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Branch Issue
+Selected value: Branch Issue
+Randomly selected value: Partial On Hand
+Selected value: Partial On Hand
+Randomly selected value: 200 Carats
+Selected value: 200 Carats
+Location is not specified. Clicking to select location.
+Randomly selected value: Main
+Selected value: Main
+Point of Contact is not specified. Clicking to select point of contact.
+Randomly selected value: Noah Lim
+Selected value: Noah Lim

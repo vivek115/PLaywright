@@ -1,0 +1,24 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Packages
+Selected value: Packages
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: 1030 Company
+Selected value: 1030 Company
+Current location: 
+Randomly selected value: Site 3
+Selected value: Site 3
+Current contact: 
+Randomly selected value: Three Dlc
+Selected value: Three Dlc
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: All Company Access
+Selected value: All Company Access
+Current location: Main
+Location is auto-populated: Main
+Current contact: 
+No options appeared in the point of contact dropdown; continuing.
+No point of contact is available; continuing.

@@ -1,0 +1,2323 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: createWarehouseReceipts.spec.js >> Login test
+- Location: tests\createWarehouseReceipts.spec.js:3:1
+
+# Error details
+
+```
+Error: Playwright Test did not expect test() to be called here.
+Most common reasons include:
+- You are calling test() in a configuration file.
+- You are calling test() in a file that is imported by the configuration file.
+- You have two different versions of @playwright/test. This usually happens
+  when one of the dependencies in your package.json depends on @playwright/test.
+- You are calling test() from an async test.describe() block. Only sync ones are supported.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - navigation [ref=e6]:
+        - paragraph [ref=e10] [cursor=pointer]: WMS
+        - generic [ref=e11]:
+          - list [ref=e12]:
+            - listitem [ref=e13]:
+              - link "Dashboard" [ref=e14] [cursor=pointer]:
+                - /url: /wms/dashboard
+            - listitem [ref=e15]:
+              - link "Orders" [ref=e16] [cursor=pointer]:
+                - /url: /wms/orders
+            - listitem [ref=e17]:
+              - link "Warehouse" [ref=e18] [cursor=pointer]:
+                - /url: /wms/warehouse
+            - listitem [ref=e19]:
+              - link "Locations" [ref=e20] [cursor=pointer]:
+                - /url: /wms/locations/list
+            - listitem [ref=e21]:
+              - link "Shipments" [ref=e22] [cursor=pointer]:
+                - /url: /wms/shipments
+            - listitem [ref=e23]:
+              - link "Tasks" [ref=e24] [cursor=pointer]:
+                - /url: /wms/tasks
+            - listitem [ref=e25]:
+              - link "Reports" [ref=e26] [cursor=pointer]:
+                - /url: /wms/reports
+            - listitem [ref=e27]:
+              - link "Settings" [ref=e28] [cursor=pointer]:
+                - /url: /wms/settings
+          - list [ref=e29]:
+            - listitem [ref=e30]:
+              - generic [ref=e31]:
+                - menuitem "Filter": Filter
+                - textbox "Search..." [ref=e32]
+            - listitem [ref=e33]:
+              - list [ref=e34]:
+                - listitem [ref=e35]:
+                  - generic [ref=e36] [cursor=pointer]: IFS Demo
+                  - list:
+                    - listitem:
+                      - generic: My Profile
+                    - listitem:
+                      - link "Logout":
+                        - /url: /logout
+    - generic [ref=e38]:
+      - generic [ref=e42] [cursor=pointer]:
+        - heading "SCRM" [level=4] [ref=e43]
+        - paragraph [ref=e44]: Manage Companies, Contacts & Quotes
+      - link "WMS WMS Manage Inventory, Packages & More" [ref=e46] [cursor=pointer]:
+        - /url: /wms
+        - img "WMS" [ref=e48]
+        - generic [ref=e49]:
+          - heading "WMS" [level=4] [ref=e50]
+          - paragraph [ref=e51]: Manage Inventory, Packages & More
+      - link "Dimensioner Dimensioner Capture Dimensions, Weight & Images" [ref=e53] [cursor=pointer]:
+        - /url: /dimensioner/capture
+        - img "Dimensioner" [ref=e55]
+        - generic [ref=e56]:
+          - heading "Dimensioner" [level=4] [ref=e57]
+          - paragraph [ref=e58]: Capture Dimensions, Weight & Images
+      - link "Workflows Workflows Manage Automations & More" [ref=e60] [cursor=pointer]:
+        - /url: /workflows/list
+        - img "Workflows" [ref=e62]
+        - generic [ref=e63]:
+          - heading "Workflows" [level=4] [ref=e64]
+          - paragraph [ref=e65]: Manage Automations & More
+      - generic [ref=e69] [cursor=pointer]:
+        - heading "Admin" [level=4] [ref=e70]
+        - paragraph [ref=e71]: Manage Users, Security, Modules and More
+  - generic [ref=e75]:
+    - generic [ref=e76]:
+      - img [ref=e77]
+      - img [ref=e78]
+    - generic [ref=e82]:
+      - generic [ref=e83]:
+        - heading "Warehouse Receipts" [level=2]:
+          - generic [ref=e86] [cursor=pointer]: Warehouse Receipts
+      - list [ref=e88]:
+        - listitem
+        - listitem
+        - listitem [ref=e89]:
+          - button "Create New" [ref=e91] [cursor=pointer]: Create New
+        - listitem [ref=e92]:
+          - button [ref=e95] [cursor=pointer]
+    - generic [ref=e99]:
+      - grid "Data table" [ref=e100]:
+        - row [ref=e151]:
+          - columnheader "Select All Rows":
+            - checkbox "Select All Rows" [ref=e152]: 
+          - columnheader "WR ID Sortable" [ref=e153]:
+            - generic [ref=e154]:
+              - generic [ref=e155] [cursor=pointer]:
+                - generic [ref=e156]: WR ID
+                - note "Sortable" [ref=e157]
+              - status
+          - columnheader "Total Pckgs Sortable" [ref=e159]:
+            - generic [ref=e160]:
+              - generic [ref=e161] [cursor=pointer]:
+                - generic [ref=e162]: Total Pckgs
+                - note "Sortable" [ref=e163]
+              - status
+          - columnheader "Shipper Sortable" [ref=e165]:
+            - generic [ref=e166]:
+              - generic [ref=e167] [cursor=pointer]:
+                - generic [ref=e168]: Shipper
+                - note "Sortable" [ref=e169]
+              - status
+          - columnheader "Total Wght (lbs) Sortable" [ref=e171]:
+            - generic [ref=e172]:
+              - generic [ref=e173] [cursor=pointer]:
+                - generic [ref=e174]: Total Wght (lbs)
+                - note "Sortable" [ref=e175]
+              - status
+          - columnheader "Total Wght (kg) Sortable" [ref=e177]:
+            - generic [ref=e178]:
+              - generic [ref=e179] [cursor=pointer]:
+                - generic [ref=e180]: Total Wght (kg)
+                - note "Sortable" [ref=e181]
+              - status
+          - columnheader "Total Volume (ft³) Sortable" [ref=e183]:
+            - generic [ref=e184]:
+              - generic [ref=e185] [cursor=pointer]:
+                - generic [ref=e186]: Total Volume (ft³)
+                - note "Sortable" [ref=e187]
+              - status
+          - columnheader "Total Volume (m³) Sortable" [ref=e189]:
+            - generic [ref=e190]:
+              - generic [ref=e191] [cursor=pointer]:
+                - generic [ref=e192]: Total Volume (m³)
+                - note "Sortable" [ref=e193]
+              - status
+          - columnheader "Created Time Sortable" [ref=e195]:
+            - generic [ref=e196]:
+              - generic [ref=e197] [cursor=pointer]:
+                - generic [ref=e198]: Created Time
+                - note "Sortable" [ref=e199]
+              - status
+          - columnheader "Carrier Sortable" [ref=e201]:
+            - generic [ref=e202]:
+              - generic [ref=e203] [cursor=pointer]:
+                - generic [ref=e204]: Carrier
+                - note "Sortable" [ref=e205]
+              - status
+          - columnheader "PRO No. Sortable" [ref=e207]:
+            - generic [ref=e208]:
+              - generic [ref=e209] [cursor=pointer]:
+                - generic [ref=e210]: PRO No.
+                - note "Sortable" [ref=e211]
+              - status
+          - columnheader "Tracking No. Sortable" [ref=e213]:
+            - generic [ref=e214]:
+              - generic [ref=e215] [cursor=pointer]:
+                - generic [ref=e216]: Tracking No.
+                - note "Sortable" [ref=e217]
+              - status
+          - columnheader "Agent Sortable" [ref=e219]:
+            - generic [ref=e220]:
+              - generic [ref=e221] [cursor=pointer]:
+                - generic [ref=e222]: Agent
+                - note "Sortable" [ref=e223]
+              - status
+          - columnheader "Supplier Sortable" [ref=e225]:
+            - generic [ref=e226]:
+              - generic [ref=e227] [cursor=pointer]:
+                - generic [ref=e228]: Supplier
+                - note "Sortable" [ref=e229]
+              - status
+          - columnheader "Receiving Type Sortable" [ref=e231]:
+            - generic [ref=e232]:
+              - generic [ref=e233] [cursor=pointer]:
+                - generic [ref=e234]: Receiving Type
+                - note "Sortable" [ref=e235]
+              - status
+          - columnheader "Received By Sortable" [ref=e237]:
+            - generic [ref=e238]:
+              - generic [ref=e239] [cursor=pointer]:
+                - generic [ref=e240]: Received By
+                - note "Sortable" [ref=e241]
+              - status
+          - columnheader "Received Date Sortable" [ref=e243]:
+            - generic [ref=e244]:
+              - generic [ref=e245] [cursor=pointer]:
+                - generic [ref=e246]: Received Date
+                - note "Sortable" [ref=e247]
+              - status
+          - columnheader "Received Time Sortable" [ref=e249]:
+            - generic [ref=e250]:
+              - generic [ref=e251] [cursor=pointer]:
+                - generic [ref=e252]: Received Time
+                - note "Sortable" [ref=e253]
+              - status
+          - columnheader "Modified By Sortable" [ref=e255]:
+            - generic [ref=e256]:
+              - generic [ref=e257] [cursor=pointer]:
+                - generic [ref=e258]: Modified By
+                - note "Sortable" [ref=e259]
+              - status
+          - columnheader "Modified Date Sortable" [ref=e261]:
+            - generic [ref=e262]:
+              - generic [ref=e263] [cursor=pointer]:
+                - generic [ref=e264]: Modified Date
+                - note "Sortable" [ref=e265]
+              - status
+          - columnheader "Modified Time Sortable" [ref=e267]:
+            - generic [ref=e268]:
+              - generic [ref=e269] [cursor=pointer]:
+                - generic [ref=e270]: Modified Time
+                - note "Sortable" [ref=e271]
+              - status
+          - columnheader "T. Mode Sortable" [ref=e273]:
+            - generic [ref=e274]:
+              - generic [ref=e275] [cursor=pointer]:
+                - generic [ref=e276]: T. Mode
+                - note "Sortable" [ref=e277]
+              - status
+          - columnheader "Shipment ID Sortable" [ref=e279]:
+            - generic [ref=e280]:
+              - generic [ref=e281] [cursor=pointer]:
+                - generic [ref=e282]: Shipment ID
+                - note "Sortable" [ref=e283]
+              - status
+          - columnheader "Consolidation ID Sortable" [ref=e285]:
+            - generic [ref=e286]:
+              - generic [ref=e287] [cursor=pointer]:
+                - generic [ref=e288]: Consolidation ID
+                - note "Sortable" [ref=e289]
+              - status
+          - columnheader "House Bill No. Sortable" [ref=e291]:
+            - generic [ref=e292]:
+              - generic [ref=e293] [cursor=pointer]:
+                - generic [ref=e294]: House Bill No.
+                - note "Sortable" [ref=e295]
+              - status
+          - columnheader "Master Bill No. Sortable" [ref=e297]:
+            - generic [ref=e298]:
+              - generic [ref=e299] [cursor=pointer]:
+                - generic [ref=e300]: Master Bill No.
+                - note "Sortable" [ref=e301]
+              - status
+          - columnheader "Container No. Sortable" [ref=e303]:
+            - generic [ref=e304]:
+              - generic [ref=e305] [cursor=pointer]:
+                - generic [ref=e306]: Container No.
+                - note "Sortable" [ref=e307]
+              - status
+          - columnheader "Booking No. Sortable" [ref=e309]:
+            - generic [ref=e310]:
+              - generic [ref=e311] [cursor=pointer]:
+                - generic [ref=e312]: Booking No.
+                - note "Sortable" [ref=e313]
+              - status
+          - columnheader "Cargo Release ID Sortable" [ref=e315]:
+            - generic [ref=e316]:
+              - generic [ref=e317] [cursor=pointer]:
+                - generic [ref=e318]: Cargo Release ID
+                - note "Sortable" [ref=e319]
+              - status
+          - columnheader "Total Volume Wght (lbs) Sortable" [ref=e321]:
+            - generic [ref=e322]:
+              - generic [ref=e323] [cursor=pointer]:
+                - generic [ref=e324]: Total Volume Wght (lbs)
+                - note "Sortable" [ref=e325]
+              - status
+          - columnheader "Total Volume Wght (kg) Sortable" [ref=e327]:
+            - generic [ref=e328]:
+              - generic [ref=e329] [cursor=pointer]:
+                - generic [ref=e330]: Total Volume Wght (kg)
+                - note "Sortable" [ref=e331]
+              - status
+          - columnheader "Total Value Sortable" [ref=e333]:
+            - generic [ref=e334]:
+              - generic [ref=e335] [cursor=pointer]:
+                - generic [ref=e336]: Total Value
+                - note "Sortable" [ref=e337]
+              - status
+          - columnheader "Consignee Loc Sortable" [ref=e339]:
+            - generic [ref=e340]:
+              - generic [ref=e341] [cursor=pointer]:
+                - generic [ref=e342]: Consignee Loc
+                - note "Sortable" [ref=e343]
+              - status
+          - columnheader "Consignee City Sortable" [ref=e345]:
+            - generic [ref=e346]:
+              - generic [ref=e347] [cursor=pointer]:
+                - generic [ref=e348]: Consignee City
+                - note "Sortable" [ref=e349]
+              - status
+          - columnheader "Consignee Country Sortable" [ref=e351]:
+            - generic [ref=e352]:
+              - generic [ref=e353] [cursor=pointer]:
+                - generic [ref=e354]: Consignee Country
+                - note "Sortable" [ref=e355]
+              - status
+          - columnheader "WR Picker Sortable" [ref=e357]:
+            - generic [ref=e358]:
+              - generic [ref=e359] [cursor=pointer]:
+                - generic [ref=e360]: WR Picker
+                - note "Sortable" [ref=e361]
+              - status
+          - columnheader "WR Checkbox Sortable" [ref=e363]:
+            - generic [ref=e364]:
+              - generic [ref=e365] [cursor=pointer]:
+                - generic [ref=e366]: WR Checkbox
+                - note "Sortable" [ref=e367]
+              - status
+          - columnheader "WR Dropdown Sortable" [ref=e369]:
+            - generic [ref=e370]:
+              - generic [ref=e371] [cursor=pointer]:
+                - generic [ref=e372]: WR Dropdown
+                - note "Sortable" [ref=e373]
+              - status
+          - columnheader "Status Sortable" [ref=e375]:
+            - generic [ref=e376]:
+              - generic [ref=e377] [cursor=pointer]:
+                - generic [ref=e378]: Status
+                - note "Sortable" [ref=e379]
+              - status
+          - columnheader "Created Date Sortable" [ref=e381]:
+            - generic [ref=e382]:
+              - generic [ref=e383] [cursor=pointer]:
+                - generic [ref=e384]: Created Date
+                - note "Sortable" [ref=e385]
+              - status
+          - columnheader "Created By Sortable" [ref=e387]:
+            - generic [ref=e388]:
+              - generic [ref=e389] [cursor=pointer]:
+                - generic [ref=e390]: Created By
+                - note "Sortable" [ref=e391]
+              - status
+          - columnheader "Consignee Sortable" [ref=e393]:
+            - generic [ref=e394]:
+              - generic [ref=e395] [cursor=pointer]:
+                - generic [ref=e396]: Consignee
+                - note "Sortable" [ref=e397]
+              - status
+          - columnheader "Warehouse Sortable" [ref=e399]:
+            - generic [ref=e400]:
+              - generic [ref=e401] [cursor=pointer]:
+                - generic [ref=e402]: Warehouse
+                - note "Sortable" [ref=e403]
+              - status
+          - columnheader "PO No. Sortable" [ref=e405]:
+            - generic [ref=e406]:
+              - generic [ref=e407] [cursor=pointer]:
+                - generic [ref=e408]: PO No.
+                - note "Sortable" [ref=e409]
+              - status
+          - columnheader "Bill To Sortable" [ref=e411]:
+            - generic [ref=e412]:
+              - generic [ref=e413] [cursor=pointer]:
+                - generic [ref=e414]: Bill To
+                - note "Sortable" [ref=e415]
+              - status
+          - columnheader "WR SLT Edit Sortable" [ref=e417]:
+            - generic [ref=e418]:
+              - generic [ref=e419] [cursor=pointer]:
+                - generic [ref=e420]: WR SLT Edit
+                - note "Sortable" [ref=e421]
+              - status
+          - columnheader "WR DD Edit Sortable" [ref=e423]:
+            - generic [ref=e424]:
+              - generic [ref=e425] [cursor=pointer]:
+                - generic [ref=e426]: WR DD Edit
+                - note "Sortable" [ref=e427]
+              - status
+          - columnheader "WR MC Edit Sortable" [ref=e429]:
+            - generic [ref=e430]:
+              - generic [ref=e431] [cursor=pointer]:
+                - generic [ref=e432]: WR MC Edit
+                - note "Sortable" [ref=e433]
+              - status
+          - columnheader "WR DP Edit Sortable" [ref=e435]:
+            - generic [ref=e436]:
+              - generic [ref=e437] [cursor=pointer]:
+                - generic [ref=e438]: WR DP Edit
+                - note "Sortable" [ref=e439]
+              - status
+          - columnheader [ref=e441]
+        - row [ref=e443]:
+          - textbox "Search" [ref=e445]
+          - generic [ref=e449] [cursor=pointer]: Filter
+          - textbox "Search" [ref=e451]
+          - generic [ref=e455] [cursor=pointer]: Filter
+          - generic [ref=e459] [cursor=pointer]: Filter
+          - generic [ref=e463] [cursor=pointer]: Filter
+          - generic [ref=e467] [cursor=pointer]: Filter
+          - generic [ref=e471] [cursor=pointer]: Filter
+          - textbox "Search" [ref=e473]
+          - textbox "Search" [ref=e475]
+          - textbox "Search" [ref=e477]
+          - textbox "Search" [ref=e479]
+          - textbox "Search" [ref=e481]
+          - generic [ref=e485] [cursor=pointer]: Filter
+          - textbox "Search" [ref=e487]
+          - generic [ref=e491] [cursor=pointer]: Filter
+          - generic [ref=e495] [cursor=pointer]: Filter
+          - textbox "Search" [ref=e497]
+          - generic [ref=e501] [cursor=pointer]: Filter
+          - generic [ref=e505] [cursor=pointer]: Filter
+          - textbox "Search" [ref=e507]
+          - textbox "Search" [ref=e509]
+          - textbox "Search" [ref=e511]
+          - textbox "Search" [ref=e513]
+          - textbox "Search" [ref=e515]
+          - textbox "Search" [ref=e517]
+          - textbox "Search" [ref=e519]
+          - textbox "Search" [ref=e521]
+          - generic [ref=e525] [cursor=pointer]: Filter
+          - generic [ref=e529] [cursor=pointer]: Filter
+          - generic [ref=e533] [cursor=pointer]: Filter
+          - textbox "Search" [ref=e535]
+          - textbox "Search" [ref=e537]
+          - textbox "Search" [ref=e539]
+          - generic [ref=e543] [cursor=pointer]: Filter
+          - generic [ref=e547] [cursor=pointer]: Filter
+          - generic [ref=e551] [cursor=pointer]: Filter
+          - generic [ref=e555] [cursor=pointer]: Filter
+          - generic [ref=e559] [cursor=pointer]: Filter
+          - textbox "Search" [ref=e561]
+          - textbox "Search" [ref=e563]
+          - textbox "Search" [ref=e565]
+          - textbox "Search" [ref=e567]
+          - textbox "Search" [ref=e569]
+          - textbox "Search" [ref=e571]
+          - generic [ref=e575] [cursor=pointer]: Filter
+          - generic [ref=e579] [cursor=pointer]: Filter
+          - generic [ref=e583] [cursor=pointer]: Filter
+        - generic [ref=e584]:
+          - row "Select Row WRAA000958 1 Fengsan Evren 2.4 1.09 0.2 0.01 03:02 PM Andres Puerta 08/28/2026 03:02 PM 2.07 0.95 Main Miami US On Hand 08/28/2026 Andres Puerta Jorlin Maradiaga Demo WH" [ref=e635]:
+            - gridcell "Select Row" [ref=e636]:
+              - checkbox "Select Row" [ref=e637]: 
+            - gridcell "WRAA000958" [ref=e638]:
+              - link "WRAA000958" [ref=e641] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/0304ea85-f7af-4ca5-beaf-2cc2afa490c8/general
+            - gridcell "1" [ref=e642]:
+              - generic [ref=e644]: "1"
+            - gridcell "Fengsan Evren" [ref=e645]:
+              - generic [ref=e647]: Fengsan Evren
+            - gridcell "2.4" [ref=e648]:
+              - generic [ref=e650]: "2.4"
+            - gridcell "1.09" [ref=e651]:
+              - generic [ref=e653]: "1.09"
+            - gridcell "0.2" [ref=e654]:
+              - generic [ref=e656]: "0.2"
+            - gridcell "0.01" [ref=e657]:
+              - generic [ref=e659]: "0.01"
+            - gridcell "03:02 PM" [ref=e660]:
+              - generic [ref=e662]: 03:02 PM
+            - gridcell [ref=e663]
+            - gridcell [ref=e664]
+            - gridcell [ref=e665]
+            - gridcell [ref=e666]
+            - gridcell [ref=e667]
+            - gridcell [ref=e668]
+            - gridcell "Andres Puerta" [ref=e669]:
+              - generic [ref=e671]: Andres Puerta
+            - gridcell "08/28/2026" [ref=e672]:
+              - generic [ref=e674]: 08/28/2026
+            - gridcell "03:02 PM" [ref=e675]:
+              - generic [ref=e677]: 03:02 PM
+            - gridcell [ref=e678]
+            - gridcell [ref=e679]
+            - gridcell [ref=e680]
+            - gridcell [ref=e681]
+            - gridcell [ref=e682]
+            - gridcell [ref=e683]
+            - gridcell [ref=e684]
+            - gridcell [ref=e685]
+            - gridcell [ref=e686]
+            - gridcell [ref=e687]
+            - gridcell [ref=e688]
+            - gridcell "2.07" [ref=e689]:
+              - generic [ref=e691]: "2.07"
+            - gridcell "0.95" [ref=e692]:
+              - generic [ref=e694]: "0.95"
+            - gridcell [ref=e695]
+            - gridcell "Main" [ref=e696]:
+              - generic [ref=e698]: Main
+            - gridcell "Miami" [ref=e699]:
+              - generic [ref=e701]: Miami
+            - gridcell "US" [ref=e702]:
+              - generic [ref=e704]: US
+            - gridcell [ref=e705]
+            - gridcell [ref=e706]
+            - gridcell [ref=e707]
+            - gridcell "On Hand" [ref=e708]:
+              - generic [ref=e710]: On Hand
+            - gridcell "08/28/2026" [ref=e711]:
+              - generic [ref=e713]: 08/28/2026
+            - gridcell "Andres Puerta" [ref=e714]:
+              - generic [ref=e716]: Andres Puerta
+            - gridcell "Jorlin Maradiaga" [ref=e717]:
+              - generic [ref=e719]: Jorlin Maradiaga
+            - gridcell "Demo WH" [ref=e720]:
+              - generic [ref=e722]: Demo WH
+            - gridcell [ref=e723]
+            - gridcell [ref=e724]
+            - gridcell [ref=e725]
+            - gridcell [ref=e726]
+            - gridcell [ref=e727]
+            - gridcell [ref=e728]
+            - gridcell [ref=e729]
+          - row "Select Row WRAA000957 1 Fengsan Evren 2.4 1.09 0.2 0.01 02:40 PM Andres Puerta 08/28/2026 02:40 PM 2.07 0.95 Main Miami US On Hand 08/28/2026 Andres Puerta Jorlin Maradiaga Demo WH" [ref=e730]:
+            - gridcell "Select Row" [ref=e731]:
+              - checkbox "Select Row" [ref=e732]: 
+            - gridcell "WRAA000957" [ref=e733]:
+              - link "WRAA000957" [ref=e736] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/8922b5f6-db75-44ce-b9f1-b5668940cac0/general
+            - gridcell "1" [ref=e737]:
+              - generic [ref=e739]: "1"
+            - gridcell "Fengsan Evren" [ref=e740]:
+              - generic [ref=e742]: Fengsan Evren
+            - gridcell "2.4" [ref=e743]:
+              - generic [ref=e745]: "2.4"
+            - gridcell "1.09" [ref=e746]:
+              - generic [ref=e748]: "1.09"
+            - gridcell "0.2" [ref=e749]:
+              - generic [ref=e751]: "0.2"
+            - gridcell "0.01" [ref=e752]:
+              - generic [ref=e754]: "0.01"
+            - gridcell "02:40 PM" [ref=e755]:
+              - generic [ref=e757]: 02:40 PM
+            - gridcell [ref=e758]
+            - gridcell [ref=e759]
+            - gridcell [ref=e760]
+            - gridcell [ref=e761]
+            - gridcell [ref=e762]
+            - gridcell [ref=e763]
+            - gridcell "Andres Puerta" [ref=e764]:
+              - generic [ref=e766]: Andres Puerta
+            - gridcell "08/28/2026" [ref=e767]:
+              - generic [ref=e769]: 08/28/2026
+            - gridcell "02:40 PM" [ref=e770]:
+              - generic [ref=e772]: 02:40 PM
+            - gridcell [ref=e773]
+            - gridcell [ref=e774]
+            - gridcell [ref=e775]
+            - gridcell [ref=e776]
+            - gridcell [ref=e777]
+            - gridcell [ref=e778]
+            - gridcell [ref=e779]
+            - gridcell [ref=e780]
+            - gridcell [ref=e781]
+            - gridcell [ref=e782]
+            - gridcell [ref=e783]
+            - gridcell "2.07" [ref=e784]:
+              - generic [ref=e786]: "2.07"
+            - gridcell "0.95" [ref=e787]:
+              - generic [ref=e789]: "0.95"
+            - gridcell [ref=e790]
+            - gridcell "Main" [ref=e791]:
+              - generic [ref=e793]: Main
+            - gridcell "Miami" [ref=e794]:
+              - generic [ref=e796]: Miami
+            - gridcell "US" [ref=e797]:
+              - generic [ref=e799]: US
+            - gridcell [ref=e800]
+            - gridcell [ref=e801]
+            - gridcell [ref=e802]
+            - gridcell "On Hand" [ref=e803]:
+              - generic [ref=e805]: On Hand
+            - gridcell "08/28/2026" [ref=e806]:
+              - generic [ref=e808]: 08/28/2026
+            - gridcell "Andres Puerta" [ref=e809]:
+              - generic [ref=e811]: Andres Puerta
+            - gridcell "Jorlin Maradiaga" [ref=e812]:
+              - generic [ref=e814]: Jorlin Maradiaga
+            - gridcell "Demo WH" [ref=e815]:
+              - generic [ref=e817]: Demo WH
+            - gridcell [ref=e818]
+            - gridcell [ref=e819]
+            - gridcell [ref=e820]
+            - gridcell [ref=e821]
+            - gridcell [ref=e822]
+            - gridcell [ref=e823]
+            - gridcell [ref=e824]
+          - row "Select Row WRAA000956 Angels Ice Plant 08:35 PM Ameritrade Logistics Main Pre-Received 08/26/2026 Andres Puerta Andres Lopez Demo WH" [ref=e825]:
+            - gridcell "Select Row" [ref=e826]:
+              - checkbox "Select Row" [ref=e827]: 
+            - gridcell "WRAA000956" [ref=e828]:
+              - link "WRAA000956" [ref=e831] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/edd66f8a-8d7f-4f73-9782-bed6bd132d7a/general
+            - gridcell [ref=e832]
+            - gridcell "Angels Ice Plant" [ref=e833]:
+              - generic [ref=e835]: Angels Ice Plant
+            - gridcell [ref=e836]
+            - gridcell [ref=e837]
+            - gridcell [ref=e838]
+            - gridcell [ref=e839]
+            - gridcell "08:35 PM" [ref=e840]:
+              - generic [ref=e842]: 08:35 PM
+            - gridcell [ref=e843]
+            - gridcell [ref=e844]
+            - gridcell [ref=e845]
+            - gridcell "Ameritrade Logistics" [ref=e846]:
+              - generic [ref=e848]: Ameritrade Logistics
+            - gridcell [ref=e849]
+            - gridcell [ref=e850]
+            - gridcell [ref=e851]
+            - gridcell [ref=e852]
+            - gridcell [ref=e853]
+            - gridcell [ref=e854]
+            - gridcell [ref=e855]
+            - gridcell [ref=e856]
+            - gridcell [ref=e857]
+            - gridcell [ref=e858]
+            - gridcell [ref=e859]
+            - gridcell [ref=e860]
+            - gridcell [ref=e861]
+            - gridcell [ref=e862]
+            - gridcell [ref=e863]
+            - gridcell [ref=e864]
+            - gridcell [ref=e865]
+            - gridcell [ref=e866]
+            - gridcell [ref=e867]
+            - gridcell "Main" [ref=e868]:
+              - generic [ref=e870]: Main
+            - gridcell [ref=e871]
+            - gridcell [ref=e872]
+            - gridcell [ref=e873]
+            - gridcell [ref=e874]
+            - gridcell [ref=e875]
+            - gridcell "Pre-Received" [ref=e876]:
+              - generic [ref=e878]: Pre-Received
+            - gridcell "08/26/2026" [ref=e879]:
+              - generic [ref=e881]: 08/26/2026
+            - gridcell "Andres Puerta" [ref=e882]:
+              - generic [ref=e884]: Andres Puerta
+            - gridcell "Andres Lopez" [ref=e885]:
+              - generic [ref=e887]: Andres Lopez
+            - gridcell "Demo WH" [ref=e888]:
+              - generic [ref=e890]: Demo WH
+            - gridcell [ref=e891]
+            - gridcell [ref=e892]
+            - gridcell [ref=e893]
+            - gridcell [ref=e894]
+            - gridcell [ref=e895]
+            - gridcell [ref=e896]
+            - gridcell [ref=e897]
+          - row "Select Row WRAA000955 2 03:22 PM IFS Demo 08/24/2026 03:25 PM Partial On Hand 08/21/2026 IFS Demo Doral WH" [ref=e898]:
+            - gridcell "Select Row" [ref=e899]:
+              - checkbox "Select Row" [ref=e900]: 
+            - gridcell "WRAA000955" [ref=e901]:
+              - link "WRAA000955" [ref=e904] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/db68c02e-a391-4652-96af-fd039c5ee06f/general
+            - gridcell "2" [ref=e905]:
+              - generic [ref=e907]: "2"
+            - gridcell [ref=e908]
+            - gridcell [ref=e909]
+            - gridcell [ref=e910]
+            - gridcell [ref=e911]
+            - gridcell [ref=e912]
+            - gridcell "03:22 PM" [ref=e913]:
+              - generic [ref=e915]: 03:22 PM
+            - gridcell [ref=e916]
+            - gridcell [ref=e917]
+            - gridcell [ref=e918]
+            - gridcell [ref=e919]
+            - gridcell [ref=e920]
+            - gridcell [ref=e921]
+            - gridcell "IFS Demo" [ref=e922]:
+              - generic [ref=e924]: IFS Demo
+            - gridcell "08/24/2026" [ref=e925]:
+              - generic [ref=e927]: 08/24/2026
+            - gridcell "03:25 PM" [ref=e928]:
+              - generic [ref=e930]: 03:25 PM
+            - gridcell [ref=e931]
+            - gridcell [ref=e932]
+            - gridcell [ref=e933]
+            - gridcell [ref=e934]
+            - gridcell [ref=e935]
+            - gridcell [ref=e936]
+            - gridcell [ref=e937]
+            - gridcell [ref=e938]
+            - gridcell [ref=e939]
+            - gridcell [ref=e940]
+            - gridcell [ref=e941]
+            - gridcell [ref=e942]
+            - gridcell [ref=e943]
+            - gridcell [ref=e944]
+            - gridcell [ref=e945]
+            - gridcell [ref=e946]
+            - gridcell [ref=e947]
+            - gridcell [ref=e948]
+            - gridcell [ref=e949]
+            - gridcell [ref=e950]
+            - gridcell "Partial On Hand" [ref=e951]:
+              - generic [ref=e953]: Partial On Hand
+            - gridcell "08/21/2026" [ref=e954]:
+              - generic [ref=e956]: 08/21/2026
+            - gridcell "IFS Demo" [ref=e957]:
+              - generic [ref=e959]: IFS Demo
+            - gridcell [ref=e960]
+            - gridcell "Doral WH" [ref=e961]:
+              - generic [ref=e963]: Doral WH
+            - gridcell [ref=e964]
+            - gridcell [ref=e965]
+            - gridcell [ref=e966]
+            - gridcell [ref=e967]
+            - gridcell [ref=e968]
+            - gridcell [ref=e969]
+            - gridcell [ref=e970]
+          - row "Select Row WRAA000954 146 36,500 16,556.4 11,040.52 312.63 01:04 PM IFS Demo 08/21/2026 01:06 PM FCL CAA000143 MBNQQ BN444 114,423.38 52,209.58 In Process 08/21/2026 IFS Demo Doral WH" [ref=e971]:
+            - gridcell "Select Row" [ref=e972]:
+              - checkbox "Select Row" [ref=e973]: 
+            - gridcell "WRAA000954" [ref=e974]:
+              - link "WRAA000954" [ref=e977] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/05d92389-e2ea-4810-b938-4b4cd89cb992/general
+            - gridcell "146" [ref=e978]:
+              - generic [ref=e980]: "146"
+            - gridcell [ref=e981]
+            - gridcell "36,500" [ref=e982]:
+              - generic [ref=e984]: 36,500
+            - gridcell "16,556.4" [ref=e985]:
+              - generic [ref=e987]: 16,556.4
+            - gridcell "11,040.52" [ref=e988]:
+              - generic [ref=e990]: 11,040.52
+            - gridcell "312.63" [ref=e991]:
+              - generic [ref=e993]: "312.63"
+            - gridcell "01:04 PM" [ref=e994]:
+              - generic [ref=e996]: 01:04 PM
+            - gridcell [ref=e997]
+            - gridcell [ref=e998]
+            - gridcell [ref=e999]
+            - gridcell [ref=e1000]
+            - gridcell [ref=e1001]
+            - gridcell [ref=e1002]
+            - gridcell "IFS Demo" [ref=e1003]:
+              - generic [ref=e1005]: IFS Demo
+            - gridcell "08/21/2026" [ref=e1006]:
+              - generic [ref=e1008]: 08/21/2026
+            - gridcell "01:06 PM" [ref=e1009]:
+              - generic [ref=e1011]: 01:06 PM
+            - gridcell [ref=e1012]
+            - gridcell [ref=e1013]
+            - gridcell [ref=e1014]
+            - gridcell "FCL" [ref=e1015]:
+              - generic [ref=e1017]: FCL
+            - gridcell [ref=e1018]
+            - gridcell "CAA000143" [ref=e1019]:
+              - generic [ref=e1021]: CAA000143
+            - gridcell [ref=e1022]
+            - gridcell "MBNQQ" [ref=e1023]:
+              - generic [ref=e1025]: MBNQQ
+            - gridcell [ref=e1026]
+            - gridcell "BN444" [ref=e1027]:
+              - generic [ref=e1029]: BN444
+            - gridcell [ref=e1030]
+            - gridcell "114,423.38" [ref=e1031]:
+              - generic [ref=e1033]: 114,423.38
+            - gridcell "52,209.58" [ref=e1034]:
+              - generic [ref=e1036]: 52,209.58
+            - gridcell [ref=e1037]
+            - gridcell [ref=e1038]
+            - gridcell [ref=e1039]
+            - gridcell [ref=e1040]
+            - gridcell [ref=e1041]
+            - gridcell [ref=e1042]
+            - gridcell [ref=e1043]
+            - gridcell "In Process" [ref=e1044]:
+              - generic [ref=e1046]: In Process
+            - gridcell "08/21/2026" [ref=e1047]:
+              - generic [ref=e1049]: 08/21/2026
+            - gridcell "IFS Demo" [ref=e1050]:
+              - generic [ref=e1052]: IFS Demo
+            - gridcell [ref=e1053]
+            - gridcell "Doral WH" [ref=e1054]:
+              - generic [ref=e1056]: Doral WH
+            - gridcell [ref=e1057]
+            - gridcell [ref=e1058]
+            - gridcell [ref=e1059]
+            - gridcell [ref=e1060]
+            - gridcell [ref=e1061]
+            - gridcell [ref=e1062]
+            - gridcell [ref=e1063]
+          - row "Select Row WRAA000953 200 20,000 9,072 4,372 123.8 01:04 PM IFS Demo 08/21/2026 01:04 PM FCL CAA000143 MBNQQ BN444 45,311.18 20,674.78 In Process 08/21/2026 IFS Demo Doral WH" [ref=e1064]:
+            - gridcell "Select Row" [ref=e1065]:
+              - checkbox "Select Row" [ref=e1066]: 
+            - gridcell "WRAA000953" [ref=e1067]:
+              - link "WRAA000953" [ref=e1070] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/7d5b4f3f-9fd9-4b3e-8449-5102a13e2f9b/general
+            - gridcell "200" [ref=e1071]:
+              - generic [ref=e1073]: "200"
+            - gridcell [ref=e1074]
+            - gridcell "20,000" [ref=e1075]:
+              - generic [ref=e1077]: 20,000
+            - gridcell "9,072" [ref=e1078]:
+              - generic [ref=e1080]: 9,072
+            - gridcell "4,372" [ref=e1081]:
+              - generic [ref=e1083]: 4,372
+            - gridcell "123.8" [ref=e1084]:
+              - generic [ref=e1086]: "123.8"
+            - gridcell "01:04 PM" [ref=e1087]:
+              - generic [ref=e1089]: 01:04 PM
+            - gridcell [ref=e1090]
+            - gridcell [ref=e1091]
+            - gridcell [ref=e1092]
+            - gridcell [ref=e1093]
+            - gridcell [ref=e1094]
+            - gridcell [ref=e1095]
+            - gridcell "IFS Demo" [ref=e1096]:
+              - generic [ref=e1098]: IFS Demo
+            - gridcell "08/21/2026" [ref=e1099]:
+              - generic [ref=e1101]: 08/21/2026
+            - gridcell "01:04 PM" [ref=e1102]:
+              - generic [ref=e1104]: 01:04 PM
+            - gridcell [ref=e1105]
+            - gridcell [ref=e1106]
+            - gridcell [ref=e1107]
+            - gridcell "FCL" [ref=e1108]:
+              - generic [ref=e1110]: FCL
+            - gridcell [ref=e1111]
+            - gridcell "CAA000143" [ref=e1112]:
+              - generic [ref=e1114]: CAA000143
+            - gridcell [ref=e1115]
+            - gridcell "MBNQQ" [ref=e1116]:
+              - generic [ref=e1118]: MBNQQ
+            - gridcell [ref=e1119]
+            - gridcell "BN444" [ref=e1120]:
+              - generic [ref=e1122]: BN444
+            - gridcell [ref=e1123]
+            - gridcell "45,311.18" [ref=e1124]:
+              - generic [ref=e1126]: 45,311.18
+            - gridcell "20,674.78" [ref=e1127]:
+              - generic [ref=e1129]: 20,674.78
+            - gridcell [ref=e1130]
+            - gridcell [ref=e1131]
+            - gridcell [ref=e1132]
+            - gridcell [ref=e1133]
+            - gridcell [ref=e1134]
+            - gridcell [ref=e1135]
+            - gridcell [ref=e1136]
+            - gridcell "In Process" [ref=e1137]:
+              - generic [ref=e1139]: In Process
+            - gridcell "08/21/2026" [ref=e1140]:
+              - generic [ref=e1142]: 08/21/2026
+            - gridcell "IFS Demo" [ref=e1143]:
+              - generic [ref=e1145]: IFS Demo
+            - gridcell [ref=e1146]
+            - gridcell "Doral WH" [ref=e1147]:
+              - generic [ref=e1149]: Doral WH
+            - gridcell [ref=e1150]
+            - gridcell [ref=e1151]
+            - gridcell [ref=e1152]
+            - gridcell [ref=e1153]
+            - gridcell [ref=e1154]
+            - gridcell [ref=e1155]
+            - gridcell [ref=e1156]
+          - row "Select Row WRAA000952 77 23,100 10,478.16 3,234.77 91.6 12:57 PM IFS Demo 08/21/2026 12:58 PM FCL CAA000142 MB66 BN77 33,524.99 15,296.92 In Process 08/21/2026 IFS Demo Doral WH" [ref=e1157]:
+            - gridcell "Select Row" [ref=e1158]:
+              - checkbox "Select Row" [ref=e1159]: 
+            - gridcell "WRAA000952" [ref=e1160]:
+              - link "WRAA000952" [ref=e1163] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/cbd80a7e-a202-4826-ae43-4242aef895c9/general
+            - gridcell "77" [ref=e1164]:
+              - generic [ref=e1166]: "77"
+            - gridcell [ref=e1167]
+            - gridcell "23,100" [ref=e1168]:
+              - generic [ref=e1170]: 23,100
+            - gridcell "10,478.16" [ref=e1171]:
+              - generic [ref=e1173]: 10,478.16
+            - gridcell "3,234.77" [ref=e1174]:
+              - generic [ref=e1176]: 3,234.77
+            - gridcell "91.6" [ref=e1177]:
+              - generic [ref=e1179]: "91.6"
+            - gridcell "12:57 PM" [ref=e1180]:
+              - generic [ref=e1182]: 12:57 PM
+            - gridcell [ref=e1183]
+            - gridcell [ref=e1184]
+            - gridcell [ref=e1185]
+            - gridcell [ref=e1186]
+            - gridcell [ref=e1187]
+            - gridcell [ref=e1188]
+            - gridcell "IFS Demo" [ref=e1189]:
+              - generic [ref=e1191]: IFS Demo
+            - gridcell "08/21/2026" [ref=e1192]:
+              - generic [ref=e1194]: 08/21/2026
+            - gridcell "12:58 PM" [ref=e1195]:
+              - generic [ref=e1197]: 12:58 PM
+            - gridcell [ref=e1198]
+            - gridcell [ref=e1199]
+            - gridcell [ref=e1200]
+            - gridcell "FCL" [ref=e1201]:
+              - generic [ref=e1203]: FCL
+            - gridcell [ref=e1204]
+            - gridcell "CAA000142" [ref=e1205]:
+              - generic [ref=e1207]: CAA000142
+            - gridcell [ref=e1208]
+            - gridcell "MB66" [ref=e1209]:
+              - generic [ref=e1211]: MB66
+            - gridcell [ref=e1212]
+            - gridcell "BN77" [ref=e1213]:
+              - generic [ref=e1215]: BN77
+            - gridcell [ref=e1216]
+            - gridcell "33,524.99" [ref=e1217]:
+              - generic [ref=e1219]: 33,524.99
+            - gridcell "15,296.92" [ref=e1220]:
+              - generic [ref=e1222]: 15,296.92
+            - gridcell [ref=e1223]
+            - gridcell [ref=e1224]
+            - gridcell [ref=e1225]
+            - gridcell [ref=e1226]
+            - gridcell [ref=e1227]
+            - gridcell [ref=e1228]
+            - gridcell [ref=e1229]
+            - gridcell "In Process" [ref=e1230]:
+              - generic [ref=e1232]: In Process
+            - gridcell "08/21/2026" [ref=e1233]:
+              - generic [ref=e1235]: 08/21/2026
+            - gridcell "IFS Demo" [ref=e1236]:
+              - generic [ref=e1238]: IFS Demo
+            - gridcell [ref=e1239]
+            - gridcell "Doral WH" [ref=e1240]:
+              - generic [ref=e1242]: Doral WH
+            - gridcell [ref=e1243]
+            - gridcell [ref=e1244]
+            - gridcell [ref=e1245]
+            - gridcell [ref=e1246]
+            - gridcell [ref=e1247]
+            - gridcell [ref=e1248]
+            - gridcell [ref=e1249]
+          - row "Select Row WRAA000951 100 22,200 10,070 7,758 219.68 12:56 PM IFS Demo 08/21/2026 12:56 PM FCL CAA000142 MB66 BN77 80,403.51 36,686.85 In Process 08/21/2026 IFS Demo Doral WH" [ref=e1250]:
+            - gridcell "Select Row" [ref=e1251]:
+              - checkbox "Select Row" [ref=e1252]: 
+            - gridcell "WRAA000951" [ref=e1253]:
+              - link "WRAA000951" [ref=e1256] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/f47ded97-c085-4832-be18-1454533f6fb3/general
+            - gridcell "100" [ref=e1257]:
+              - generic [ref=e1259]: "100"
+            - gridcell [ref=e1260]
+            - gridcell "22,200" [ref=e1261]:
+              - generic [ref=e1263]: 22,200
+            - gridcell "10,070" [ref=e1264]:
+              - generic [ref=e1266]: 10,070
+            - gridcell "7,758" [ref=e1267]:
+              - generic [ref=e1269]: 7,758
+            - gridcell "219.68" [ref=e1270]:
+              - generic [ref=e1272]: "219.68"
+            - gridcell "12:56 PM" [ref=e1273]:
+              - generic [ref=e1275]: 12:56 PM
+            - gridcell [ref=e1276]
+            - gridcell [ref=e1277]
+            - gridcell [ref=e1278]
+            - gridcell [ref=e1279]
+            - gridcell [ref=e1280]
+            - gridcell [ref=e1281]
+            - gridcell "IFS Demo" [ref=e1282]:
+              - generic [ref=e1284]: IFS Demo
+            - gridcell "08/21/2026" [ref=e1285]:
+              - generic [ref=e1287]: 08/21/2026
+            - gridcell "12:56 PM" [ref=e1288]:
+              - generic [ref=e1290]: 12:56 PM
+            - gridcell [ref=e1291]
+            - gridcell [ref=e1292]
+            - gridcell [ref=e1293]
+            - gridcell "FCL" [ref=e1294]:
+              - generic [ref=e1296]: FCL
+            - gridcell [ref=e1297]
+            - gridcell "CAA000142" [ref=e1298]:
+              - generic [ref=e1300]: CAA000142
+            - gridcell [ref=e1301]
+            - gridcell "MB66" [ref=e1302]:
+              - generic [ref=e1304]: MB66
+            - gridcell [ref=e1305]
+            - gridcell "BN77" [ref=e1306]:
+              - generic [ref=e1308]: BN77
+            - gridcell [ref=e1309]
+            - gridcell "80,403.51" [ref=e1310]:
+              - generic [ref=e1312]: 80,403.51
+            - gridcell "36,686.85" [ref=e1313]:
+              - generic [ref=e1315]: 36,686.85
+            - gridcell [ref=e1316]
+            - gridcell [ref=e1317]
+            - gridcell [ref=e1318]
+            - gridcell [ref=e1319]
+            - gridcell [ref=e1320]
+            - gridcell [ref=e1321]
+            - gridcell [ref=e1322]
+            - gridcell "In Process" [ref=e1323]:
+              - generic [ref=e1325]: In Process
+            - gridcell "08/21/2026" [ref=e1326]:
+              - generic [ref=e1328]: 08/21/2026
+            - gridcell "IFS Demo" [ref=e1329]:
+              - generic [ref=e1331]: IFS Demo
+            - gridcell [ref=e1332]
+            - gridcell "Doral WH" [ref=e1333]:
+              - generic [ref=e1335]: Doral WH
+            - gridcell [ref=e1336]
+            - gridcell [ref=e1337]
+            - gridcell [ref=e1338]
+            - gridcell [ref=e1339]
+            - gridcell [ref=e1340]
+            - gridcell [ref=e1341]
+            - gridcell [ref=e1342]
+          - row "Select Row WRAA000950 146 64,824 29,402.94 13,494.78 382.13 12:31 PM IFS Demo 08/21/2026 12:31 PM FCL SAA000221 HBNLOPP MBNLOOP CN900 BNKIPP 139,859.21 63,815.54 In Process 08/21/2026 IFS Demo Doral WH" [ref=e1343]:
+            - gridcell "Select Row" [ref=e1344]:
+              - checkbox "Select Row" [ref=e1345]: 
+            - gridcell "WRAA000950" [ref=e1346]:
+              - link "WRAA000950" [ref=e1349] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/62029cdc-7e4b-4f1c-b3b1-30e3cc70b8a5/general
+            - gridcell "146" [ref=e1350]:
+              - generic [ref=e1352]: "146"
+            - gridcell [ref=e1353]
+            - gridcell "64,824" [ref=e1354]:
+              - generic [ref=e1356]: 64,824
+            - gridcell "29,402.94" [ref=e1357]:
+              - generic [ref=e1359]: 29,402.94
+            - gridcell "13,494.78" [ref=e1360]:
+              - generic [ref=e1362]: 13,494.78
+            - gridcell "382.13" [ref=e1363]:
+              - generic [ref=e1365]: "382.13"
+            - gridcell "12:31 PM" [ref=e1366]:
+              - generic [ref=e1368]: 12:31 PM
+            - gridcell [ref=e1369]
+            - gridcell [ref=e1370]
+            - gridcell [ref=e1371]
+            - gridcell [ref=e1372]
+            - gridcell [ref=e1373]
+            - gridcell [ref=e1374]
+            - gridcell "IFS Demo" [ref=e1375]:
+              - generic [ref=e1377]: IFS Demo
+            - gridcell "08/21/2026" [ref=e1378]:
+              - generic [ref=e1380]: 08/21/2026
+            - gridcell "12:31 PM" [ref=e1381]:
+              - generic [ref=e1383]: 12:31 PM
+            - gridcell [ref=e1384]
+            - gridcell [ref=e1385]
+            - gridcell [ref=e1386]
+            - gridcell "FCL" [ref=e1387]:
+              - generic [ref=e1389]: FCL
+            - gridcell "SAA000221" [ref=e1390]:
+              - generic [ref=e1392]: SAA000221
+            - gridcell [ref=e1393]
+            - gridcell "HBNLOPP" [ref=e1394]:
+              - generic [ref=e1396]: HBNLOPP
+            - gridcell "MBNLOOP" [ref=e1397]:
+              - generic [ref=e1399]: MBNLOOP
+            - gridcell "CN900" [ref=e1400]:
+              - generic [ref=e1402]: CN900
+            - gridcell "BNKIPP" [ref=e1403]:
+              - generic [ref=e1405]: BNKIPP
+            - gridcell [ref=e1406]
+            - gridcell "139,859.21" [ref=e1407]:
+              - generic [ref=e1409]: 139,859.21
+            - gridcell "63,815.54" [ref=e1410]:
+              - generic [ref=e1412]: 63,815.54
+            - gridcell [ref=e1413]
+            - gridcell [ref=e1414]
+            - gridcell [ref=e1415]
+            - gridcell [ref=e1416]
+            - gridcell [ref=e1417]
+            - gridcell [ref=e1418]
+            - gridcell [ref=e1419]
+            - gridcell "In Process" [ref=e1420]:
+              - generic [ref=e1422]: In Process
+            - gridcell "08/21/2026" [ref=e1423]:
+              - generic [ref=e1425]: 08/21/2026
+            - gridcell "IFS Demo" [ref=e1426]:
+              - generic [ref=e1428]: IFS Demo
+            - gridcell [ref=e1429]
+            - gridcell "Doral WH" [ref=e1430]:
+              - generic [ref=e1432]: Doral WH
+            - gridcell [ref=e1433]
+            - gridcell [ref=e1434]
+            - gridcell [ref=e1435]
+            - gridcell [ref=e1436]
+            - gridcell [ref=e1437]
+            - gridcell [ref=e1438]
+            - gridcell [ref=e1439]
+          - row "Select Row WRAA000949 200 64,400 29,212 1,848 52.33 12:30 PM IFS Demo 08/21/2026 12:30 PM FCL SAA000221 HBNLOPP MBNLOOP BNKIPP 19,152.58 8,739.02 In Process 08/21/2026 IFS Demo Doral WH" [ref=e1440]:
+            - gridcell "Select Row" [ref=e1441]:
+              - checkbox "Select Row" [ref=e1442]: 
+            - gridcell "WRAA000949" [ref=e1443]:
+              - link "WRAA000949" [ref=e1446] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/b8c68c1f-a01d-439c-b128-ccc9e3de7c24/general
+            - gridcell "200" [ref=e1447]:
+              - generic [ref=e1449]: "200"
+            - gridcell [ref=e1450]
+            - gridcell "64,400" [ref=e1451]:
+              - generic [ref=e1453]: 64,400
+            - gridcell "29,212" [ref=e1454]:
+              - generic [ref=e1456]: 29,212
+            - gridcell "1,848" [ref=e1457]:
+              - generic [ref=e1459]: 1,848
+            - gridcell "52.33" [ref=e1460]:
+              - generic [ref=e1462]: "52.33"
+            - gridcell "12:30 PM" [ref=e1463]:
+              - generic [ref=e1465]: 12:30 PM
+            - gridcell [ref=e1466]
+            - gridcell [ref=e1467]
+            - gridcell [ref=e1468]
+            - gridcell [ref=e1469]
+            - gridcell [ref=e1470]
+            - gridcell [ref=e1471]
+            - gridcell "IFS Demo" [ref=e1472]:
+              - generic [ref=e1474]: IFS Demo
+            - gridcell "08/21/2026" [ref=e1475]:
+              - generic [ref=e1477]: 08/21/2026
+            - gridcell "12:30 PM" [ref=e1478]:
+              - generic [ref=e1480]: 12:30 PM
+            - gridcell [ref=e1481]
+            - gridcell [ref=e1482]
+            - gridcell [ref=e1483]
+            - gridcell "FCL" [ref=e1484]:
+              - generic [ref=e1486]: FCL
+            - gridcell "SAA000221" [ref=e1487]:
+              - generic [ref=e1489]: SAA000221
+            - gridcell [ref=e1490]
+            - gridcell "HBNLOPP" [ref=e1491]:
+              - generic [ref=e1493]: HBNLOPP
+            - gridcell "MBNLOOP" [ref=e1494]:
+              - generic [ref=e1496]: MBNLOOP
+            - gridcell [ref=e1497]
+            - gridcell "BNKIPP" [ref=e1498]:
+              - generic [ref=e1500]: BNKIPP
+            - gridcell [ref=e1501]
+            - gridcell "19,152.58" [ref=e1502]:
+              - generic [ref=e1504]: 19,152.58
+            - gridcell "8,739.02" [ref=e1505]:
+              - generic [ref=e1507]: 8,739.02
+            - gridcell [ref=e1508]
+            - gridcell [ref=e1509]
+            - gridcell [ref=e1510]
+            - gridcell [ref=e1511]
+            - gridcell [ref=e1512]
+            - gridcell [ref=e1513]
+            - gridcell [ref=e1514]
+            - gridcell "In Process" [ref=e1515]:
+              - generic [ref=e1517]: In Process
+            - gridcell "08/21/2026" [ref=e1518]:
+              - generic [ref=e1520]: 08/21/2026
+            - gridcell "IFS Demo" [ref=e1521]:
+              - generic [ref=e1523]: IFS Demo
+            - gridcell [ref=e1524]
+            - gridcell "Doral WH" [ref=e1525]:
+              - generic [ref=e1527]: Doral WH
+            - gridcell [ref=e1528]
+            - gridcell [ref=e1529]
+            - gridcell [ref=e1530]
+            - gridcell [ref=e1531]
+            - gridcell [ref=e1532]
+            - gridcell [ref=e1533]
+            - gridcell [ref=e1534]
+          - row "Select Row WRAA000948 122 13,542 6,142.7 1,101.66 31.2 12:23 PM IFS Demo 08/21/2026 12:23 PM FCL SAA000220 HBN111 MBN0988 BNWQ11 11,417.55 5,209.65 In Process 08/21/2026 IFS Demo Doral WH" [ref=e1535]:
+            - gridcell "Select Row" [ref=e1536]:
+              - checkbox "Select Row" [ref=e1537]: 
+            - gridcell "WRAA000948" [ref=e1538]:
+              - link "WRAA000948" [ref=e1541] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/63a0e8c5-66a4-4297-9319-280e8a1a648f/general
+            - gridcell "122" [ref=e1542]:
+              - generic [ref=e1544]: "122"
+            - gridcell [ref=e1545]
+            - gridcell "13,542" [ref=e1546]:
+              - generic [ref=e1548]: 13,542
+            - gridcell "6,142.7" [ref=e1549]:
+              - generic [ref=e1551]: 6,142.7
+            - gridcell "1,101.66" [ref=e1552]:
+              - generic [ref=e1554]: 1,101.66
+            - gridcell "31.2" [ref=e1555]:
+              - generic [ref=e1557]: "31.2"
+            - gridcell "12:23 PM" [ref=e1558]:
+              - generic [ref=e1560]: 12:23 PM
+            - gridcell [ref=e1561]
+            - gridcell [ref=e1562]
+            - gridcell [ref=e1563]
+            - gridcell [ref=e1564]
+            - gridcell [ref=e1565]
+            - gridcell [ref=e1566]
+            - gridcell "IFS Demo" [ref=e1567]:
+              - generic [ref=e1569]: IFS Demo
+            - gridcell "08/21/2026" [ref=e1570]:
+              - generic [ref=e1572]: 08/21/2026
+            - gridcell "12:23 PM" [ref=e1573]:
+              - generic [ref=e1575]: 12:23 PM
+            - gridcell [ref=e1576]
+            - gridcell [ref=e1577]
+            - gridcell [ref=e1578]
+            - gridcell "FCL" [ref=e1579]:
+              - generic [ref=e1581]: FCL
+            - gridcell "SAA000220" [ref=e1582]:
+              - generic [ref=e1584]: SAA000220
+            - gridcell [ref=e1585]
+            - gridcell "HBN111" [ref=e1586]:
+              - generic [ref=e1588]: HBN111
+            - gridcell "MBN0988" [ref=e1589]:
+              - generic [ref=e1591]: MBN0988
+            - gridcell [ref=e1592]
+            - gridcell "BNWQ11" [ref=e1593]:
+              - generic [ref=e1595]: BNWQ11
+            - gridcell [ref=e1596]
+            - gridcell "11,417.55" [ref=e1597]:
+              - generic [ref=e1599]: 11,417.55
+            - gridcell "5,209.65" [ref=e1600]:
+              - generic [ref=e1602]: 5,209.65
+            - gridcell [ref=e1603]
+            - gridcell [ref=e1604]
+            - gridcell [ref=e1605]
+            - gridcell [ref=e1606]
+            - gridcell [ref=e1607]
+            - gridcell [ref=e1608]
+            - gridcell [ref=e1609]
+            - gridcell "In Process" [ref=e1610]:
+              - generic [ref=e1612]: In Process
+            - gridcell "08/21/2026" [ref=e1613]:
+              - generic [ref=e1615]: 08/21/2026
+            - gridcell "IFS Demo" [ref=e1616]:
+              - generic [ref=e1618]: IFS Demo
+            - gridcell [ref=e1619]
+            - gridcell "Doral WH" [ref=e1620]:
+              - generic [ref=e1622]: Doral WH
+            - gridcell [ref=e1623]
+            - gridcell [ref=e1624]
+            - gridcell [ref=e1625]
+            - gridcell [ref=e1626]
+            - gridcell [ref=e1627]
+            - gridcell [ref=e1628]
+            - gridcell [ref=e1629]
+          - row "Select Row WRAA000947 200 30,000 13,608 840 23.79 12:22 PM IFS Demo 08/21/2026 12:22 PM FCL SAA000220 HBN111 MBN0988 BNWQ11 8,705.72 3,972.28 In Process 08/21/2026 IFS Demo Doral WH" [ref=e1630]:
+            - gridcell "Select Row" [ref=e1631]:
+              - checkbox "Select Row" [ref=e1632]: 
+            - gridcell "WRAA000947" [ref=e1633]:
+              - link "WRAA000947" [ref=e1636] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/048443a4-3f98-4597-b06b-a16047ba0b58/general
+            - gridcell "200" [ref=e1637]:
+              - generic [ref=e1639]: "200"
+            - gridcell [ref=e1640]
+            - gridcell "30,000" [ref=e1641]:
+              - generic [ref=e1643]: 30,000
+            - gridcell "13,608" [ref=e1644]:
+              - generic [ref=e1646]: 13,608
+            - gridcell "840" [ref=e1647]:
+              - generic [ref=e1649]: "840"
+            - gridcell "23.79" [ref=e1650]:
+              - generic [ref=e1652]: "23.79"
+            - gridcell "12:22 PM" [ref=e1653]:
+              - generic [ref=e1655]: 12:22 PM
+            - gridcell [ref=e1656]
+            - gridcell [ref=e1657]
+            - gridcell [ref=e1658]
+            - gridcell [ref=e1659]
+            - gridcell [ref=e1660]
+            - gridcell [ref=e1661]
+            - gridcell "IFS Demo" [ref=e1662]:
+              - generic [ref=e1664]: IFS Demo
+            - gridcell "08/21/2026" [ref=e1665]:
+              - generic [ref=e1667]: 08/21/2026
+            - gridcell "12:22 PM" [ref=e1668]:
+              - generic [ref=e1670]: 12:22 PM
+            - gridcell [ref=e1671]
+            - gridcell [ref=e1672]
+            - gridcell [ref=e1673]
+            - gridcell "FCL" [ref=e1674]:
+              - generic [ref=e1676]: FCL
+            - gridcell "SAA000220" [ref=e1677]:
+              - generic [ref=e1679]: SAA000220
+            - gridcell [ref=e1680]
+            - gridcell "HBN111" [ref=e1681]:
+              - generic [ref=e1683]: HBN111
+            - gridcell "MBN0988" [ref=e1684]:
+              - generic [ref=e1686]: MBN0988
+            - gridcell [ref=e1687]
+            - gridcell "BNWQ11" [ref=e1688]:
+              - generic [ref=e1690]: BNWQ11
+            - gridcell [ref=e1691]
+            - gridcell "8,705.72" [ref=e1692]:
+              - generic [ref=e1694]: 8,705.72
+            - gridcell "3,972.28" [ref=e1695]:
+              - generic [ref=e1697]: 3,972.28
+            - gridcell [ref=e1698]
+            - gridcell [ref=e1699]
+            - gridcell [ref=e1700]
+            - gridcell [ref=e1701]
+            - gridcell [ref=e1702]
+            - gridcell [ref=e1703]
+            - gridcell [ref=e1704]
+            - gridcell "In Process" [ref=e1705]:
+              - generic [ref=e1707]: In Process
+            - gridcell "08/21/2026" [ref=e1708]:
+              - generic [ref=e1710]: 08/21/2026
+            - gridcell "IFS Demo" [ref=e1711]:
+              - generic [ref=e1713]: IFS Demo
+            - gridcell [ref=e1714]
+            - gridcell "Doral WH" [ref=e1715]:
+              - generic [ref=e1717]: Doral WH
+            - gridcell [ref=e1718]
+            - gridcell [ref=e1719]
+            - gridcell [ref=e1720]
+            - gridcell [ref=e1721]
+            - gridcell [ref=e1722]
+            - gridcell [ref=e1723]
+            - gridcell [ref=e1724]
+          - row "Select Row WRAA000946 200 22,200 10,070 670 18.97 12:20 PM IFS Demo 08/21/2026 12:20 PM FCL SAA000220 HBN111 MBN0988 BNWQ11 6,943.85 3,168.37 In Process 08/21/2026 IFS Demo Doral WH" [ref=e1725]:
+            - gridcell "Select Row" [ref=e1726]:
+              - checkbox "Select Row" [ref=e1727]: 
+            - gridcell "WRAA000946" [ref=e1728]:
+              - link "WRAA000946" [ref=e1731] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/038d16c6-6826-4b78-b975-8b0f6d9228d1/general
+            - gridcell "200" [ref=e1732]:
+              - generic [ref=e1734]: "200"
+            - gridcell [ref=e1735]
+            - gridcell "22,200" [ref=e1736]:
+              - generic [ref=e1738]: 22,200
+            - gridcell "10,070" [ref=e1739]:
+              - generic [ref=e1741]: 10,070
+            - gridcell "670" [ref=e1742]:
+              - generic [ref=e1744]: "670"
+            - gridcell "18.97" [ref=e1745]:
+              - generic [ref=e1747]: "18.97"
+            - gridcell "12:20 PM" [ref=e1748]:
+              - generic [ref=e1750]: 12:20 PM
+            - gridcell [ref=e1751]
+            - gridcell [ref=e1752]
+            - gridcell [ref=e1753]
+            - gridcell [ref=e1754]
+            - gridcell [ref=e1755]
+            - gridcell [ref=e1756]
+            - gridcell "IFS Demo" [ref=e1757]:
+              - generic [ref=e1759]: IFS Demo
+            - gridcell "08/21/2026" [ref=e1760]:
+              - generic [ref=e1762]: 08/21/2026
+            - gridcell "12:20 PM" [ref=e1763]:
+              - generic [ref=e1765]: 12:20 PM
+            - gridcell [ref=e1766]
+            - gridcell [ref=e1767]
+            - gridcell [ref=e1768]
+            - gridcell "FCL" [ref=e1769]:
+              - generic [ref=e1771]: FCL
+            - gridcell "SAA000220" [ref=e1772]:
+              - generic [ref=e1774]: SAA000220
+            - gridcell [ref=e1775]
+            - gridcell "HBN111" [ref=e1776]:
+              - generic [ref=e1778]: HBN111
+            - gridcell "MBN0988" [ref=e1779]:
+              - generic [ref=e1781]: MBN0988
+            - gridcell [ref=e1782]
+            - gridcell "BNWQ11" [ref=e1783]:
+              - generic [ref=e1785]: BNWQ11
+            - gridcell [ref=e1786]
+            - gridcell "6,943.85" [ref=e1787]:
+              - generic [ref=e1789]: 6,943.85
+            - gridcell "3,168.37" [ref=e1790]:
+              - generic [ref=e1792]: 3,168.37
+            - gridcell [ref=e1793]
+            - gridcell [ref=e1794]
+            - gridcell [ref=e1795]
+            - gridcell [ref=e1796]
+            - gridcell [ref=e1797]
+            - gridcell [ref=e1798]
+            - gridcell [ref=e1799]
+            - gridcell "In Process" [ref=e1800]:
+              - generic [ref=e1802]: In Process
+            - gridcell "08/21/2026" [ref=e1803]:
+              - generic [ref=e1805]: 08/21/2026
+            - gridcell "IFS Demo" [ref=e1806]:
+              - generic [ref=e1808]: IFS Demo
+            - gridcell [ref=e1809]
+            - gridcell "Doral WH" [ref=e1810]:
+              - generic [ref=e1812]: Doral WH
+            - gridcell [ref=e1813]
+            - gridcell [ref=e1814]
+            - gridcell [ref=e1815]
+            - gridcell [ref=e1816]
+            - gridcell [ref=e1817]
+            - gridcell [ref=e1818]
+            - gridcell [ref=e1819]
+          - row "Select Row WRAA000945 82 16,400 7,439.04 798.68 22.62 12:11 PM IFS Demo 08/21/2026 12:11 PM FCL SAA000219 HB988 MBN67554345 BN77 8,277.48 3,776.88 In Process 08/21/2026 IFS Demo Doral WH" [ref=e1820]:
+            - gridcell "Select Row" [ref=e1821]:
+              - checkbox "Select Row" [ref=e1822]: 
+            - gridcell "WRAA000945" [ref=e1823]:
+              - link "WRAA000945" [ref=e1826] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/db30074c-9b6f-4768-b554-6cb59f7233a5/general
+            - gridcell "82" [ref=e1827]:
+              - generic [ref=e1829]: "82"
+            - gridcell [ref=e1830]
+            - gridcell "16,400" [ref=e1831]:
+              - generic [ref=e1833]: 16,400
+            - gridcell "7,439.04" [ref=e1834]:
+              - generic [ref=e1836]: 7,439.04
+            - gridcell "798.68" [ref=e1837]:
+              - generic [ref=e1839]: "798.68"
+            - gridcell "22.62" [ref=e1840]:
+              - generic [ref=e1842]: "22.62"
+            - gridcell "12:11 PM" [ref=e1843]:
+              - generic [ref=e1845]: 12:11 PM
+            - gridcell [ref=e1846]
+            - gridcell [ref=e1847]
+            - gridcell [ref=e1848]
+            - gridcell [ref=e1849]
+            - gridcell [ref=e1850]
+            - gridcell [ref=e1851]
+            - gridcell "IFS Demo" [ref=e1852]:
+              - generic [ref=e1854]: IFS Demo
+            - gridcell "08/21/2026" [ref=e1855]:
+              - generic [ref=e1857]: 08/21/2026
+            - gridcell "12:11 PM" [ref=e1858]:
+              - generic [ref=e1860]: 12:11 PM
+            - gridcell [ref=e1861]
+            - gridcell [ref=e1862]
+            - gridcell [ref=e1863]
+            - gridcell "FCL" [ref=e1864]:
+              - generic [ref=e1866]: FCL
+            - gridcell "SAA000219" [ref=e1867]:
+              - generic [ref=e1869]: SAA000219
+            - gridcell [ref=e1870]
+            - gridcell "HB988" [ref=e1871]:
+              - generic [ref=e1873]: HB988
+            - gridcell "MBN67554345" [ref=e1874]:
+              - generic [ref=e1876]: MBN67554345
+            - gridcell [ref=e1877]
+            - gridcell "BN77" [ref=e1878]:
+              - generic [ref=e1880]: BN77
+            - gridcell [ref=e1881]
+            - gridcell "8,277.48" [ref=e1882]:
+              - generic [ref=e1884]: 8,277.48
+            - gridcell "3,776.88" [ref=e1885]:
+              - generic [ref=e1887]: 3,776.88
+            - gridcell [ref=e1888]
+            - gridcell [ref=e1889]
+            - gridcell [ref=e1890]
+            - gridcell [ref=e1891]
+            - gridcell [ref=e1892]
+            - gridcell [ref=e1893]
+            - gridcell [ref=e1894]
+            - gridcell "In Process" [ref=e1895]:
+              - generic [ref=e1897]: In Process
+            - gridcell "08/21/2026" [ref=e1898]:
+              - generic [ref=e1900]: 08/21/2026
+            - gridcell "IFS Demo" [ref=e1901]:
+              - generic [ref=e1903]: IFS Demo
+            - gridcell [ref=e1904]
+            - gridcell "Doral WH" [ref=e1905]:
+              - generic [ref=e1907]: Doral WH
+            - gridcell [ref=e1908]
+            - gridcell [ref=e1909]
+            - gridcell [ref=e1910]
+            - gridcell [ref=e1911]
+            - gridcell [ref=e1912]
+            - gridcell [ref=e1913]
+            - gridcell [ref=e1914]
+          - row "Select Row WRAA000944 100 12,200 5,534 668 18.92 12:10 PM IFS Demo 08/21/2026 12:10 PM FCL SAA000219 HB988 MBN67554345 BN77 6,923.12 3,158.91 In Process 08/21/2026 IFS Demo Doral WH" [ref=e1915]:
+            - gridcell "Select Row" [ref=e1916]:
+              - checkbox "Select Row" [ref=e1917]: 
+            - gridcell "WRAA000944" [ref=e1918]:
+              - link "WRAA000944" [ref=e1921] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/2d3f5eeb-9906-4a9b-9db8-9291b8c61b8c/general
+            - gridcell "100" [ref=e1922]:
+              - generic [ref=e1924]: "100"
+            - gridcell [ref=e1925]
+            - gridcell "12,200" [ref=e1926]:
+              - generic [ref=e1928]: 12,200
+            - gridcell "5,534" [ref=e1929]:
+              - generic [ref=e1931]: 5,534
+            - gridcell "668" [ref=e1932]:
+              - generic [ref=e1934]: "668"
+            - gridcell "18.92" [ref=e1935]:
+              - generic [ref=e1937]: "18.92"
+            - gridcell "12:10 PM" [ref=e1938]:
+              - generic [ref=e1940]: 12:10 PM
+            - gridcell [ref=e1941]
+            - gridcell [ref=e1942]
+            - gridcell [ref=e1943]
+            - gridcell [ref=e1944]
+            - gridcell [ref=e1945]
+            - gridcell [ref=e1946]
+            - gridcell "IFS Demo" [ref=e1947]:
+              - generic [ref=e1949]: IFS Demo
+            - gridcell "08/21/2026" [ref=e1950]:
+              - generic [ref=e1952]: 08/21/2026
+            - gridcell "12:10 PM" [ref=e1953]:
+              - generic [ref=e1955]: 12:10 PM
+            - gridcell [ref=e1956]
+            - gridcell [ref=e1957]
+            - gridcell [ref=e1958]
+            - gridcell "FCL" [ref=e1959]:
+              - generic [ref=e1961]: FCL
+            - gridcell "SAA000219" [ref=e1962]:
+              - generic [ref=e1964]: SAA000219
+            - gridcell [ref=e1965]
+            - gridcell "HB988" [ref=e1966]:
+              - generic [ref=e1968]: HB988
+            - gridcell "MBN67554345" [ref=e1969]:
+              - generic [ref=e1971]: MBN67554345
+            - gridcell [ref=e1972]
+            - gridcell "BN77" [ref=e1973]:
+              - generic [ref=e1975]: BN77
+            - gridcell [ref=e1976]
+            - gridcell "6,923.12" [ref=e1977]:
+              - generic [ref=e1979]: 6,923.12
+            - gridcell "3,158.91" [ref=e1980]:
+              - generic [ref=e1982]: 3,158.91
+            - gridcell [ref=e1983]
+            - gridcell [ref=e1984]
+            - gridcell [ref=e1985]
+            - gridcell [ref=e1986]
+            - gridcell [ref=e1987]
+            - gridcell [ref=e1988]
+            - gridcell [ref=e1989]
+            - gridcell "In Process" [ref=e1990]:
+              - generic [ref=e1992]: In Process
+            - gridcell "08/21/2026" [ref=e1993]:
+              - generic [ref=e1995]: 08/21/2026
+            - gridcell "IFS Demo" [ref=e1996]:
+              - generic [ref=e1998]: IFS Demo
+            - gridcell [ref=e1999]
+            - gridcell "Doral WH" [ref=e2000]:
+              - generic [ref=e2002]: Doral WH
+            - gridcell [ref=e2003]
+            - gridcell [ref=e2004]
+            - gridcell [ref=e2005]
+            - gridcell [ref=e2006]
+            - gridcell [ref=e2007]
+            - gridcell [ref=e2008]
+            - gridcell [ref=e2009]
+          - row "Select Row WRAA000942 09:53 AM All Company Access Branch 1 Washington United States Pre-Received 08/21/2026 IFS Demo 100 SM Brewing Doral WH" [ref=e2010]:
+            - gridcell "Select Row" [ref=e2011]:
+              - checkbox "Select Row" [ref=e2012]: 
+            - gridcell "WRAA000942" [ref=e2013]:
+              - link "WRAA000942" [ref=e2016] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/9f5749b8-4965-4d03-be66-b1a24c7869dd/general
+            - gridcell [ref=e2017]
+            - gridcell [ref=e2018]
+            - gridcell [ref=e2019]
+            - gridcell [ref=e2020]
+            - gridcell [ref=e2021]
+            - gridcell [ref=e2022]
+            - gridcell "09:53 AM" [ref=e2023]:
+              - generic [ref=e2025]: 09:53 AM
+            - gridcell [ref=e2026]
+            - gridcell [ref=e2027]
+            - gridcell [ref=e2028]
+            - gridcell "All Company Access" [ref=e2029]:
+              - generic [ref=e2031]: All Company Access
+            - gridcell [ref=e2032]
+            - gridcell [ref=e2033]
+            - gridcell [ref=e2034]
+            - gridcell [ref=e2035]
+            - gridcell [ref=e2036]
+            - gridcell [ref=e2037]
+            - gridcell [ref=e2038]
+            - gridcell [ref=e2039]
+            - gridcell [ref=e2040]
+            - gridcell [ref=e2041]
+            - gridcell [ref=e2042]
+            - gridcell [ref=e2043]
+            - gridcell [ref=e2044]
+            - gridcell [ref=e2045]
+            - gridcell [ref=e2046]
+            - gridcell [ref=e2047]
+            - gridcell [ref=e2048]
+            - gridcell [ref=e2049]
+            - gridcell [ref=e2050]
+            - gridcell "Branch 1" [ref=e2051]:
+              - generic [ref=e2053]: Branch 1
+            - gridcell "Washington" [ref=e2054]:
+              - generic [ref=e2056]: Washington
+            - gridcell "United States" [ref=e2057]:
+              - generic [ref=e2059]: United States
+            - gridcell [ref=e2060]
+            - gridcell [ref=e2061]
+            - gridcell [ref=e2062]
+            - gridcell "Pre-Received" [ref=e2063]:
+              - generic [ref=e2065]: Pre-Received
+            - gridcell "08/21/2026" [ref=e2066]:
+              - generic [ref=e2068]: 08/21/2026
+            - gridcell "IFS Demo" [ref=e2069]:
+              - generic [ref=e2071]: IFS Demo
+            - gridcell "100 SM Brewing" [ref=e2072]:
+              - generic [ref=e2074]: 100 SM Brewing
+            - gridcell "Doral WH" [ref=e2075]:
+              - generic [ref=e2077]: Doral WH
+            - gridcell [ref=e2078]
+            - gridcell [ref=e2079]
+            - gridcell [ref=e2080]
+            - gridcell [ref=e2081]
+            - gridcell [ref=e2082]
+            - gridcell [ref=e2083]
+            - gridcell [ref=e2084]
+          - row "Select Row WRAA000941 100 12,200 5,534 4,357 123.38 05:41 PM IFS Demo 08/19/2026 05:42 PM 45,155.72 20,603.84 In Process 08/19/2026 IFS Demo Doral WH" [ref=e2085]:
+            - gridcell "Select Row" [ref=e2086]:
+              - checkbox "Select Row" [ref=e2087]: 
+            - gridcell "WRAA000941" [ref=e2088]:
+              - link "WRAA000941" [ref=e2091] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/a23351a7-3962-4ca6-8c2c-edcf154e07fb/general
+            - gridcell "100" [ref=e2092]:
+              - generic [ref=e2094]: "100"
+            - gridcell [ref=e2095]
+            - gridcell "12,200" [ref=e2096]:
+              - generic [ref=e2098]: 12,200
+            - gridcell "5,534" [ref=e2099]:
+              - generic [ref=e2101]: 5,534
+            - gridcell "4,357" [ref=e2102]:
+              - generic [ref=e2104]: 4,357
+            - gridcell "123.38" [ref=e2105]:
+              - generic [ref=e2107]: "123.38"
+            - gridcell "05:41 PM" [ref=e2108]:
+              - generic [ref=e2110]: 05:41 PM
+            - gridcell [ref=e2111]
+            - gridcell [ref=e2112]
+            - gridcell [ref=e2113]
+            - gridcell [ref=e2114]
+            - gridcell [ref=e2115]
+            - gridcell [ref=e2116]
+            - gridcell "IFS Demo" [ref=e2117]:
+              - generic [ref=e2119]: IFS Demo
+            - gridcell "08/19/2026" [ref=e2120]:
+              - generic [ref=e2122]: 08/19/2026
+            - gridcell "05:42 PM" [ref=e2123]:
+              - generic [ref=e2125]: 05:42 PM
+            - gridcell [ref=e2126]
+            - gridcell [ref=e2127]
+            - gridcell [ref=e2128]
+            - gridcell [ref=e2129]
+            - gridcell [ref=e2130]
+            - gridcell [ref=e2131]
+            - gridcell [ref=e2132]
+            - gridcell [ref=e2133]
+            - gridcell [ref=e2134]
+            - gridcell [ref=e2135]
+            - gridcell [ref=e2136]
+            - gridcell "45,155.72" [ref=e2137]:
+              - generic [ref=e2139]: 45,155.72
+            - gridcell "20,603.84" [ref=e2140]:
+              - generic [ref=e2142]: 20,603.84
+            - gridcell [ref=e2143]
+            - gridcell [ref=e2144]
+            - gridcell [ref=e2145]
+            - gridcell [ref=e2146]
+            - gridcell [ref=e2147]
+            - gridcell [ref=e2148]
+            - gridcell [ref=e2149]
+            - gridcell "In Process" [ref=e2150]:
+              - generic [ref=e2152]: In Process
+            - gridcell "08/19/2026" [ref=e2153]:
+              - generic [ref=e2155]: 08/19/2026
+            - gridcell "IFS Demo" [ref=e2156]:
+              - generic [ref=e2158]: IFS Demo
+            - gridcell [ref=e2159]
+            - gridcell "Doral WH" [ref=e2160]:
+              - generic [ref=e2162]: Doral WH
+            - gridcell [ref=e2163]
+            - gridcell [ref=e2164]
+            - gridcell [ref=e2165]
+            - gridcell [ref=e2166]
+            - gridcell [ref=e2167]
+            - gridcell [ref=e2168]
+            - gridcell [ref=e2169]
+          - row "Select Row WRAA000940 200 21,100 9,571 1,822 51.59 05:27 PM IFS Demo 08/19/2026 05:35 PM AIR SAA000217, SAA000218 18,883.11 8,616.07 In Process 08/19/2026 IFS Demo Doral WH" [ref=e2170]:
+            - gridcell "Select Row" [ref=e2171]:
+              - checkbox "Select Row" [ref=e2172]: 
+            - gridcell "WRAA000940" [ref=e2173]:
+              - link "WRAA000940" [ref=e2176] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/94d033cf-11ba-47f7-9106-1e788e40c5e1/general
+            - gridcell "200" [ref=e2177]:
+              - generic [ref=e2179]: "200"
+            - gridcell [ref=e2180]
+            - gridcell "21,100" [ref=e2181]:
+              - generic [ref=e2183]: 21,100
+            - gridcell "9,571" [ref=e2184]:
+              - generic [ref=e2186]: 9,571
+            - gridcell "1,822" [ref=e2187]:
+              - generic [ref=e2189]: 1,822
+            - gridcell "51.59" [ref=e2190]:
+              - generic [ref=e2192]: "51.59"
+            - gridcell "05:27 PM" [ref=e2193]:
+              - generic [ref=e2195]: 05:27 PM
+            - gridcell [ref=e2196]
+            - gridcell [ref=e2197]
+            - gridcell [ref=e2198]
+            - gridcell [ref=e2199]
+            - gridcell [ref=e2200]
+            - gridcell [ref=e2201]
+            - gridcell "IFS Demo" [ref=e2202]:
+              - generic [ref=e2204]: IFS Demo
+            - gridcell "08/19/2026" [ref=e2205]:
+              - generic [ref=e2207]: 08/19/2026
+            - gridcell "05:35 PM" [ref=e2208]:
+              - generic [ref=e2210]: 05:35 PM
+            - gridcell [ref=e2211]
+            - gridcell [ref=e2212]
+            - gridcell [ref=e2213]
+            - gridcell "AIR" [ref=e2214]:
+              - generic [ref=e2216]: AIR
+            - gridcell "SAA000217, SAA000218" [ref=e2217]:
+              - generic [ref=e2219]: SAA000217, SAA000218
+            - gridcell [ref=e2220]
+            - gridcell [ref=e2221]
+            - gridcell [ref=e2222]
+            - gridcell [ref=e2223]
+            - gridcell [ref=e2224]
+            - gridcell [ref=e2225]
+            - gridcell "18,883.11" [ref=e2226]:
+              - generic [ref=e2228]: 18,883.11
+            - gridcell "8,616.07" [ref=e2229]:
+              - generic [ref=e2231]: 8,616.07
+            - gridcell [ref=e2232]
+            - gridcell [ref=e2233]
+            - gridcell [ref=e2234]
+            - gridcell [ref=e2235]
+            - gridcell [ref=e2236]
+            - gridcell [ref=e2237]
+            - gridcell [ref=e2238]
+            - gridcell "In Process" [ref=e2239]:
+              - generic [ref=e2241]: In Process
+            - gridcell "08/19/2026" [ref=e2242]:
+              - generic [ref=e2244]: 08/19/2026
+            - gridcell "IFS Demo" [ref=e2245]:
+              - generic [ref=e2247]: IFS Demo
+            - gridcell [ref=e2248]
+            - gridcell "Doral WH" [ref=e2249]:
+              - generic [ref=e2251]: Doral WH
+            - gridcell [ref=e2252]
+            - gridcell [ref=e2253]
+            - gridcell [ref=e2254]
+            - gridcell [ref=e2255]
+            - gridcell [ref=e2256]
+            - gridcell [ref=e2257]
+            - gridcell [ref=e2258]
+          - row "Select Row WRAA000939 5 100 SM Brewing 3,530 1,601.17 269.18 7.62 01:21 PM 1 TAZ TRUCK & TRAILER REPAIR LLC PLUIOUO TN5757567 100 SM Brewing 10000R's Cafe Bonded IFS Demo 08/17/2026 01:23 PM IFS Demo 08/17/2026 01:23 PM AIR SAA000218 CAA000141 CN6654, CN900 2,789.77 1,272.93 Main Fort Lauderdale United States 08/31/2026 Zudio Pre Received Partial On Hand 08/17/2026 IFS Demo Jionni Pizza Plus Doral WH Jionni Pizza Plus" [ref=e2259]:
+            - gridcell "Select Row" [ref=e2260]:
+              - checkbox "Select Row" [ref=e2261]: 
+            - gridcell "WRAA000939" [ref=e2262]:
+              - link "WRAA000939" [ref=e2265] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/4546ee1b-1ba8-4bc5-b76b-dad51dbafcb6/general
+            - gridcell "5" [ref=e2266]:
+              - generic [ref=e2268]: "5"
+            - gridcell "100 SM Brewing" [ref=e2269]:
+              - generic [ref=e2271]: 100 SM Brewing
+            - gridcell "3,530" [ref=e2272]:
+              - generic [ref=e2274]: 3,530
+            - gridcell "1,601.17" [ref=e2275]:
+              - generic [ref=e2277]: 1,601.17
+            - gridcell "269.18" [ref=e2278]:
+              - generic [ref=e2280]: "269.18"
+            - gridcell "7.62" [ref=e2281]:
+              - generic [ref=e2283]: "7.62"
+            - gridcell "01:21 PM" [ref=e2284]:
+              - generic [ref=e2286]: 01:21 PM
+            - gridcell "1 TAZ TRUCK & TRAILER REPAIR LLC" [ref=e2287]:
+              - generic [ref=e2289]: 1 TAZ TRUCK & TRAILER REPAIR LLC
+            - gridcell "PLUIOUO" [ref=e2290]:
+              - generic [ref=e2292]: PLUIOUO
+            - gridcell "TN5757567" [ref=e2293]:
+              - generic [ref=e2295]: TN5757567
+            - gridcell "100 SM Brewing" [ref=e2296]:
+              - generic [ref=e2298]: 100 SM Brewing
+            - gridcell "10000R's Cafe" [ref=e2299]:
+              - generic [ref=e2301]: 10000R's Cafe
+            - gridcell "Bonded" [ref=e2302]:
+              - generic [ref=e2304]: Bonded
+            - gridcell "IFS Demo" [ref=e2305]:
+              - generic [ref=e2307]: IFS Demo
+            - gridcell "08/17/2026" [ref=e2308]:
+              - generic [ref=e2310]: 08/17/2026
+            - gridcell "01:23 PM" [ref=e2311]:
+              - generic [ref=e2313]: 01:23 PM
+            - gridcell "IFS Demo" [ref=e2314]:
+              - generic [ref=e2316]: IFS Demo
+            - gridcell "08/17/2026" [ref=e2317]:
+              - generic [ref=e2319]: 08/17/2026
+            - gridcell "01:23 PM" [ref=e2320]:
+              - generic [ref=e2322]: 01:23 PM
+            - gridcell "AIR" [ref=e2323]:
+              - generic [ref=e2325]: AIR
+            - gridcell "SAA000218" [ref=e2326]:
+              - generic [ref=e2328]: SAA000218
+            - gridcell "CAA000141" [ref=e2329]:
+              - generic [ref=e2331]: CAA000141
+            - gridcell [ref=e2332]
+            - gridcell [ref=e2333]
+            - gridcell "CN6654, CN900" [ref=e2334]:
+              - generic [ref=e2336]: CN6654, CN900
+            - gridcell [ref=e2337]
+            - gridcell [ref=e2338]
+            - gridcell "2,789.77" [ref=e2339]:
+              - generic [ref=e2341]: 2,789.77
+            - gridcell "1,272.93" [ref=e2342]:
+              - generic [ref=e2344]: 1,272.93
+            - gridcell [ref=e2345]
+            - gridcell "Main" [ref=e2346]:
+              - generic [ref=e2348]: Main
+            - gridcell "Fort Lauderdale" [ref=e2349]:
+              - generic [ref=e2351]: Fort Lauderdale
+            - gridcell "United States" [ref=e2352]:
+              - generic [ref=e2354]: United States
+            - gridcell "08/31/2026" [ref=e2355]:
+              - generic [ref=e2356]: 08/31/2026
+            - gridcell "Zudio" [ref=e2357]:
+              - generic [ref=e2358]: Zudio
+            - gridcell "Pre Received" [ref=e2359]:
+              - generic [ref=e2360]: Pre Received
+            - gridcell "Partial On Hand" [ref=e2361]:
+              - generic [ref=e2363]: Partial On Hand
+            - gridcell "08/17/2026" [ref=e2364]:
+              - generic [ref=e2366]: 08/17/2026
+            - gridcell "IFS Demo" [ref=e2367]:
+              - generic [ref=e2369]: IFS Demo
+            - gridcell "Jionni Pizza Plus" [ref=e2370]:
+              - generic [ref=e2372]: Jionni Pizza Plus
+            - gridcell "Doral WH" [ref=e2373]:
+              - generic [ref=e2375]: Doral WH
+            - gridcell [ref=e2376]
+            - gridcell "Jionni Pizza Plus" [ref=e2377]:
+              - generic [ref=e2379]: Jionni Pizza Plus
+            - gridcell [ref=e2380]
+            - gridcell [ref=e2381]
+            - gridcell [ref=e2382]
+            - gridcell [ref=e2383]
+            - gridcell [ref=e2384]
+          - row "Select Row WRAA000937 mikosddra 12:33 PM 100 SM Brewing Main Fort Lauderdale United States Pre-Received 08/17/2026 IFS Demo Jionni Pizza Plus Doral WH" [ref=e2385]:
+            - gridcell "Select Row" [ref=e2386]:
+              - checkbox "Select Row" [ref=e2387]: 
+            - gridcell "WRAA000937" [ref=e2388]:
+              - link "WRAA000937" [ref=e2391] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/4bbc298f-d8a9-451a-86eb-64837a6e69a0/general
+            - gridcell [ref=e2392]
+            - gridcell "mikosddra" [ref=e2393]:
+              - generic [ref=e2395]: mikosddra
+            - gridcell [ref=e2396]
+            - gridcell [ref=e2397]
+            - gridcell [ref=e2398]
+            - gridcell [ref=e2399]
+            - gridcell "12:33 PM" [ref=e2400]:
+              - generic [ref=e2402]: 12:33 PM
+            - gridcell [ref=e2403]
+            - gridcell [ref=e2404]
+            - gridcell [ref=e2405]
+            - gridcell "100 SM Brewing" [ref=e2406]:
+              - generic [ref=e2408]: 100 SM Brewing
+            - gridcell [ref=e2409]
+            - gridcell [ref=e2410]
+            - gridcell [ref=e2411]
+            - gridcell [ref=e2412]
+            - gridcell [ref=e2413]
+            - gridcell [ref=e2414]
+            - gridcell [ref=e2415]
+            - gridcell [ref=e2416]
+            - gridcell [ref=e2417]
+            - gridcell [ref=e2418]
+            - gridcell [ref=e2419]
+            - gridcell [ref=e2420]
+            - gridcell [ref=e2421]
+            - gridcell [ref=e2422]
+            - gridcell [ref=e2423]
+            - gridcell [ref=e2424]
+            - gridcell [ref=e2425]
+            - gridcell [ref=e2426]
+            - gridcell [ref=e2427]
+            - gridcell "Main" [ref=e2428]:
+              - generic [ref=e2430]: Main
+            - gridcell "Fort Lauderdale" [ref=e2431]:
+              - generic [ref=e2433]: Fort Lauderdale
+            - gridcell "United States" [ref=e2434]:
+              - generic [ref=e2436]: United States
+            - gridcell [ref=e2437]
+            - gridcell [ref=e2438]
+            - gridcell [ref=e2439]
+            - gridcell "Pre-Received" [ref=e2440]:
+              - generic [ref=e2442]: Pre-Received
+            - gridcell "08/17/2026" [ref=e2443]:
+              - generic [ref=e2445]: 08/17/2026
+            - gridcell "IFS Demo" [ref=e2446]:
+              - generic [ref=e2448]: IFS Demo
+            - gridcell "Jionni Pizza Plus" [ref=e2449]:
+              - generic [ref=e2451]: Jionni Pizza Plus
+            - gridcell "Doral WH" [ref=e2452]:
+              - generic [ref=e2454]: Doral WH
+            - gridcell [ref=e2455]
+            - gridcell [ref=e2456]
+            - gridcell [ref=e2457]
+            - gridcell [ref=e2458]
+            - gridcell [ref=e2459]
+            - gridcell [ref=e2460]
+            - gridcell [ref=e2461]
+          - row "Select Row WRAA000936 10 mikosddra 4,171 1,891.93 36.44 1.03 03:43 PM 100 SM Brewing IFS Demo 08/17/2026 12:28 PM IFS Demo 08/17/2026 12:21 PM AIR SAA000218 377.66 172.32 Main Fort Lauderdale United States Partial On Hand 08/13/2026 IFS Demo Jionni Pizza Plus Doral WH" [ref=e2462]:
+            - gridcell "Select Row" [ref=e2463]:
+              - checkbox "Select Row" [ref=e2464]: 
+            - gridcell "WRAA000936" [ref=e2465]:
+              - link "WRAA000936" [ref=e2468] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/cdbe44d4-3861-470a-9c57-9eb27fe28235/general
+            - gridcell "10" [ref=e2469]:
+              - generic [ref=e2471]: "10"
+            - gridcell "mikosddra" [ref=e2472]:
+              - generic [ref=e2474]: mikosddra
+            - gridcell "4,171" [ref=e2475]:
+              - generic [ref=e2477]: 4,171
+            - gridcell "1,891.93" [ref=e2478]:
+              - generic [ref=e2480]: 1,891.93
+            - gridcell "36.44" [ref=e2481]:
+              - generic [ref=e2483]: "36.44"
+            - gridcell "1.03" [ref=e2484]:
+              - generic [ref=e2486]: "1.03"
+            - gridcell "03:43 PM" [ref=e2487]:
+              - generic [ref=e2489]: 03:43 PM
+            - gridcell [ref=e2490]
+            - gridcell [ref=e2491]
+            - gridcell [ref=e2492]
+            - gridcell "100 SM Brewing" [ref=e2493]:
+              - generic [ref=e2495]: 100 SM Brewing
+            - gridcell [ref=e2496]
+            - gridcell [ref=e2497]
+            - gridcell "IFS Demo" [ref=e2498]:
+              - generic [ref=e2500]: IFS Demo
+            - gridcell "08/17/2026" [ref=e2501]:
+              - generic [ref=e2503]: 08/17/2026
+            - gridcell "12:28 PM" [ref=e2504]:
+              - generic [ref=e2506]: 12:28 PM
+            - gridcell "IFS Demo" [ref=e2507]:
+              - generic [ref=e2509]: IFS Demo
+            - gridcell "08/17/2026" [ref=e2510]:
+              - generic [ref=e2512]: 08/17/2026
+            - gridcell "12:21 PM" [ref=e2513]:
+              - generic [ref=e2515]: 12:21 PM
+            - gridcell "AIR" [ref=e2516]:
+              - generic [ref=e2518]: AIR
+            - gridcell "SAA000218" [ref=e2519]:
+              - generic [ref=e2521]: SAA000218
+            - gridcell [ref=e2522]
+            - gridcell [ref=e2523]
+            - gridcell [ref=e2524]
+            - gridcell [ref=e2525]
+            - gridcell [ref=e2526]
+            - gridcell [ref=e2527]
+            - gridcell "377.66" [ref=e2528]:
+              - generic [ref=e2530]: "377.66"
+            - gridcell "172.32" [ref=e2531]:
+              - generic [ref=e2533]: "172.32"
+            - gridcell [ref=e2534]
+            - gridcell "Main" [ref=e2535]:
+              - generic [ref=e2537]: Main
+            - gridcell "Fort Lauderdale" [ref=e2538]:
+              - generic [ref=e2540]: Fort Lauderdale
+            - gridcell "United States" [ref=e2541]:
+              - generic [ref=e2543]: United States
+            - gridcell [ref=e2544]
+            - gridcell [ref=e2545]
+            - gridcell [ref=e2546]
+            - gridcell "Partial On Hand" [ref=e2547]:
+              - generic [ref=e2549]: Partial On Hand
+            - gridcell "08/13/2026" [ref=e2550]:
+              - generic [ref=e2552]: 08/13/2026
+            - gridcell "IFS Demo" [ref=e2553]:
+              - generic [ref=e2555]: IFS Demo
+            - gridcell "Jionni Pizza Plus" [ref=e2556]:
+              - generic [ref=e2558]: Jionni Pizza Plus
+            - gridcell "Doral WH" [ref=e2559]:
+              - generic [ref=e2561]: Doral WH
+            - gridcell [ref=e2562]
+            - gridcell [ref=e2563]
+            - gridcell [ref=e2564]
+            - gridcell [ref=e2565]
+            - gridcell [ref=e2566]
+            - gridcell [ref=e2567]
+            - gridcell [ref=e2568]
+          - row "Select Row WRAA000935 Chicago Heights 03:23 PM IFS Demo 08/11/2026 04:06 PM Main Mississauga Canada Pre-Received 08/11/2026 IFS Demo KilloParts Doral WH" [ref=e2569]:
+            - gridcell "Select Row" [ref=e2570]:
+              - checkbox "Select Row" [ref=e2571]: 
+            - gridcell "WRAA000935" [ref=e2572]:
+              - link "WRAA000935" [ref=e2575] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/2cc31498-190b-40ba-bad8-5162034c75a0/general
+            - gridcell [ref=e2576]
+            - gridcell "Chicago Heights" [ref=e2577]:
+              - generic [ref=e2579]: Chicago Heights
+            - gridcell [ref=e2580]
+            - gridcell [ref=e2581]
+            - gridcell [ref=e2582]
+            - gridcell [ref=e2583]
+            - gridcell "03:23 PM" [ref=e2584]:
+              - generic [ref=e2586]: 03:23 PM
+            - gridcell [ref=e2587]
+            - gridcell [ref=e2588]
+            - gridcell [ref=e2589]
+            - gridcell [ref=e2590]
+            - gridcell [ref=e2591]
+            - gridcell [ref=e2592]
+            - gridcell [ref=e2593]
+            - gridcell [ref=e2594]
+            - gridcell [ref=e2595]
+            - gridcell "IFS Demo" [ref=e2596]:
+              - generic [ref=e2598]: IFS Demo
+            - gridcell "08/11/2026" [ref=e2599]:
+              - generic [ref=e2601]: 08/11/2026
+            - gridcell "04:06 PM" [ref=e2602]:
+              - generic [ref=e2604]: 04:06 PM
+            - gridcell [ref=e2605]
+            - gridcell [ref=e2606]
+            - gridcell [ref=e2607]
+            - gridcell [ref=e2608]
+            - gridcell [ref=e2609]
+            - gridcell [ref=e2610]
+            - gridcell [ref=e2611]
+            - gridcell [ref=e2612]
+            - gridcell [ref=e2613]
+            - gridcell [ref=e2614]
+            - gridcell [ref=e2615]
+            - gridcell "Main" [ref=e2616]:
+              - generic [ref=e2618]: Main
+            - gridcell "Mississauga" [ref=e2619]:
+              - generic [ref=e2621]: Mississauga
+            - gridcell "Canada" [ref=e2622]:
+              - generic [ref=e2624]: Canada
+            - gridcell [ref=e2625]
+            - gridcell [ref=e2626]
+            - gridcell [ref=e2627]
+            - gridcell "Pre-Received" [ref=e2628]:
+              - generic [ref=e2630]: Pre-Received
+            - gridcell "08/11/2026" [ref=e2631]:
+              - generic [ref=e2633]: 08/11/2026
+            - gridcell "IFS Demo" [ref=e2634]:
+              - generic [ref=e2636]: IFS Demo
+            - gridcell "KilloParts" [ref=e2637]:
+              - generic [ref=e2639]: KilloParts
+            - gridcell "Doral WH" [ref=e2640]:
+              - generic [ref=e2642]: Doral WH
+            - gridcell [ref=e2643]
+            - gridcell [ref=e2644]
+            - gridcell [ref=e2645]
+            - gridcell [ref=e2646]
+            - gridcell [ref=e2647]
+            - gridcell [ref=e2648]
+            - gridcell [ref=e2649]
+          - row "Select Row WRAA000934 Grand Ananta Valley Resorts Pvt. Ltd. 12:37 PM Trento 88 10 IFS Demo 08/11/2026 03:48 PM Pre-Received 08/03/2026 IFS Demo Doral WH" [ref=e2650]:
+            - gridcell "Select Row" [ref=e2651]:
+              - checkbox "Select Row" [ref=e2652]: 
+            - gridcell "WRAA000934" [ref=e2653]:
+              - link "WRAA000934" [ref=e2656] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/245e7684-e1be-4147-9563-7e13872bdcf3/general
+            - gridcell [ref=e2657]
+            - gridcell "Grand Ananta Valley Resorts Pvt. Ltd." [ref=e2658]:
+              - generic [ref=e2660]: Grand Ananta Valley Resorts Pvt. Ltd.
+            - gridcell [ref=e2661]
+            - gridcell [ref=e2662]
+            - gridcell [ref=e2663]
+            - gridcell [ref=e2664]
+            - gridcell "12:37 PM" [ref=e2665]:
+              - generic [ref=e2667]: 12:37 PM
+            - gridcell "Trento" [ref=e2668]:
+              - generic [ref=e2670]: Trento
+            - gridcell "88" [ref=e2671]:
+              - generic [ref=e2673]: "88"
+            - gridcell "10" [ref=e2674]:
+              - generic [ref=e2676]: "10"
+            - gridcell [ref=e2677]
+            - gridcell [ref=e2678]
+            - gridcell [ref=e2679]
+            - gridcell [ref=e2680]
+            - gridcell [ref=e2681]
+            - gridcell [ref=e2682]
+            - gridcell "IFS Demo" [ref=e2683]:
+              - generic [ref=e2685]: IFS Demo
+            - gridcell "08/11/2026" [ref=e2686]:
+              - generic [ref=e2688]: 08/11/2026
+            - gridcell "03:48 PM" [ref=e2689]:
+              - generic [ref=e2691]: 03:48 PM
+            - gridcell [ref=e2692]
+            - gridcell [ref=e2693]
+            - gridcell [ref=e2694]
+            - gridcell [ref=e2695]
+            - gridcell [ref=e2696]
+            - gridcell [ref=e2697]
+            - gridcell [ref=e2698]
+            - gridcell [ref=e2699]
+            - gridcell [ref=e2700]
+            - gridcell [ref=e2701]
+            - gridcell [ref=e2702]
+            - gridcell [ref=e2703]
+            - gridcell [ref=e2704]
+            - gridcell [ref=e2705]
+            - gridcell [ref=e2706]
+            - gridcell [ref=e2707]
+            - gridcell [ref=e2708]
+            - gridcell "Pre-Received" [ref=e2709]:
+              - generic [ref=e2711]: Pre-Received
+            - gridcell "08/03/2026" [ref=e2712]:
+              - generic [ref=e2714]: 08/03/2026
+            - gridcell "IFS Demo" [ref=e2715]:
+              - generic [ref=e2717]: IFS Demo
+            - gridcell [ref=e2718]
+            - gridcell "Doral WH" [ref=e2719]:
+              - generic [ref=e2721]: Doral WH
+            - gridcell [ref=e2722]
+            - gridcell [ref=e2723]
+            - gridcell [ref=e2724]
+            - gridcell [ref=e2725]
+            - gridcell [ref=e2726]
+            - gridcell [ref=e2727]
+            - gridcell [ref=e2728]
+          - row "Select Row WRAA000933 2 All Type Fence Co 21.2 9.62 2.03 0.06 01:11 AM APS Transport 9622001900008524261900875696976344 Amantesa Atlantech Distribution Inc. Andres Puerta 07/28/2026 01:36 AM Andres Puerta 08/19/2026 06:01 PM AIR SAA000213 21.04 9.6 Main Front Royal United States In Process 07/28/2026 Andres Puerta All Company Access Demo WH" [ref=e2729]:
+            - gridcell "Select Row" [ref=e2730]:
+              - checkbox "Select Row" [ref=e2731]: 
+            - gridcell "WRAA000933" [ref=e2732]:
+              - link "WRAA000933" [ref=e2735] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/7df7fffd-ba0a-45ec-a6f2-70730afe51d0/general
+            - gridcell "2" [ref=e2736]:
+              - generic [ref=e2738]: "2"
+            - gridcell "All Type Fence Co" [ref=e2739]:
+              - generic [ref=e2741]: All Type Fence Co
+            - gridcell "21.2" [ref=e2742]:
+              - generic [ref=e2744]: "21.2"
+            - gridcell "9.62" [ref=e2745]:
+              - generic [ref=e2747]: "9.62"
+            - gridcell "2.03" [ref=e2748]:
+              - generic [ref=e2750]: "2.03"
+            - gridcell "0.06" [ref=e2751]:
+              - generic [ref=e2753]: "0.06"
+            - gridcell "01:11 AM" [ref=e2754]:
+              - generic [ref=e2756]: 01:11 AM
+            - gridcell "APS Transport" [ref=e2757]:
+              - generic [ref=e2759]: APS Transport
+            - gridcell [ref=e2760]
+            - gridcell "9622001900008524261900875696976344" [ref=e2761]:
+              - generic [ref=e2763]: "9622001900008524261900875696976344"
+            - gridcell "Amantesa" [ref=e2764]:
+              - generic [ref=e2766]: Amantesa
+            - gridcell "Atlantech Distribution Inc." [ref=e2767]:
+              - generic [ref=e2769]: Atlantech Distribution Inc.
+            - gridcell [ref=e2770]
+            - gridcell "Andres Puerta" [ref=e2771]:
+              - generic [ref=e2773]: Andres Puerta
+            - gridcell "07/28/2026" [ref=e2774]:
+              - generic [ref=e2776]: 07/28/2026
+            - gridcell "01:36 AM" [ref=e2777]:
+              - generic [ref=e2779]: 01:36 AM
+            - gridcell "Andres Puerta" [ref=e2780]:
+              - generic [ref=e2782]: Andres Puerta
+            - gridcell "08/19/2026" [ref=e2783]:
+              - generic [ref=e2785]: 08/19/2026
+            - gridcell "06:01 PM" [ref=e2786]:
+              - generic [ref=e2788]: 06:01 PM
+            - gridcell "AIR" [ref=e2789]:
+              - generic [ref=e2791]: AIR
+            - gridcell "SAA000213" [ref=e2792]:
+              - generic [ref=e2794]: SAA000213
+            - gridcell [ref=e2795]
+            - gridcell [ref=e2796]
+            - gridcell [ref=e2797]
+            - gridcell [ref=e2798]
+            - gridcell [ref=e2799]
+            - gridcell [ref=e2800]
+            - gridcell "21.04" [ref=e2801]:
+              - generic [ref=e2803]: "21.04"
+            - gridcell "9.6" [ref=e2804]:
+              - generic [ref=e2806]: "9.6"
+            - gridcell [ref=e2807]
+            - gridcell "Main" [ref=e2808]:
+              - generic [ref=e2810]: Main
+            - gridcell "Front Royal" [ref=e2811]:
+              - generic [ref=e2813]: Front Royal
+            - gridcell "United States" [ref=e2814]:
+              - generic [ref=e2816]: United States
+            - gridcell [ref=e2817]
+            - gridcell [ref=e2818]
+            - gridcell [ref=e2819]
+            - gridcell "In Process" [ref=e2820]:
+              - generic [ref=e2822]: In Process
+            - gridcell "07/28/2026" [ref=e2823]:
+              - generic [ref=e2825]: 07/28/2026
+            - gridcell "Andres Puerta" [ref=e2826]:
+              - generic [ref=e2828]: Andres Puerta
+            - gridcell "All Company Access" [ref=e2829]:
+              - generic [ref=e2831]: All Company Access
+            - gridcell "Demo WH" [ref=e2832]:
+              - generic [ref=e2834]: Demo WH
+            - gridcell [ref=e2835]
+            - gridcell [ref=e2836]
+            - gridcell [ref=e2837]
+            - gridcell [ref=e2838]
+            - gridcell [ref=e2839]
+            - gridcell [ref=e2840]
+            - gridcell [ref=e2841]
+          - row "Select Row WRAA000932 All Type Fence Co 01:05 AM APS Transport Amantesa Atlantech Distribution Inc. Main Front Royal United States Pre-Received 07/28/2026 Andres Puerta All Company Access Demo WH" [ref=e2842]:
+            - gridcell "Select Row" [ref=e2843]:
+              - checkbox "Select Row" [ref=e2844]: 
+            - gridcell "WRAA000932" [ref=e2845]:
+              - link "WRAA000932" [ref=e2848] [cursor=pointer]:
+                - /url: /wms/warehouse/receipt/938bdc09-070e-49c1-ae7d-a386dd7630d1/general
+            - gridcell [ref=e2849]
+            - gridcell "All Type Fence Co" [ref=e2850]:
+              - generic [ref=e2852]: All Type Fence Co
+            - gridcell [ref=e2853]
+            - gridcell [ref=e2854]
+            - gridcell [ref=e2855]
+            - gridcell [ref=e2856]
+            - gridcell "01:05 AM" [ref=e2857]:
+              - generic [ref=e2859]: 01:05 AM
+            - gridcell "APS Transport" [ref=e2860]:
+              - generic [ref=e2862]: APS Transport
+            - gridcell [ref=e2863]
+            - gridcell [ref=e2864]
+            - gridcell "Amantesa" [ref=e2865]:
+              - generic [ref=e2867]: Amantesa
+            - gridcell "Atlantech Distribution Inc." [ref=e2868]:
+              - generic [ref=e2870]: Atlantech Distribution Inc.
+            - gridcell [ref=e2871]
+            - gridcell [ref=e2872]
+            - gridcell [ref=e2873]
+            - gridcell [ref=e2874]
+            - gridcell [ref=e2875]
+            - gridcell [ref=e2876]
+            - gridcell [ref=e2877]
+            - gridcell [ref=e2878]
+            - gridcell [ref=e2879]
+            - gridcell [ref=e2880]
+            - gridcell [ref=e2881]
+            - gridcell [ref=e2882]
+            - gridcell [ref=e2883]
+            - gridcell [ref=e2884]
+            - gridcell [ref=e2885]
+            - gridcell [ref=e2886]
+            - gridcell [ref=e2887]
+            - gridcell [ref=e2888]
+            - gridcell "Main" [ref=e2889]:
+              - generic [ref=e2891]: Main
+            - gridcell "Front Royal" [ref=e2892]:
+              - generic [ref=e2894]: Front Royal
+            - gridcell "United States" [ref=e2895]:
+              - generic [ref=e2897]: United States
+            - gridcell [ref=e2898]
+            - gridcell [ref=e2899]
+            - gridcell [ref=e2900]
+            - gridcell "Pre-Received" [ref=e2901]:
+              - generic [ref=e2903]: Pre-Received
+            - gridcell "07/28/2026" [ref=e2904]:
+              - generic [ref=e2906]: 07/28/2026
+            - gridcell "Andres Puerta" [ref=e2907]:
+              - generic [ref=e2909]: Andres Puerta
+            - gridcell "All Company Access" [ref=e2910]:
+              - generic [ref=e2912]: All Company Access
+            - gridcell "Demo WH" [ref=e2913]:
+              - generic [ref=e2915]: Demo WH
+            - gridcell [ref=e2916]
+            - gridcell [ref=e2917]
+            - gridcell [ref=e2918]
+            - gridcell [ref=e2919]
+            - gridcell [ref=e2920]
+            - gridcell [ref=e2921]
+            - gridcell [ref=e2922]
+      - generic [ref=e2924]:
+        - generic [ref=e2925]: 1-25 of 1559 items
+        - generic [ref=e2926]:
+          - generic [ref=e2927]:
+            - button "Go to the first page":
+              - note "Go to the first page"
+            - button "Go to the previous page":
+              - note "Go to the previous page"
+          - list [ref=e2929]:
+            - listitem [ref=e2930]:
+              - button "Page 1" [ref=e2931]: "1"
+            - listitem [ref=e2932]:
+              - button "Page 2" [ref=e2933] [cursor=pointer]: "2"
+            - listitem [ref=e2934]:
+              - button "Page 3" [ref=e2935] [cursor=pointer]: "3"
+            - listitem [ref=e2936]:
+              - button "Page 4" [ref=e2937] [cursor=pointer]: "4"
+            - listitem [ref=e2938]:
+              - button "Page 5" [ref=e2939] [cursor=pointer]: "5"
+            - listitem [ref=e2940]:
+              - button "Page 6" [ref=e2941] [cursor=pointer]: "6"
+            - listitem [ref=e2942]:
+              - button "Page 7" [ref=e2943] [cursor=pointer]: "7"
+            - listitem [ref=e2944]:
+              - button "Page 8" [ref=e2945] [cursor=pointer]: "8"
+            - listitem [ref=e2946]:
+              - button "Page 9" [ref=e2947] [cursor=pointer]: "9"
+            - listitem [ref=e2948]:
+              - button "Page 10" [ref=e2949] [cursor=pointer]: "10"
+            - listitem [ref=e2950]:
+              - button "Page 11" [ref=e2951] [cursor=pointer]: ...
+          - generic [ref=e2952]:
+            - button "Go to the next page" [ref=e2953] [cursor=pointer]:
+              - note "Go to the next page" [ref=e2954]
+            - button "Go to the last page" [ref=e2955] [cursor=pointer]:
+              - note "Go to the last page" [ref=e2956]
+        - button "25 per page" [ref=e2958] [cursor=pointer]:
+          - generic [ref=e2959]: 25 per page
+  - button "AI Assistant AI" [ref=e2960] [cursor=pointer]:
+    - img "AI Assistant" [ref=e2961]
+    - text: AI
+```
+
+# Test source
+
+```ts
+  1  | const { test, expect } = require('./BaseTest');
+  2  | 
+  3  | test('Login test', async ({ loginPage, testConfig }) => {
+  4  |     await loginPage.navigateToLoginPageURL();
+  5  |     await loginPage.verfiyLoginPageTitle();
+  6  |     await loginPage.validLogin();
+  7  |     await loginPage.verifyUserLandingToWarehouseOrchestratorPage();
+> 8  |     test('Create Warehouse Receipts test', async ({ createWarehouseReceipts, testConfig }) => {
+     |     ^ Error: Playwright Test did not expect test() to be called here.
+  9  |      
+  10 |     });
+  11 | });
+```

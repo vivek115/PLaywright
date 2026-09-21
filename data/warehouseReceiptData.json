@@ -1,0 +1,16 @@
+{
+    "wrGeneralFormURL": {
+        "url": "https://app.warehouseorchestrator.com/wms/warehouse/receipts",
+        "expectedHeading": "WR00000000",
+        "expectedSuccessMessage": "Warehouse Receipt has been created successfully.",
+        "switchToCardView": "Switch to Card View",
+        "expectedPackageFormHeading": "Create Multiple Packages",
+        "noOfPieces": "5"
+    },
+
+    "wrFormdData": {
+
+    }
+
+
+}

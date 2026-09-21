@@ -1,0 +1,35 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Demo WH
+Selected value: Demo WH
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: All Type Fence Co
+Selected value: All Type Fence Co
+Current location: Main
+Location is auto-populated: Main
+Randomly selected value: Alfred Colten
+Selected value: Alfred Colten
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: Amazing Orchids
+Selected value: Amazing Orchids
+Current location: Main
+Location is auto-populated: Main
+Randomly selected value: Jessie James
+Selected value: Jessie James
+Agent is not specified. Clicking to select agent.
+Randomly selected value: Braini Medical Supply
+Selected value: Braini Medical Supply
+Current location: 
+Randomly selected value: Cyzerg Test location
+Selected value: Cyzerg Test location
+Randomly selected value: AP AP
+Selected value: AP AP
+Supplier is not specified. Clicking to select supplier.
+Randomly selected value: 10000R's Cafe
+Selected value: 10000R's Cafe
+Current location: 
+Randomly selected value: test
+Selected value: test

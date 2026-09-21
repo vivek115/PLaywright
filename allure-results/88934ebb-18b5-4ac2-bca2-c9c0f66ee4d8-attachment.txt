@@ -1,0 +1,36 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Packages
+Selected value: Packages
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: Amantesa
+Selected value: Amantesa
+Current location: 
+Randomly selected value: Agent Miami
+Selected value: Agent Miami
+Randomly selected value: Cristobal Pascual
+Selected value: Cristobal Pascual
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: Braini Medical Supply
+Selected value: Braini Medical Supply
+Current location: 
+Randomly selected value: Cyzerg Test location
+Selected value: Cyzerg Test location
+Randomly selected value: ALMA SONKOLY
+Selected value: ALMA SONKOLY
+Agent is not specified. Clicking to select agent.
+Randomly selected value: All Company Access
+Selected value: All Company Access
+Current location: Main
+Location is auto-populated: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.
+Supplier is not specified. Clicking to select supplier.
+Randomly selected value: 10000R's Cafe
+Selected value: 10000R's Cafe
+Current location: 
+Randomly selected value: Main
+Selected value: Main

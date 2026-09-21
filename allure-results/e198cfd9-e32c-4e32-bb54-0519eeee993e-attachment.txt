@@ -1,0 +1,44 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Branch Issue
+Selected value: Branch Issue
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: Amazing Orchids
+Selected value: Amazing Orchids
+Current location: Main
+Location is auto-populated: Main
+Randomly selected value: Jessie James
+Selected value: Jessie James
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: Alpha Star Research
+Selected value: Alpha Star Research
+Current location: 
+Randomly selected value: Main
+Selected value: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.
+Agent is not specified. Clicking to select agent.
+Randomly selected value: Amantesa
+Selected value: Amantesa
+Current location: 
+Randomly selected value: Agent MIami
+Selected value: Agent MIami
+Randomly selected value: Joshua Catelo
+Selected value: Joshua Catelo
+Supplier is not specified. Clicking to select supplier.
+Randomly selected value: Angels Pizza
+Selected value: Angels Pizza
+Current location: Main
+Location is auto-populated: Main
+Menu options available:  [
+  'Create Task',
+  'Add to Task',
+  'Print Label',
+  'Download Images',
+  'Delete',
+  'Switch to List View'
+]
+Card view option not found in the menu options.
