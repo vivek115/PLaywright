@@ -1,0 +1,46 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Locations Preview
+Selected value: Locations Preview
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: 11 S Beach Dr
+Selected value: 11 S Beach Dr
+Current location: 
+Randomly selected value: HQ
+Selected value: HQ
+Randomly selected value: last
+Selected value: last
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: 100 SM Brewing
+Selected value: 100 SM Brewing
+Current location: 
+Randomly selected value: msin
+Selected value: msin
+Randomly selected value: p-u_se.r@gmail.com
+Selected value: p-u_se.r@gmail.com
+Agent is specified: All Company Access
+Current location: Main
+Location is auto-populated: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.
+Supplier is not specified. Clicking to select supplier.
+Randomly selected value: Fossil Rim Wildlife Center
+Selected value: Fossil Rim Wildlife Center
+Current location: Main
+Location is auto-populated: Main
+Menu options available:  [
+  'Create Task',
+  'Add to Task',
+  'Print Label',
+  'Download Images',
+  'Delete',
+  'Switch to List View'
+]
+Card view option not found in the menu options.
+Package form heading:  Create Multiple Packages
+Randomly selected value: Bale
+Selected value: Bale
+Rows found in the Kendo grid:  15

@@ -55,7 +55,9 @@ class LoginPage extends LocatorHelper {
         }
     }
     async logout() {
+        await this.locator('userImage').waitFor({ state: 'visible' });
         await this.locator('userImage').click();
+        await this.locator('logoutButton').waitFor({ state: 'visible' });   
         await this.locator('logoutButton').click();
         await utils.waitForLoaderToDisappear(this.locator('loader'));
         const currentUrl = this.page.url();

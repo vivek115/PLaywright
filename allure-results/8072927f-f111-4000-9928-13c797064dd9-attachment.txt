@@ -1,0 +1,43 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Demo WH
+Selected value: Demo WH
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: 1234 Test Rd
+Selected value: 1234 Test Rd
+Current location: Main
+Location is auto-populated: Main
+Point of Contact already populated: test nat test nat
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: Ameritrade Logistics
+Selected value: Ameritrade Logistics
+Current location: 
+Randomly selected value: Main
+Selected value: Main
+Randomly selected value: First Name3 Last Name3
+Selected value: First Name3 Last Name3
+Agent is specified: Default Agent
+Current location: Main
+Location is auto-populated: Main
+Point of Contact already populated: Agent contact
+Supplier is not specified. Clicking to select supplier.
+Randomly selected value: Fossil Rim Wildlife Center
+Selected value: Fossil Rim Wildlife Center
+Current location: Main
+Location is auto-populated: Main
+Menu options available:  [
+  'Create Task',
+  'Add to Task',
+  'Print Label',
+  'Download Images',
+  'Delete',
+  'Switch to List View'
+]
+Card view option not found in the menu options.
+Package form heading:  Create Multiple Packages
+Randomly selected value: Basket
+Selected value: Basket
+Rows found in the Kendo grid:  15

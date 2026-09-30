@@ -7,11 +7,11 @@ test.describe('Warehouse receipts', () => {
         await loginPage.verifyUserLandingToWarehouseOrchestratorPage();
     });
 
-    test('Create warehouse receipt', async ({  wrPage }) => {
+    test('Create warehouse receipt', async ({ loginPage, wrPage }) => {
         await wrPage.verifyWRForm();
         await wrPage.createWarehouseReceipts();
         await wrPage.createPackage();
-        await wrPage.logout();
-        
+        await loginPage.logout();
+
     });
 });

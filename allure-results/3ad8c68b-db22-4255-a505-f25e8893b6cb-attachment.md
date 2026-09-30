@@ -1,0 +1,125 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: createWarehouseReceipts.spec.js >> Warehouse receipts >> Create warehouse receipt
+- Location: tests\createWarehouseReceipts.spec.js:10:5
+
+# Error details
+
+```
+TimeoutError: locator.waitFor: Timeout 100000ms exceeded.
+Call log:
+  - waiting for locator('//div[@class=\'loader-new true\']').first() to be hidden
+    200 × locator resolved to visible <div class="loader-new true"></div>
+
+```
+
+# Test source
+
+```ts
+  1  | class CommonUtils {
+  2  | 
+  3  | 
+  4  |     static async wait(seconds) {
+  5  | 
+  6  |         await new Promise(resolve =>
+  7  |             //I promise I will complete this task in the future
+  8  |             setTimeout(resolve, seconds * 1000)
+  9  |             //Run something after a certain amount of time
+  10 |             //resolve - The waiting time is finished. Continue the next step.
+  11 |         );
+  12 | 
+  13 |     };
+  14 | 
+  15 |     static getTimeStamp() {
+  16 | 
+  17 |         return Date.now();
+  18 | 
+  19 |     }
+  20 | 
+  21 |     static isEmpty(value) {
+  22 | 
+  23 |         return value === null || value === undefined || value === "";
+  24 | 
+  25 |     }
+  26 | 
+  27 |     static async waitForLoaderToDisappear(locator, timeout = 100000) {
+> 28 |         await locator.first().waitFor({
+     |                               ^ TimeoutError: locator.waitFor: Timeout 100000ms exceeded.
+  29 |             state: 'hidden',
+  30 |             timeout: Math.min(timeout, 100000)
+  31 |         });
+  32 |     }
+  33 | 
+  34 | 
+  35 |     static async getDropdownValues(locator, dropdownName = 'dropdown') {
+  36 |         if (!locator) {
+  37 |             throw new Error(`${dropdownName} locator is null or undefined.`);
+  38 |         }
+  39 | 
+  40 |         try {
+  41 |             await locator.first().waitFor({ state: 'visible', timeout: 10000 });
+  42 |         } catch (error) {
+  43 |             if (error.name === 'TimeoutError') {
+  44 |                 console.log(`No options appeared in the ${dropdownName}; continuing.`);
+  45 |                 return [];
+  46 |             }
+  47 |             throw error;
+  48 |         }
+  49 |         const values = await locator.allTextContents();
+  50 | 
+  51 |         const dropdownValues = values
+  52 |             .map(value => value.trim())
+  53 |             .filter(value => value !== '');
+  54 | 
+  55 |         return dropdownValues;
+  56 |     }
+  57 |     static async randomFunction(value) {
+  58 |         const randomvalue = Math.floor(Math.random() * value.length);
+  59 |         return value[randomvalue];
+  60 |     }
+  61 |     static async selectRandomValue(values, options, valueName = 'dropdown value') {
+  62 |         if (!Array.isArray(values) || values.length === 0) {
+  63 |             console.log(`No ${valueName} is available; continuing.`);
+  64 |             return null;
+  65 |         }
+  66 |         if (!options) {
+  67 |             throw new Error(`Cannot select a random ${valueName}: dropdown locator is null or undefined.`);
+  68 |         }
+  69 | 
+  70 |         const randomIndex = Math.floor(Math.random() * values.length);
+  71 |         const randomValue = values[randomIndex];
+  72 | 
+  73 |         console.log('Randomly selected value:', randomValue);
+  74 | 
+  75 |         const randomOption = options
+  76 |             .filter({ hasText: randomValue })
+  77 |             .first();
+  78 | 
+  79 |         await randomOption.waitFor({ state: 'visible' });
+  80 |         await randomOption.scrollIntoViewIfNeeded();
+  81 |         await randomOption.click();
+  82 | 
+  83 |         console.log('Selected value:', randomValue);
+  84 | 
+  85 |         return randomValue;
+  86 |     }
+  87 | 
+  88 |     static async randomDimension(min = 1, max = 100) {
+  89 |         return Math.floor(Math.random() * (max - min + 1)) + min;
+  90 |     }
+  91 | 
+  92 | 
+  93 | 
+  94 | }
+  95 | 
+  96 | module.exports = CommonUtils;
+  97 | 
+  98 | 
+  99 | 
+```

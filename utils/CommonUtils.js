@@ -27,7 +27,7 @@ class CommonUtils {
     static async waitForLoaderToDisappear(locator, timeout = 100000) {
         await locator.first().waitFor({
             state: 'hidden',
-            timeout: Math.min(timeout, 30000)
+            timeout: Math.min(timeout, 100000)
         });
     }
 

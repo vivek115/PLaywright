@@ -1,0 +1,49 @@
+Current URL after login: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+User has successfully landed on the Warehouse Orchestrator page: https://app.warehouseorchestrator.com/wms/warehouse/receipts
+WR Form is displaying on the screen
+Randomly selected value: Doral WH
+Selected value: Doral WH
+Status is specified: Pre-Received
+Current shipper: 
+Shipper is not specified. Clicking to select shipper.
+Randomly selected value: 146 Thomas Jefferson Terrace and ny state usa
+Selected value: 146 Thomas Jefferson Terrace and ny state usa
+Current location: Main
+Location is auto-populated: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.
+Consignee is not specified. Clicking to select consignee.
+Randomly selected value: CHRISTIAN TERAN
+Selected value: CHRISTIAN TERAN
+Current location: Main
+Location is auto-populated: Main
+No options appeared in the point of contact dropdown; continuing.
+No Point of Contact options found; closing dropdown.
+Agent is not specified. Clicking to select agent.
+Randomly selected value: 1030 Company
+Selected value: 1030 Company
+Current location: 
+Randomly selected value: Site B
+Selected value: Site B
+Randomly selected value: Two dlc
+Selected value: Two dlc
+Supplier is not specified. Clicking to select supplier.
+Randomly selected value: 100 SM Brewing
+Selected value: 100 SM Brewing
+Current location: 
+Randomly selected value: Branch 1
+Selected value: Branch 1
+Menu options available:  [
+  'Create Task',
+  'Add to Task',
+  'Print Label',
+  'Download Images',
+  'Delete',
+  'Switch to List View'
+]
+Card view option not found in the menu options.
+Package form heading:  Create Multiple Packages
+Randomly selected value: Barreling
+Selected value: Barreling
+Rows found in the Kendo grid:  15
+Current URL after logout: https://app.warehouseorchestrator.com/wms/warehouse/receipt/05ba20ce-d407-42b7-83b4-7821a3fea9aa/packages/card

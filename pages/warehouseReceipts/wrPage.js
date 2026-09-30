@@ -4,6 +4,7 @@ const LocatorHelper = require("../../utils/LocatorHelper");
 const wrData = require('../../data/warehouseReceiptData.json');
 const warehouseReceiptLocators = require('./warehouseReceiptLocators');
 const WRCommonFields = require('./wrCommonFields');
+const env = require('../../config/env.prod.json');
 
 class WRPage extends LocatorHelper {
 
@@ -103,18 +104,10 @@ class WRPage extends LocatorHelper {
         const radioButtonCount = await rowRadioButtons.count();
         expect(radioButtonCount).toBeGreaterThan(0);
         await rowRadioButtons.nth(Math.floor(Math.random() * radioButtonCount)).click();
-
-
+        await this.locator('submitButton').first().click();
+        await utils.waitForLoaderToDisappear(this.locator('loader'));
     }
-    async logout() {
-        await this.locator('userImage').click();
-        await this.locator('logoutButton').click();
-        //await utils.waitForLoaderToDisappear(this.locator('loader'));
-        const currentUrl = this.page.url();
-        console.log('Current URL after logout:', currentUrl);
-        expect(currentUrl).toBe(env.baseUrl, "User did not land on the expected login page after logout");
 
-    }
 
 }
 
